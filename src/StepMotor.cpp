@@ -1,6 +1,6 @@
-#include "StepperMotor.h"
+#include "StepMotor.h"
 
-StepperMotor::StepperMotor(
+StepMotor::StepMotor(
 			uint8_t in1Pin,
 			uint8_t in2Pin,
 			uint8_t in3Pin,
@@ -34,74 +34,74 @@ StepperMotor::StepperMotor(
 /*!
  * \brief Initialize StepMotor controller.
  */
-void StepperMotor::begin(){
+void StepMotor::begin(){
 	
 	// Set Output PinMode 
-    STEPPER_IN1_OUTPUT();
-    STEPPER_IN2_OUTPUT();
-    STEPPER_IN3_OUTPUT();
-    STEPPER_IN4_OUTPUT();
+    STEP_IN1_OUTPUT();
+    STEP_IN2_OUTPUT();
+    STEP_IN3_OUTPUT();
+    STEP_IN4_OUTPUT();
 
     // Set All Pins Low (saves current draining)
-    STEPPER_IN1_LOW();
-    STEPPER_IN2_LOW();
-    STEPPER_IN3_LOW();
-    STEPPER_IN4_LOW();
+    STEP_IN1_LOW();
+    STEP_IN2_LOW();
+    STEP_IN3_LOW();
+    STEP_IN4_LOW();
 }
 
 /*!
  * \brief Release StepMotor controller pins.
  */
-void StepperMotor::end(){
+void StepMotor::end(){
 	
 	// Reset PinMode as Input
-    STEPPER_IN1_INPUT();
-    STEPPER_IN2_INPUT();
-    STEPPER_IN3_INPUT();
-    STEPPER_IN4_INPUT();
+    STEP_IN1_INPUT();
+    STEP_IN2_INPUT();
+    STEP_IN3_INPUT();
+    STEP_IN4_INPUT();
 
     // Set All Pins Low
-    STEPPER_IN1_LOW();
-    STEPPER_IN2_LOW();
-    STEPPER_IN3_LOW();
-    STEPPER_IN4_LOW();    
+    STEP_IN1_LOW();
+    STEP_IN2_LOW();
+    STEP_IN3_LOW();
+    STEP_IN4_LOW();    
 }
 
 /*!
  * \brief Move StepMotor to the target angle at the established speed
  */
-void StepperMotor::setMov(int angle, uint8_t speed = 10){
+void StepMotor::setMov(int angle, uint8_t speed = 10){
 	
 	// Clockwise Movement -- Bipolar
 	if(_motorT == Bipolar && angle >= 0){
 	
 		for(int i = 0; i < angle; i++){
 			// step 1
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_LOW();
+			STEP_IN1_HIGH();
+			STEP_IN2_LOW();
+			STEP_IN3_HIGH();
+			STEP_IN4_LOW();
 			delay(100/speed);
 			
 			// step 2
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_HIGH();
+			STEP_IN2_LOW();
+			STEP_IN3_LOW();
+			STEP_IN4_HIGH();
 			delay(100/speed);
 			
 			// step 3
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_LOW();
+			STEP_IN2_HIGH();
+			STEP_IN3_LOW();
+			STEP_IN4_HIGH();
 			delay(100/speed);
 
 			// step 4			
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_LOW();
+			STEP_IN1_LOW();
+			STEP_IN2_HIGH();
+			STEP_IN3_HIGH();
+			STEP_IN4_LOW();
 			delay(100/speed);			
 		}
 	}
@@ -110,31 +110,31 @@ void StepperMotor::setMov(int angle, uint8_t speed = 10){
 	
 		for(int i = 0; i < (-1)*angle; i++){
 			// step 4			
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_LOW();
+			STEP_IN1_LOW();
+			STEP_IN2_HIGH();
+			STEP_IN3_HIGH();
+			STEP_IN4_LOW();
 			delay(100/speed);
 			
 			// step 3
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_LOW();
+			STEP_IN2_HIGH();
+			STEP_IN3_LOW();
+			STEP_IN4_HIGH();
 			delay(100/speed);
 			
 			// step 2
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_HIGH();
+			STEP_IN2_LOW();
+			STEP_IN3_LOW();
+			STEP_IN4_HIGH();
 			delay(100/speed);
 			
 			// step 1
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_LOW();
+			STEP_IN1_HIGH();
+			STEP_IN2_LOW();
+			STEP_IN3_HIGH();
+			STEP_IN4_LOW();
 			delay(100/speed);
 		}
 	}
@@ -143,31 +143,31 @@ void StepperMotor::setMov(int angle, uint8_t speed = 10){
 	
 		for(int i = 0; i < angle; i++){
 			// step 1
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_HIGH();
+			STEP_IN2_LOW();
+			STEP_IN3_LOW();
+			STEP_IN4_HIGH();
 			delay(100/speed);
 			
 			// step 2
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_LOW();
+			STEP_IN2_LOW();
+			STEP_IN3_HIGH();
+			STEP_IN4_HIGH();
 			delay(100/speed);
 			
 			// step 3
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_LOW();
+			STEP_IN1_LOW();
+			STEP_IN2_HIGH();
+			STEP_IN3_HIGH();
+			STEP_IN4_LOW();
 			delay(100/speed);
 			
 			// step 4			
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_LOW();
+			STEP_IN1_HIGH();
+			STEP_IN2_HIGH();
+			STEP_IN3_LOW();
+			STEP_IN4_LOW();
 			delay(100/speed);			
 		}
 	}
@@ -176,48 +176,48 @@ void StepperMotor::setMov(int angle, uint8_t speed = 10){
 	
 		for(int i = 0; i < (-1)*angle; i++){
 			// step 4			
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_LOW();
+			STEP_IN1_HIGH();
+			STEP_IN2_HIGH();
+			STEP_IN3_LOW();
+			STEP_IN4_LOW();
 			delay(100/speed);
 					
 			// step 3
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_HIGH();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_LOW();
+			STEP_IN1_LOW();
+			STEP_IN2_HIGH();
+			STEP_IN3_HIGH();
+			STEP_IN4_LOW();
 			delay(100/speed);
 								
 			// step 2
-			STEPPER_IN1_LOW();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_HIGH();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_LOW();
+			STEP_IN2_LOW();
+			STEP_IN3_HIGH();
+			STEP_IN4_HIGH();
 			delay(100/speed);
 					
 			// step 1
-			STEPPER_IN1_HIGH();
-			STEPPER_IN2_LOW();
-			STEPPER_IN3_LOW();
-			STEPPER_IN4_HIGH();
+			STEP_IN1_HIGH();
+			STEP_IN2_LOW();
+			STEP_IN3_LOW();
+			STEP_IN4_HIGH();
 			delay(100/speed);	
 		}
 	}
 	
 	// Release StepMotor pins to save current
-	STEPPER_IN1_LOW();
-	STEPPER_IN2_LOW();
-	STEPPER_IN3_LOW();
-	STEPPER_IN4_LOW();
+	STEP_IN1_LOW();
+	STEP_IN2_LOW();
+	STEP_IN3_LOW();
+	STEP_IN4_LOW();
 }
 
-void StepperMotor::setMotorType(motorType motorT){
+void StepMotor::setMotorType(motorType motorT){
 	// Needs check if motorT in motorType list
 	_motorT = motorT;
 }
 
-void StepperMotor::setTorqueForce(torqueForce torqueF){
+void StepMotor::setTorqueForce(torqueForce torqueF){
 	// Needs check if torqueF in torqueForce list
 	_torqueF = torqueF;
 }

@@ -1,7 +1,7 @@
-#include <StepperMotor.h>
+#include <StepMotor.h>
 
-StepperMotor baseMotor(8,9,10,11, Bipolar);
-StepperMotor joinMotor(2,3,4,5, Unipolar);
+StepMotor baseMotor(8,9,10,11, Bipolar);
+StepMotor joinMotor(2,3,4,5, Unipolar);
 
 void setup(){
   
