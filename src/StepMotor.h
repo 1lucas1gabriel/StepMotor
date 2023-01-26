@@ -4,46 +4,47 @@
 #include <Arduino.h>
 
 #ifdef __AVR
-#define STEP_IN1_LOW()		{ *portOutputRegister(	_in1PinPort) &= ~_in1PinBit; }   //!< IN1 pin low
-#define STEP_IN1_HIGH()		{ *portOutputRegister(	_in1PinPort) |=  _in1PinBit; }   //!< IN1 pin high
-#define STEP_IN1_INPUT()	{ *portModeRegister(	_in1PinPort) &= ~_in1PinBit; }   //!< IN1 pin input
-#define STEP_IN1_OUTPUT()	{ *portModeRegister(	_in1PinPort) |=  _in1PinBit; }   //!< IN1 pin output
-#define STEP_IN2_LOW()		{ *portOutputRegister(	_in2PinPort) &= ~_in2PinBit; }   //!< IN2 pin low
-#define STEP_IN2_HIGH()		{ *portOutputRegister(	_in2PinPort) |=  _in2PinBit; }   //!< IN2 pin high
-#define STEP_IN2_INPUT()	{ *portModeRegister(	_in2PinPort) &= ~_in2PinBit; }   //!< IN2 pin input
-#define STEP_IN2_OUTPUT()	{ *portModeRegister(	_in2PinPort) |=  _in2PinBit; }   //!< IN2 pin output
-#define STEP_IN3_LOW()		{ *portOutputRegister(	_in3PinPort) &= ~_in3PinBit; }   //!< IN3 pin low
-#define STEP_IN3_HIGH()		{ *portOutputRegister(	_in3PinPort) |=  _in3PinBit; }   //!< IN3 pin high
-#define STEP_IN3_INPUT()	{ *portModeRegister(	_in3PinPort) &= ~_in3PinBit; }   //!< IN3 pin input
-#define STEP_IN3_OUTPUT()	{ *portModeRegister(	_in3PinPort) |=  _in3PinBit; }   //!< IN3 pin output
-#define STEP_IN4_LOW()		{ *portOutputRegister(	_in4PinPort) &= ~_in4PinBit; }   //!< IN4 pin low
-#define STEP_IN4_HIGH()     { *portOutputRegister(	_in4PinPort) |=  _in4PinBit; }   //!< IN4 pin high
-#define STEP_IN4_INPUT()	{ *portModeRegister(	_in4PinPort) &= ~_in4PinBit; }   //!< IN4 pin input
-#define STEP_IN4_OUTPUT()   { *portModeRegister(	_in4PinPort) |=  _in4PinBit; }   //!< IN4 pin output
+#define IN1_LOW()		{ *portOutputRegister(	_in1PinPort) &= ~_in1PinBit;}
+#define IN1_HIGH()		{ *portOutputRegister(	_in1PinPort) |=  _in1PinBit;}
+#define IN1_INPUT()		{ *portModeRegister(	_in1PinPort) &= ~_in1PinBit;}
+#define IN1_OUTPUT()	{ *portModeRegister(	_in1PinPort) |=  _in1PinBit;}
+#define IN2_LOW()		{ *portOutputRegister(	_in2PinPort) &= ~_in2PinBit;}
+#define IN2_HIGH()		{ *portOutputRegister(	_in2PinPort) |=  _in2PinBit;}
+#define IN2_INPUT()		{ *portModeRegister(	_in2PinPort) &= ~_in2PinBit;}
+#define IN2_OUTPUT()	{ *portModeRegister(	_in2PinPort) |=  _in2PinBit;}
+#define IN3_LOW()		{ *portOutputRegister(	_in3PinPort) &= ~_in3PinBit;}
+#define IN3_HIGH()		{ *portOutputRegister(	_in3PinPort) |=  _in3PinBit;}
+#define IN3_INPUT()		{ *portModeRegister(	_in3PinPort) &= ~_in3PinBit;}
+#define IN3_OUTPUT()	{ *portModeRegister(	_in3PinPort) |=  _in3PinBit;}
+#define IN4_LOW()		{ *portOutputRegister(	_in4PinPort) &= ~_in4PinBit;}
+#define IN4_HIGH()     	{ *portOutputRegister(	_in4PinPort) |=  _in4PinBit;}
+#define IN4_INPUT()		{ *portModeRegister(	_in4PinPort) &= ~_in4PinBit;}
+#define IN4_OUTPUT()   	{ *portModeRegister(	_in4PinPort) |=  _in4PinBit;}
 #else
-#define STEP_IN1_LOW()        { digitalWrite(_in1Pin, LOW); }                 //!< IN1 pin low
-#define STEP_IN1_HIGH()       { digitalWrite(_in1Pin, HIGH); }                //!< IN1 pin high
-#define STEP_IN1_INPUT()      { pinMode(	 _in1Pin, INPUT); }               //!< IN1 pin input
-#define STEP_IN1_OUTPUT()     { pinMode(	 _in1Pin, OUTPUT); }              //!< IN1 pin output
-#define STEP_IN2_LOW()        { digitalWrite(_in2Pin, LOW); }                 //!< IN2 pin low
-#define STEP_IN2_HIGH()       { digitalWrite(_in2Pin, HIGH); }                //!< IN2 pin high
-#define STEP_IN2_INPUT()      { pinMode(	 _in2Pin, INPUT); }               //!< IN2 pin input
-#define STEP_IN2_OUTPUT()     { pinMode(	 _in2Pin, OUTPUT); }              //!< IN2 pin output
-#define STEP_IN3_LOW()        { digitalWrite(_in3Pin, LOW); }                 //!< IN3 pin low
-#define STEP_IN3_HIGH()       { digitalWrite(_in3Pin, HIGH); }                //!< IN3 pin high
-#define STEP_IN3_INPUT()      { pinMode(	 _in3Pin, INPUT); }               //!< IN3 pin input
-#define STEP_IN3_OUTPUT()     { pinMode(	 _in3Pin, OUTPUT); }              //!< IN3 pin output
-#define STEP_IN4_LOW()        { digitalWrite(_in4Pin, LOW); }                 //!< IN4 pin low
-#define STEP_IN4_HIGH()       { digitalWrite(_in4Pin, HIGH); }                //!< IN4 pin high
-#define STEP_IN4_INPUT()      { pinMode(	 _in4Pin, INPUT); }               //!< IN4 pin input
-#define STEP_IN4_OUTPUT()     { pinMode(	 _in4Pin, OUTPUT); }              //!< IN4 pin output
+#define IN1_LOW()       { digitalWrite(_in1Pin, LOW); }      
+#define IN1_HIGH()      { digitalWrite(_in1Pin, HIGH);}     
+#define IN1_INPUT()     { pinMode(	 _in1Pin, INPUT); }       
+#define IN1_OUTPUT()    { pinMode(	 _in1Pin, OUTPUT);}      
+#define IN2_LOW()       { digitalWrite(_in2Pin, LOW); }      
+#define IN2_HIGH()      { digitalWrite(_in2Pin, HIGH);}     
+#define IN2_INPUT()     { pinMode(	 _in2Pin, INPUT); }       
+#define IN2_OUTPUT()    { pinMode(	 _in2Pin, OUTPUT);}      
+#define IN3_LOW()       { digitalWrite(_in3Pin, LOW); }      
+#define IN3_HIGH()      { digitalWrite(_in3Pin, HIGH);}     
+#define IN3_INPUT()     { pinMode(	 _in3Pin, INPUT); }       
+#define IN3_OUTPUT()    { pinMode(	 _in3Pin, OUTPUT);}      
+#define IN4_LOW()       { digitalWrite(_in4Pin, LOW); }      
+#define IN4_HIGH()      { digitalWrite(_in4Pin, HIGH);}     
+#define IN4_INPUT()     { pinMode(	 _in4Pin, INPUT); }     
+#define IN4_OUTPUT()    { pinMode(	 _in4Pin, OUTPUT);}
 #endif
 
 
 // bipolar  motors: 2 distinct phases
 // unipolar motors: 4 distinct phases
 typedef enum {Unipolar, Bipolar} motorType;
-typedef enum {Low, High} torqueForce;
+typedef enum {Half, Full} torqueForce;
+typedef enum {Clk, CtrClk} directRot;
 
 
 class StepMotor 
@@ -54,15 +55,13 @@ public:
 				uint8_t in3Pin,
 				uint8_t in4Pin,
 				motorType motorT,
-				torqueForce torqueF = High);
+				torqueForce torqueF = Full);
 	
 	virtual void begin();
     virtual void end();
-	virtual void setMov(int angle, uint8_t speed = 10);
+	virtual void setMov(uint16_t nSteps, uint8_t speed = 1, directRot directR = Clk);
 	virtual void setMotorType(motorType motorT);
 	virtual void setTorqueForce(torqueForce torqueF);
-	//virtual void stopMov();
-	//virtual void calibrate();
 	
 protected:
 #ifdef __AVR
@@ -81,8 +80,22 @@ protected:
     uint8_t _in3Pin;    	//!< Pole 3 pin
     uint8_t _in4Pin;    	//!< Pole 4 pin
 #endif
+	
+	// Internal Variables & Methods
 	motorType 	_motorT;	//!< Motor type: Bipolar or Unipolar
-	torqueForce _torqueF;	//!< Torque force: High or Low
+	torqueForce _torqueF;	//!< Torque force: Full or Half
+
+	void _RELEASE_PINS();
+	void _BI_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed);		
+	void _BI_CTR_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed);
+	void _UNI_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed);		
+	void _UNI_CTR_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed);
+/*
+	void _BIPOLAR_POSITIVE_ANGLE_FULL_STEP(uint8_t speed);			
+	void _BIPOLAR_NEGATIVE_ANGLE_FULL_STEP(uint8_t speed);			
+	void _UNIPOLAR_POSITIVE_ANGLE_FULL_STEP(uint8_t speed);			
+	void _UNIPOLAR_NEGATIVE_ANGLE_FULL_STEP(uint8_t speed);	
+*/		
 };
 
 #endif // STEP_MOTOR_H
