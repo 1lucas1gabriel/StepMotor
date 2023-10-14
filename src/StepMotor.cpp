@@ -1,31 +1,27 @@
 #include "StepMotor.h"
 
+
 StepMotor::StepMotor(
 			uint8_t in1Pin,
 			uint8_t in2Pin,
 			uint8_t in3Pin,
 			uint8_t in4Pin,
-			motorType motorT,
-			torqueForce torqueF):
-			_motorT(motorT), _torqueF(torqueF)
+			SM_motortype_t 		motorType,
+			SM_torqueforce_t 	torqueForce)
 {
+	this->_setMotorType(motorType);
+	this->_setTorqueForce(torqueForce);
+
 #ifdef __AVR
-    // Calculate bit and port register for fast pin read and writes (AVR targets only)
-    _in1PinPort = digitalPinToPort(in1Pin);
-    _in2PinPort = digitalPinToPort(in2Pin);
-    _in3PinPort = digitalPinToPort(in3Pin);
-    _in4PinPort = digitalPinToPort(in4Pin);    
+    // Calculate bit and unique port register for writing commands to a step motor (AVR targets only)
+    _pinsPort 	= digitalPinToPort(in1Pin);
 
     _in1PinBit = digitalPinToBitMask(in1Pin);
     _in2PinBit = digitalPinToBitMask(in2Pin);
     _in3PinBit = digitalPinToBitMask(in3Pin);
     _in4PinBit = digitalPinToBitMask(in4Pin);
-#else
-    // Use the slow digitalRead() and digitalWrite() functions for non-AVR targets
-    _in1Pin = in1Pin;
-    _in2Pin = in2Pin;
-    _in3Pin = in3Pin;
-    _in4Pin = in4Pin;
+
+//#else #define for other architectures
 #endif
 }
 
@@ -35,11 +31,8 @@ StepMotor::StepMotor(
 void StepMotor::begin(){
 	
 	// Set Output PinMode and Turn Off to save current
-    IN1_OUTPUT();
-    IN2_OUTPUT();
-    IN3_OUTPUT();
-    IN4_OUTPUT();
-    this->_RELEASE_PINS();
+    // PORT_OUTPUT()
+    _release_pins();
 }
 
 /*!
@@ -48,48 +41,31 @@ void StepMotor::begin(){
 void StepMotor::end(){
 	
 	// Set Input PinMode and Turn Off to save current
-    IN1_INPUT();
-    IN2_INPUT();
-    IN3_INPUT();
-    IN4_INPUT();
-    this->_RELEASE_PINS(); 
+    // PORT_INPUT()
+    _release_pins(); 
 }
 
 /*!
  * \brief Rotate StepMotor nSteps at the established speed and direction
  */
-void StepMotor::setMov(uint16_t nSteps, uint8_t speed, directRot directR){	
+void StepMotor::setMov(	uint16_t nSteps, 
+						SM_stepdelay_t delay_ms, 
+						SM_direction_t direction){	
 	
-	if(_motorT == Bipolar && directR == Clk)
+	if(_motorType == BIPOLAR_2PHASE && direction == CLOCKWISE)
 		_BI_CLKWISE_ROT_FULL_TORQUE(nSteps, speed);
 
-	if(_motorT == Bipolar && directR == CtrClk)
+	if(_motorType == BIPOLAR_2PHASE && direction == COUNTER_CLOCKWISE)
 		_BI_CTR_CLKWISE_ROT_FULL_TORQUE(nSteps, speed);
 
-	if(_motorT == Unipolar && directR == Clk)
+	if(_motorType == UNIPOLAR_4PHASE && direction == CLOCKWISE)
 		_UNI_CLKWISE_ROT_FULL_TORQUE(nSteps, speed);
 
-	if(_motorT == Unipolar && directR == CtrClk)
+	if(_motorType == UNIPOLAR_4PHASE && direction == COUNTER_CLOCKWISE)
 		_UNI_CTR_CLKWISE_ROT_FULL_TORQUE(nSteps, speed);
 	
 	// Turn off StepMotor pins to save current
-	this->_RELEASE_PINS();
-}
-
-/*!
- * \brief Set which motor type will be used (Bipolar or Unipolar)
- */
-void StepMotor::setMotorType(motorType motorT){
-	// Needs check if motorT in motorType list
-	_motorT = motorT;
-}
-
-/*!
- * \brief Set which torque force will be used (Half or Full)
- */
-void StepMotor::setTorqueForce(torqueForce torqueF){
-	// Needs check if torqueF in torqueForce list
-	_torqueF = torqueF;
+	_release_pins();
 }
 
 
@@ -97,20 +73,34 @@ void StepMotor::setTorqueForce(torqueForce torqueF){
  *  INTERNAL METHODS *
  *********************************************************** /
 
-/*!
+ /*!
  * \brief Turn off pins to save current
  */
-void StepMotor::_RELEASE_PINS(){
-	IN1_LOW();
-	IN2_LOW();
-	IN3_LOW();
-	IN4_LOW();
+void StepMotor::_release_pins(){
+
+	writeToPort(0x00);
 }
 
 /*!
- * \brief Clockwise Rotation of Bipolar Motor at Full Torque
+ * \brief Set which motor type will be used.
  */
-void StepMotor::_BI_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed){
+void StepMotor::_setMotorType(SM_motortype_t motorType){
+
+	_motorType = motorType;
+}
+
+/*!
+ * \brief Set which torque force will be used.
+ */
+void StepMotor::_setTorqueForce(SM_torqueforce_t torqueForce){
+
+	_torqueForce = torqueForce;
+}
+
+/*!
+ * \brief Rotate step motor by using sequence step.
+ */
+void StepMotor::_rotate_stepMotor(uint8_t *stepSequenceMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms){
 
 	for(uint16_t i = 0; i < nSteps; i++){
 		//----------------------------------------------------------//
@@ -118,195 +108,20 @@ void StepMotor::_BI_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed){
 		// bitwise operation just select last 2 LSB from iterator	//
 		// 2 LSB needed to order from 1 up to 4 step (00,01,10,11)	//
 		//----------------------------------------------------------//
+
+		// 0x0003 (0x00000011) & 11 (0b00001011) => 3 (0b11)
+		// uni_4phase_clock_fullstep_torque[4] 	= {0x9, 0x3, 0x6, 0xC}; 
+		// 0xC = 0x1100
+
+		// needs to create a logic or function to go through 8 steps instead of 4
+		// uni_4phase_clock_halfstep[8] = {0x9, 0x1, 0x3, 0x2, 0x6, 0x4, 0xC, 0x8};
+
 		uint8_t currentStep = (0x0003 & i);
 
-		switch(currentStep){
-			case 0:
-				IN1_HIGH();
-				IN2_LOW();
-				IN3_HIGH();
-				IN4_LOW();
-			break;
-			case 1:
-				IN1_HIGH();
-				IN2_LOW();
-				IN3_LOW();
-				IN4_HIGH();
-			break;
-			case 2:
-				IN1_LOW();
-				IN2_HIGH();
-				IN3_LOW();
-				IN4_HIGH();
-			break;
-			case 3:
-				IN1_LOW();
-				IN2_HIGH();
-				IN3_HIGH();
-				IN4_LOW();
-			break;
-		}
+		// writing nibble to a PORT
+		writeToPort(stepSequenceMatrix[currentStep] & 0x0f);
+
 		// stop step until the next step -> impacts on motor velocity
-		delay(100/speed);		
+		stepDelay(delay_ms);		
 	}
 }
-
-/*!
- * \brief Counter Clockwise Rotation of Bipolar Motor at Full Torque
- */
-void StepMotor::_BI_CTR_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed){
-
-	for(uint16_t i = 0; i < nSteps; i++){
-		//----------------------------------------------------------//
-		// To sync movement and repeat for nSteps:					//
-		// bitwise operation just select last 2 LSB from iterator	//
-		// 2 LSB needed to order from 1 up to 4 step (00,01,10,11)	//
-		//----------------------------------------------------------//
-		uint8_t currentStep = (0x0003 & i);
-
-		switch(currentStep){
-			case 0:
-				IN1_LOW();
-				IN2_HIGH();
-				IN3_HIGH();
-				IN4_LOW();				
-			break;
-			case 1:
-				IN1_LOW();
-				IN2_HIGH();
-				IN3_LOW();
-				IN4_HIGH();
-			break;
-			case 2:
-				IN1_HIGH();
-				IN2_LOW();
-				IN3_LOW();
-				IN4_HIGH();
-			break;
-			case 3:
-				IN1_HIGH();
-				IN2_LOW();
-				IN3_HIGH();
-				IN4_LOW();
-			break;
-		}
-		// stop step until the next step -> impacts on motor velocity
-		delay(100/speed);		
-	}
-}
-
-/*!
- * \brief Clockwise Rotation of Unipolar Motor at Full Torque
- */
-void StepMotor::_UNI_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed){
-
-	for(uint16_t i = 0; i < nSteps; i++){
-		//----------------------------------------------------------//
-		// To sync movement and repeat for nSteps:					//
-		// bitwise operation just select last 2 LSB from iterator	//
-		// 2 LSB needed to order from 1 up to 4 step (00,01,10,11)	//
-		//----------------------------------------------------------//
-		uint8_t currentStep = (0x0003 & i);
-
-		switch(currentStep){
-			case 0:
-				IN1_HIGH();
-				IN2_LOW();
-				IN3_LOW();
-				IN4_HIGH();
-			break;
-			case 1:
-				IN1_LOW();
-				IN2_LOW();
-				IN3_HIGH();
-				IN4_HIGH();
-			break;
-			case 2:
-				IN1_LOW();
-				IN2_HIGH();
-				IN3_HIGH();
-				IN4_LOW();
-			break;
-			case 3:
-				IN1_HIGH();
-				IN2_HIGH();
-				IN3_LOW();
-				IN4_LOW();
-			break;
-		}
-		// stop step until the next step -> impacts on motor velocity
-		delay(100/speed);		
-	}
-}
-
-/*!
- * \brief Counter Clockwise Rotation of Unipolar Motor at Full Torque
- */
-void StepMotor::_UNI_CTR_CLKWISE_ROT_FULL_TORQUE(uint16_t nSteps, uint8_t speed){
-
-	for(uint16_t i = 0; i < nSteps; i++){
-		//----------------------------------------------------------//
-		// To sync movement and repeat for nSteps:					//
-		// bitwise operation just select last 2 LSB from iterator	//
-		// 2 LSB needed to order from 1 up to 4 step (00,01,10,11)	//
-		//----------------------------------------------------------//
-		uint8_t currentStep = (0x0003 & i);
-
-		switch(currentStep){
-			case 0:
-				IN1_HIGH();
-				IN2_HIGH();
-				IN3_LOW();
-				IN4_LOW();			
-			break;
-			case 1:
-				IN1_LOW();
-				IN2_HIGH();
-				IN3_HIGH();
-				IN4_LOW();
-			break;
-			case 2:
-				IN1_LOW();
-				IN2_LOW();
-				IN3_HIGH();
-				IN4_HIGH();
-			break;
-			case 3:
-				IN1_HIGH();
-				IN2_LOW();
-				IN3_LOW();
-				IN4_HIGH();
-			break;
-		}
-		// stop step until the next step -> impacts on motor velocity
-		delay(100/speed);		
-	}
-}
-
-
-
-/*
-- Implement Bipolar vs Unipolar wrap up in raw code which implement driving sequence
-- Implement Full Step vs Half Step to save current vs increase torque
-- Improve Velocity Control method (Scale and range)
-- Improve Velocity Control by removing "delay" function to reuse code in other platforms
-- Improve Velocity deviation methods to vary acceleration
-*/
-
-/*
-** HALF_STEP not considered yet ** 
-
-BIPOLAR_POSITIVE_ANGLE_FULL_STEP			* 1 phase actuated by time (less torque)
-BIPOLAR_NEGATIVE_ANGLE_FULL_STEP			* 1 phase actuated by time (less torque)
-BIPOLAR_POSITIVE_ANGLE_FULL_STEP_TORQUE		* 2 phases actuated at the same time (full torque)
-BIPOLAR_NEGATIVE_ANGLE_FULL_STEP_TORQUE		* 2 phases actuated at the same time (full torque)
-
-UNIPOLAR_POSITIVE_ANGLE_FULL_STEP			* 1 phase actuated by time (less torque)
-UNIPOLAR_NEGATIVE_ANGLE_FULL_STEP			* 1 phase actuated by time (less torque)
-UNIPOLAR_POSITIVE_ANGLE_FULL_STEP_TORQUE	* 2 phases actuated at the same time (full torque)
-UNIPOLAR_NEGATIVE_ANGLE_FULL_STEP_TORQUE	* 2 phases actuated at the same time (full torque)
-
-*/
-
-
-
