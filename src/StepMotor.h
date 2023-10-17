@@ -14,26 +14,41 @@
  * 						-----------------------------------------
  *  uC: 8 LSB Port		| b7 | b6 | b5 | b4 | b3 | b2 | b1 | b0 |
  * 						-----------------------------------------
- * 	StepMotor:								---------------------
- *  pin connection (LSB_nibble)				| In1| In2| In3| In4|
- * 											---------------------				
+ * 	StepMotor:						   ---------------------
+ *  pin connection (nibble_cmd)		   | In1| In2| In3| In4|
+ * 									   ---------------------				
+ * 
+ * 									0b00001000 => In1
+ * 									0b00010000 => In1
+ * 
+ * 										  1010
+ * 										 1010
  * 
  * ***************************************************************/
 
 #ifdef __AVR
 #include <Arduino.h>
 
-#define writeToPort(LSB_nibble)	{ *portOutputRegister(_pinsPort) |=  LSB_nibble;}
-//#define IN1_INPUT()		{ *portModeRegister(	_in1PinPort) &= ~_in1PinBit;}
-//#define IN1_OUTPUT()		{ *portModeRegister(	_in1PinPort) |=  _in1PinBit;}
+#define writeToPort(nibble_cmd)	{ *portOutputRegister(_pin1Port) |=  (nibble_cmd << X);}
+#define clearPinPort()			{ *portOutputRegister(_pin1Port) &= ~(0x0F << X);}
 #define stepDelay(delayTime)	{ delay(delayTime);}
+
+#define pin1_input()			{ *portModeRegister(_pin1Port) &= ~_pin1PortBit;}
+#define pin2_input()			{ *portModeRegister(_pin2Port) &= ~_pin2PortBit;}
+#define pin3_input()			{ *portModeRegister(_pin3Port) &= ~_pin3PortBit;}
+#define pin4_input()			{ *portModeRegister(_pin4Port) &= ~_pin4PortBit;}
+
+#define pin1_output()			{ *portModeRegister(_pin1Port) |=  _pin1PortBit;}
+#define pin2_output()			{ *portModeRegister(_pin2Port) |=  _pin2PortBit;}
+#define pin3_output()			{ *portModeRegister(_pin3Port) |=  _pin3PortBit;}
+#define pin4_output()			{ *portModeRegister(_pin4Port) |=  _pin4PortBit;}
 
 //#else #define for other architectures
 #endif
 
 
 /*************************************************************
- *  LOOKUP TABLES - STEP SEQUENCE MATRIX 
+ *  LOOKUP TABLES - STEP SEQUENCE MATRIX - REMINDER: SAVE IN FLASH
  * ***********************************************************/
 
 // Full Step and Maximum Torque (2 phase ON per step)
@@ -109,13 +124,16 @@ public:
 	
 protected:
 #ifdef __AVR
-    uint8_t _pinsPort;   	//!< Unique Port for all IO pins register
+	uint8_t	_pin1Port;
+	uint8_t	_pin2Port;
+	uint8_t	_pin3Port;
+	uint8_t _pin4Port;  	//!< Unique Port for all IO pins register
     
 	// only port is needed. Additional variables to allow shifting trought the register
-    uint8_t _in1PinBit;    	//!< bit number in IO register for pin1
-    uint8_t _in2PinBit;    	//!< bit number in IO register for pin2
-    uint8_t _in3PinBit;    	//!< bit number in IO register for pin3
-    uint8_t _in4PinBit;    	//!< bit number in IO register for pin4
+    uint8_t _pin1PortBit;    	//!< bit number in IO register for pin1
+    uint8_t _pin2PortBit;    	//!< bit number in IO register for pin2
+    uint8_t _pin3PortBit;    	//!< bit number in IO register for pin3
+    uint8_t _pin4PortBit;    	//!< bit number in IO register for pin4
 
 //#else #define for other architectures
 #endif
@@ -124,7 +142,6 @@ protected:
 	SM_motortype_t 		_motorType;		//!< Motor type
 	SM_torqueforce_t 	_torqueForce;	//!< Torque force
 	
-	void _release_pins();
 	void _setMotorType(SM_motortype_t motorType);
 	void _setTorqueForce(SM_torqueforce_t torqueForce);
 	void _rotate_stepMotor(uint8_t *stepSequenceMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms);

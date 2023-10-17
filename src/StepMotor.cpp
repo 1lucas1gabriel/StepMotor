@@ -14,12 +14,15 @@ StepMotor::StepMotor(
 
 #ifdef __AVR
     // Calculate bit and unique port register for writing commands to a step motor (AVR targets only)
-    _pinsPort 	= digitalPinToPort(in1Pin);
+    _pin1Port 	= digitalPinToPort(in1Pin);
+	_pin2Port 	= digitalPinToPort(in2Pin);
+	_pin3Port 	= digitalPinToPort(in3Pin);
+    _pin4Port 	= digitalPinToPort(in4Pin);
 
-    _in1PinBit = digitalPinToBitMask(in1Pin);
-    _in2PinBit = digitalPinToBitMask(in2Pin);
-    _in3PinBit = digitalPinToBitMask(in3Pin);
-    _in4PinBit = digitalPinToBitMask(in4Pin);
+    _pin1PortBit 	= digitalPinToBitMask(in1Pin);
+    _pin2PortBit	= digitalPinToBitMask(in2Pin);
+    _pin3PortBit 	= digitalPinToBitMask(in3Pin);
+    _pin4PortBit 	= digitalPinToBitMask(in4Pin);
 
 //#else #define for other architectures
 #endif
@@ -31,8 +34,11 @@ StepMotor::StepMotor(
 void StepMotor::begin(){
 	
 	// Set Output PinMode and Turn Off to save current
-    // PORT_OUTPUT()
-    _release_pins();
+    pin1_output();
+	pin2_output();
+	pin3_output();
+	pin4_output();
+    clearPinPort();
 }
 
 /*!
@@ -41,8 +47,11 @@ void StepMotor::begin(){
 void StepMotor::end(){
 	
 	// Set Input PinMode and Turn Off to save current
-    // PORT_INPUT()
-    _release_pins(); 
+    pin1_input();
+	pin2_input();
+	pin3_input();
+	pin4_input();
+    clearPinPort(); 
 }
 
 /*!
@@ -65,21 +74,13 @@ void StepMotor::setMov(	uint16_t nSteps,
 		_UNI_CTR_CLKWISE_ROT_FULL_TORQUE(nSteps, speed);
 	
 	// Turn off StepMotor pins to save current
-	_release_pins();
+	clearPinPort();
 }
 
 
 /***********************************************************
  *  INTERNAL METHODS *
  *********************************************************** /
-
- /*!
- * \brief Turn off pins to save current
- */
-void StepMotor::_release_pins(){
-
-	writeToPort(0x00);
-}
 
 /*!
  * \brief Set which motor type will be used.
@@ -119,7 +120,7 @@ void StepMotor::_rotate_stepMotor(uint8_t *stepSequenceMatrix, uint16_t nSteps, 
 		uint8_t currentStep = (0x0003 & i);
 
 		// writing nibble to a PORT
-		writeToPort(stepSequenceMatrix[currentStep] & 0x0f);
+		writeToPort(stepSequenceMatrix[currentStep] & 0x0F);
 
 		// stop step until the next step -> impacts on motor velocity
 		stepDelay(delay_ms);		
