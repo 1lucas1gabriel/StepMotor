@@ -2,7 +2,7 @@ Required Changes:
 0. Study Arduino StepMotor library in order to capture additional insights
 [DONE] 1. Adjust delay function to be absent of specific library/architecture 
 2. Document port (8bits) over pin conection required (4 pins) | In1 | In2 | In3 | In4 |
-3. Implement function to write values on uC port (e.g. DDR1)
+3. Implement function to write values on uC port (e.g. DDR1) - version2 library - compare perfomance
 [DONE] 4. Implement matrix mapping for different motor step types.
 [DONE] 5. Refactor functions names and structure when writing motor steps (unipolar, bipolar, etc)
 [DONE] 6. Refactor enumeration and name conventions
@@ -22,7 +22,7 @@ Library Requirements:
 
 Functional Requirements:
 1. StepMotor shall allow motor speed control to the user
-2. _rotate_stepMotor
-3. setMov
+[DONE] 2. _rotate_stepMotor
+[DONE] 3. setMov
 [DONE] 4. begin(), end(), 
-5. writeToPort, clearPinPort functions
+[DEPRECATED] 5. writeToPort, clearPinPort functions => _set_stepCmd(nibble_cmd)

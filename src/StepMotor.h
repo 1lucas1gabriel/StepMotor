@@ -18,20 +18,24 @@
  *  pin connection (nibble_cmd)		   | In1| In2| In3| In4|
  * 									   ---------------------				
  * 
- * 									0b00001000 => In1
- * 									0b00010000 => In1
- * 
- * 										  1010
- * 										 1010
- * 
  * ***************************************************************/
 
 #ifdef __AVR
 #include <Arduino.h>
 
-#define writeToPort(nibble_cmd)	{ *portOutputRegister(_pin1Port) |=  (nibble_cmd << X);}
-#define clearPinPort()			{ *portOutputRegister(_pin1Port) &= ~(0x0F << X);}
+//#define writeToPort(nibble_cmd)	{ *portOutputRegister(_pin1Port) |=  (nibble_cmd << X);}
+//#define clearPinPort()			{ *portOutputRegister(_pin1Port) &= ~(0x0F << X);}
 #define stepDelay(delayTime)	{ delay(delayTime);}
+
+#define pin1_high()				{ *portOutputRegister(_pin1Port) |=  _pin1PortBit;}
+#define pin2_high()				{ *portOutputRegister(_pin2Port) |=  _pin2PortBit;}
+#define pin3_high()				{ *portOutputRegister(_pin3Port) |=  _pin3PortBit;}
+#define pin4_high()				{ *portOutputRegister(_pin4Port) |=  _pin4PortBit;}
+
+#define pin1_low()				{ *portOutputRegister(_pin1Port) &=  ~_pin1PortBit;}
+#define pin2_low()				{ *portOutputRegister(_pin2Port) &=  ~_pin2PortBit;}
+#define pin3_low()				{ *portOutputRegister(_pin3Port) &=  ~_pin3PortBit;}
+#define pin4_low()				{ *portOutputRegister(_pin4Port) &=  ~_pin4PortBit;}
 
 #define pin1_input()			{ *portModeRegister(_pin1Port) &= ~_pin1PortBit;}
 #define pin2_input()			{ *portModeRegister(_pin2Port) &= ~_pin2PortBit;}
@@ -144,7 +148,8 @@ protected:
 	
 	void _setMotorType(SM_motortype_t motorType);
 	void _setTorqueForce(SM_torqueforce_t torqueForce);
-	void _rotate_stepMotor(uint8_t *stepSequenceMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms);
+	void _rotate_stepMotor(uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms);
+	void _set_stepCmd(uint8_t nibble_cmd);
 };
 
 #endif // STEP_MOTOR_H
