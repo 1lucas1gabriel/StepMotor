@@ -56,55 +56,57 @@
  * ***********************************************************/
 
 // Full Step and Maximum Torque (2 phase ON per step)
-static const uint8_t uni_4phase_clock_fullstep_torque[4] 			= {0x9, 0x3, 0x6, 0xC};
-static const uint8_t uni_4phase_counter_clock_fullstep_torque[4] 	= {0xC, 0x6, 0x3, 0x9};
+static const uint8_t uni_4phase_fullstep_maxtorque_clk[4] 		= {0x9, 0x3, 0x6, 0xC};
+static const uint8_t uni_4phase_fullstep_maxtorque_ctr_clk[4] 	= {0xC, 0x6, 0x3, 0x9};
 
-// Full Step and Reduced Torque (1 phase ON per step)
-static const uint8_t uni_4phase_clock_fullstep[4] 					= {0x8, 0x1, 0x2, 0x4};
-static const uint8_t uni_4phase_counter_clock_fullstep[4] 			= {0x4, 0x2, 0x1, 0x8};
+// Full Step and Minimum Torque (1 phase ON per step)
+static const uint8_t uni_4phase_fullstep_mintorque_clk[4] 		= {0x8, 0x1, 0x2, 0x4};
+static const uint8_t uni_4phase_fullstep_mintorque_ctr_clk[4] 	= {0x4, 0x2, 0x1, 0x8};
 
+// TBD
 // Half Step (Mix of 1 and 2 Phase ON per step)
-static const uint8_t uni_4phase_clock_halfstep[8] 					= {0x9, 0x1, 0x3, 0x2, 0x6, 0x4, 0xC, 0x8};
-static const uint8_t uni_4phase_counter_clock_halfstep[8] 			= {0x8, 0xC, 0x4, 0x6, 0x2, 0x3, 0x1, 0x9};
+// static const uint8_t uni_4phase_halfstep_clk[8] 				= {0x9, 0x1, 0x3, 0x2, 0x6, 0x4, 0xC, 0x8};
+// static const uint8_t uni_4phase_halfstep_ctr_clk[8] 			= {0x8, 0xC, 0x4, 0x6, 0x2, 0x3, 0x1, 0x9};
 
 
 // Full Step and Maximum Torque (2 phase ON per step)
-static const uint8_t bi_2phase_clock_fullstep_torque[4] 			= {0xA, 0x9, 0x5, 0x6};
-static const uint8_t bi_2phase_counter_clock_fullstep_torque[4] 	= {0x6, 0x5, 0x9, 0xA};
+static const uint8_t bi_2phase_fullstep_maxtorque_clk[4] 		= {0xA, 0x9, 0x5, 0x6};
+static const uint8_t bi_2phase_fullstep_maxtorque_ctr_clk[4] 	= {0x6, 0x5, 0x9, 0xA};
 
-// Full Step and Reduced Torque (1 phase ON per step)
-static const uint8_t bi_2phase_clock_fullstep[4] 					= {0x8, 0x1, 0x4, 0x2};
-static const uint8_t bi_2phase_counter_clock_fullstep[4] 			= {0x2, 0x4, 0x1, 0x8};
+// Full Step and Minimum Torque (1 phase ON per step)
+static const uint8_t bi_2phase_fullstep_mintorque_clk[4] 		= {0x8, 0x1, 0x4, 0x2};
+static const uint8_t bi_2phase_fullstep_mintorque_ctr_clk[4]	= {0x2, 0x4, 0x1, 0x8};
 
+// TBD
 // Half Step (Mix of 1 and 2 Phase ON per step)
-static const uint8_t bi_2phase_clock_halfstep[8] 					= {0x8, 0x9, 0x1, 0x5, 0x4, 0x6, 0x2, 0xA};
-static const uint8_t bi_2phase_counter_clock_halfstep[8] 			= {0xA, 0x2, 0x6, 0x4, 0x5, 0x1, 0x9, 0x8};
+//static const uint8_t bi_2phase_halfstep_clk[8]				= {0x8, 0x9, 0x1, 0x5, 0x4, 0x6, 0x2, 0xA};
+//static const uint8_t bi_2phase_halfstep_ctr_clk[8] 			= {0xA, 0x2, 0x6, 0x4, 0x5, 0x1, 0x9, 0x8};
 
 
 
 typedef enum{	
 
-	UNIPOLAR_4PHASE		= 0x00, 
-	BIPOLAR_2PHASE		= 0x01
+	UNIPOLAR_4PHASE		= 0b00, 
+	BIPOLAR_2PHASE		= 0b01
 } SM_motortype_t;
 
 typedef enum {
 	
-	HALF_TORQUE			= 0x00, 
-	FULL_TORQUE 		= 0x01
+	MIN_TORQUE			= 0b00, 
+	MAX_TORQUE	 		= 0b01
 } SM_torqueforce_t;
 
 typedef enum {
 	
-	CLOCKWISE			= 0x00, 
-	COUNTER_CLOCKWISE	= 0x01
+	CLOCKWISE			= 0b00, 
+	COUNTER_CLOCKWISE	= 0b01
 } SM_direction_t;
 
 typedef enum {
 	
-	SLOW_MS				= 100, 
-	MEDIUM_MS			= 50,
-	FAST_MS 			= 30
+	SLOW_MS				= 50, 
+	MEDIUM_MS			= 30,
+	FAST_MS 			= 10
 } SM_stepdelay_t;
 
 

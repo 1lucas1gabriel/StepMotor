@@ -14,12 +14,12 @@ StepMotor::StepMotor(
 
 #ifdef __AVR
     // Map pins to according PORT and bit position (AVR targets only)
-    _pin1Port 	= digitalPinToPort(in1Pin);
-	_pin2Port 	= digitalPinToPort(in2Pin);
-	_pin3Port 	= digitalPinToPort(in3Pin);
-    _pin4Port 	= digitalPinToPort(in4Pin);
+    _pin1Port 		= digitalPinToPort(in1Pin);
+	_pin2Port 		= digitalPinToPort(in2Pin);
+	_pin3Port 		= digitalPinToPort(in3Pin);
+    _pin4Port 		= digitalPinToPort(in4Pin);
 
-    _pin1PortBit 	= digitalPinToBitMask(in1Pin);
+    _pin1PortBit	= digitalPinToBitMask(in1Pin);
     _pin2PortBit	= digitalPinToBitMask(in2Pin);
     _pin3PortBit 	= digitalPinToBitMask(in3Pin);
     _pin4PortBit 	= digitalPinToBitMask(in4Pin);
@@ -59,21 +59,53 @@ void StepMotor::end(){
  */
 void StepMotor::setMov(	uint16_t nSteps, 
 						SM_stepdelay_t delay_ms, 
-						SM_direction_t direction){	
-	
-	if(_motorType == BIPOLAR_2PHASE && direction == CLOCKWISE)
-		_rotate_stepMotor(bi_2phase_clock_fullstep_torque, true, nSteps, delay_ms);
+						SM_direction_t direction){
 
-	if(_motorType == BIPOLAR_2PHASE && direction == COUNTER_CLOCKWISE)
-		_rotate_stepMotor(bi_2phase_counter_clock_fullstep_torque, true, nSteps, delay_ms);
+	/*-------------------------------------------------------
+	 *| _motorType 	| _torqueForce 	| direction | cmd (BIN) |
+	 *-------------------------------------------------------
+	 *|	UNI_4PHASE	| MIN_TORQUE	| CLK		| 0b0000 	|
+	 *|	UNI_4PHASE	| MIN_TORQUE	| CTR_CLK	| 0b0001 	|
+	 *|	UNI_4PHASE	| MAX_TORQUE	| CLK		| 0b0010 	|
+	 *|	UNI_4PHASE	| MAX_TORQUE	| CTR_CLK	| 0b0011 	|
+	 *|	BI_2PHASE	| MIN_TORQUE	| CLK		| 0b0100 	|
+	 *|	BI_2PHASE	| MIN_TORQUE	| CTR_CLK	| 0b0101 	|
+	 *|	BI_2PHASE	| MAX_TORQUE	| CLK		| 0b0110 	|
+	 *|	BI_2PHASE	| MAX_TORQUE	| CTR_CLK	| 0b0111 	|
+	 *-------------------------------------------------------
+	 */
 
-	if(_motorType == UNIPOLAR_4PHASE && direction == CLOCKWISE)
-		_rotate_stepMotor(uni_4phase_clock_fullstep_torque, true, nSteps, delay_ms);
+	uint8_t cmd = (_motorType << 2) | ((_torqueForce << 1) | direction);
 
-	if(_motorType == UNIPOLAR_4PHASE && direction == COUNTER_CLOCKWISE)
-		_rotate_stepMotor(uni_4phase_counter_clock_fullstep_torque,	true, nSteps, delay_ms);
+	switch (cmd){
 
-	// HALF_TORQUE. really half torque or half step or both?	
+	case 0:
+		_rotate_stepMotor(uni_4phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
+		break;
+	case 1:
+		_rotate_stepMotor(uni_4phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
+		break;
+	case 2:
+		_rotate_stepMotor(uni_4phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
+		break;
+	case 3:
+		_rotate_stepMotor(uni_4phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
+		break;
+	case 4:
+		_rotate_stepMotor(bi_2phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
+		break;
+	case 5:
+		_rotate_stepMotor(bi_2phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
+		break;
+	case 6:
+		_rotate_stepMotor(bi_2phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
+		break;
+	case 7:
+		_rotate_stepMotor(bi_2phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
+		break;	
+	default:
+		break;
+	}
 }
 
 
