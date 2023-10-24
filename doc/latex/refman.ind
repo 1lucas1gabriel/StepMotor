@@ -1,46 +1,55 @@
 \begin{theindex}
 
-  \item {\_BI\_CLKWISE\_ROT\_FULL\_TORQUE}
+  \item {\_control\_stepCmd}
     \subitem {StepMotor}, \hyperpage{6}
-  \item {\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}
-    \subitem {StepMotor}, \hyperpage{6}
-  \item {\_RELEASE\_PINS}
-    \subitem {StepMotor}, \hyperpage{6}
-  \item {\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE}
-    \subitem {StepMotor}, \hyperpage{7}
-  \item {\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}
-    \subitem {StepMotor}, \hyperpage{7}
-  \item {\_in1Pin}
+  \item {\_motorType}
     \subitem {StepMotor}, \hyperpage{8}
-  \item {\_in2Pin}
+  \item {\_pin1Port}
     \subitem {StepMotor}, \hyperpage{8}
-  \item {\_in3Pin}
+  \item {\_pin1PortBit}
     \subitem {StepMotor}, \hyperpage{8}
-  \item {\_in4Pin}
-    \subitem {StepMotor}, \hyperpage{8}
-  \item {\_motorT}
+  \item {\_pin2Port}
     \subitem {StepMotor}, \hyperpage{9}
-  \item {\_torqueF}
+  \item {\_pin2PortBit}
     \subitem {StepMotor}, \hyperpage{9}
+  \item {\_pin3Port}
+    \subitem {StepMotor}, \hyperpage{9}
+  \item {\_pin3PortBit}
+    \subitem {StepMotor}, \hyperpage{9}
+  \item {\_pin4Port}
+    \subitem {StepMotor}, \hyperpage{9}
+  \item {\_pin4PortBit}
+    \subitem {StepMotor}, \hyperpage{9}
+  \item {\_setMotorType}
+    \subitem {StepMotor}, \hyperpage{7}
+  \item {\_setTorqueForce}
+    \subitem {StepMotor}, \hyperpage{7}
+  \item {\_set\_stepCmd}
+    \subitem {StepMotor}, \hyperpage{7}
+  \item {\_torqueForce}
+    \subitem {StepMotor}, \hyperpage{10}
 
   \indexspace
 
   \item {begin}
     \subitem {StepMotor}, \hyperpage{7}
-  \item {Bipolar}
-    \subitem {StepMotor.h}, \hyperpage{15}
+  \item {bi\_2phase\_fullstep\_maxtorque\_clk}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {bi\_2phase\_fullstep\_mintorque\_clk}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {bi\_2phase\_fullstep\_mintorque\_ctr\_clk}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {BIPOLAR\_2PHASE}
+    \subitem {StepMotor.h}, \hyperpage{13}
 
   \indexspace
 
-  \item {Clk}
-    \subitem {StepMotor.h}, \hyperpage{15}
-  \item {CtrClk}
-    \subitem {StepMotor.h}, \hyperpage{15}
-
-  \indexspace
-
-  \item {directRot}
-    \subitem {StepMotor.h}, \hyperpage{15}
+  \item {CLOCKWISE}
+    \subitem {StepMotor.h}, \hyperpage{13}
+  \item {COUNTER\_CLOCKWISE}
+    \subitem {StepMotor.h}, \hyperpage{13}
 
   \indexspace
 
@@ -49,116 +58,90 @@
 
   \indexspace
 
-  \item {Full}
-    \subitem {StepMotor.h}, \hyperpage{15}
+  \item {FAST\_MS}
+    \subitem {StepMotor.h}, \hyperpage{14}
 
   \indexspace
 
-  \item {Half}
-    \subitem {StepMotor.h}, \hyperpage{15}
+  \item {MAX\_TORQUE}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {MEDIUM\_MS}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {MIN\_TORQUE}
+    \subitem {StepMotor.h}, \hyperpage{14}
 
   \indexspace
 
-  \item {IN1\_HIGH}
-    \subitem {StepMotor.h}, \hyperpage{13}
-  \item {IN1\_INPUT}
-    \subitem {StepMotor.h}, \hyperpage{13}
-  \item {IN1\_LOW}
-    \subitem {StepMotor.h}, \hyperpage{13}
-  \item {IN1\_OUTPUT}
-    \subitem {StepMotor.h}, \hyperpage{13}
-  \item {IN2\_HIGH}
-    \subitem {StepMotor.h}, \hyperpage{13}
-  \item {IN2\_INPUT}
-    \subitem {StepMotor.h}, \hyperpage{13}
-  \item {IN2\_LOW}
-    \subitem {StepMotor.h}, \hyperpage{13}
-  \item {IN2\_OUTPUT}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN3\_HIGH}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN3\_INPUT}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN3\_LOW}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN3\_OUTPUT}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN4\_HIGH}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN4\_INPUT}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN4\_LOW}
-    \subitem {StepMotor.h}, \hyperpage{14}
-  \item {IN4\_OUTPUT}
-    \subitem {StepMotor.h}, \hyperpage{15}
-
-  \indexspace
-
-  \item {motorType}
-    \subitem {StepMotor.h}, \hyperpage{15}
-
-  \indexspace
-
-  \item {setMotorType}
-    \subitem {StepMotor}, \hyperpage{7}
   \item {setMov}
-    \subitem {StepMotor}, \hyperpage{7}
-  \item {setTorqueForce}
     \subitem {StepMotor}, \hyperpage{8}
+  \item {SLOW\_MS}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {SM\_direction\_t}
+    \subitem {StepMotor.h}, \hyperpage{13}
+  \item {SM\_motortype\_t}
+    \subitem {StepMotor.h}, \hyperpage{13}
+  \item {SM\_stepdelay\_t}
+    \subitem {StepMotor.h}, \hyperpage{13}
+  \item {SM\_torqueforce\_t}
+    \subitem {StepMotor.h}, \hyperpage{14}
   \item {StepMotor}, \hyperpage{5}
-    \subitem {\_BI\_CLKWISE\_ROT\_FULL\_TORQUE}, \hyperpage{6}
-    \subitem {\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}, \hyperpage{6}
-    \subitem {\_RELEASE\_PINS}, \hyperpage{6}
-    \subitem {\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE}, \hyperpage{7}
-    \subitem {\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}, \hyperpage{7}
-    \subitem {\_in1Pin}, \hyperpage{8}
-    \subitem {\_in2Pin}, \hyperpage{8}
-    \subitem {\_in3Pin}, \hyperpage{8}
-    \subitem {\_in4Pin}, \hyperpage{8}
-    \subitem {\_motorT}, \hyperpage{9}
-    \subitem {\_torqueF}, \hyperpage{9}
+    \subitem {\_control\_stepCmd}, \hyperpage{6}
+    \subitem {\_motorType}, \hyperpage{8}
+    \subitem {\_pin1Port}, \hyperpage{8}
+    \subitem {\_pin1PortBit}, \hyperpage{8}
+    \subitem {\_pin2Port}, \hyperpage{9}
+    \subitem {\_pin2PortBit}, \hyperpage{9}
+    \subitem {\_pin3Port}, \hyperpage{9}
+    \subitem {\_pin3PortBit}, \hyperpage{9}
+    \subitem {\_pin4Port}, \hyperpage{9}
+    \subitem {\_pin4PortBit}, \hyperpage{9}
+    \subitem {\_setMotorType}, \hyperpage{7}
+    \subitem {\_setTorqueForce}, \hyperpage{7}
+    \subitem {\_set\_stepCmd}, \hyperpage{7}
+    \subitem {\_torqueForce}, \hyperpage{10}
     \subitem {begin}, \hyperpage{7}
     \subitem {end}, \hyperpage{7}
-    \subitem {setMotorType}, \hyperpage{7}
-    \subitem {setMov}, \hyperpage{7}
-    \subitem {setTorqueForce}, \hyperpage{8}
+    \subitem {setMov}, \hyperpage{8}
     \subitem {StepMotor}, \hyperpage{6}
   \item {StepMotor.cpp}, \hyperpage{11}
   \item {StepMotor.h}, \hyperpage{11}
-    \subitem {Bipolar}, \hyperpage{15}
-    \subitem {Clk}, \hyperpage{15}
-    \subitem {CtrClk}, \hyperpage{15}
-    \subitem {directRot}, \hyperpage{15}
-    \subitem {Full}, \hyperpage{15}
-    \subitem {Half}, \hyperpage{15}
-    \subitem {IN1\_HIGH}, \hyperpage{13}
-    \subitem {IN1\_INPUT}, \hyperpage{13}
-    \subitem {IN1\_LOW}, \hyperpage{13}
-    \subitem {IN1\_OUTPUT}, \hyperpage{13}
-    \subitem {IN2\_HIGH}, \hyperpage{13}
-    \subitem {IN2\_INPUT}, \hyperpage{13}
-    \subitem {IN2\_LOW}, \hyperpage{13}
-    \subitem {IN2\_OUTPUT}, \hyperpage{14}
-    \subitem {IN3\_HIGH}, \hyperpage{14}
-    \subitem {IN3\_INPUT}, \hyperpage{14}
-    \subitem {IN3\_LOW}, \hyperpage{14}
-    \subitem {IN3\_OUTPUT}, \hyperpage{14}
-    \subitem {IN4\_HIGH}, \hyperpage{14}
-    \subitem {IN4\_INPUT}, \hyperpage{14}
-    \subitem {IN4\_LOW}, \hyperpage{14}
-    \subitem {IN4\_OUTPUT}, \hyperpage{15}
-    \subitem {motorType}, \hyperpage{15}
-    \subitem {torqueForce}, \hyperpage{15}
-    \subitem {Unipolar}, \hyperpage{15}
+    \subitem {bi\_2phase\_fullstep\_maxtorque\_clk}, \hyperpage{14}
+    \subitem {bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}, 
+		\hyperpage{14}
+    \subitem {bi\_2phase\_fullstep\_mintorque\_clk}, \hyperpage{14}
+    \subitem {bi\_2phase\_fullstep\_mintorque\_ctr\_clk}, 
+		\hyperpage{14}
+    \subitem {BIPOLAR\_2PHASE}, \hyperpage{13}
+    \subitem {CLOCKWISE}, \hyperpage{13}
+    \subitem {COUNTER\_CLOCKWISE}, \hyperpage{13}
+    \subitem {FAST\_MS}, \hyperpage{14}
+    \subitem {MAX\_TORQUE}, \hyperpage{14}
+    \subitem {MEDIUM\_MS}, \hyperpage{14}
+    \subitem {MIN\_TORQUE}, \hyperpage{14}
+    \subitem {SLOW\_MS}, \hyperpage{14}
+    \subitem {SM\_direction\_t}, \hyperpage{13}
+    \subitem {SM\_motortype\_t}, \hyperpage{13}
+    \subitem {SM\_stepdelay\_t}, \hyperpage{13}
+    \subitem {SM\_torqueforce\_t}, \hyperpage{14}
+    \subitem {uni\_4phase\_fullstep\_maxtorque\_clk}, \hyperpage{14}
+    \subitem {uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}, 
+		\hyperpage{15}
+    \subitem {uni\_4phase\_fullstep\_mintorque\_clk}, \hyperpage{15}
+    \subitem {uni\_4phase\_fullstep\_mintorque\_ctr\_clk}, 
+		\hyperpage{15}
+    \subitem {UNIPOLAR\_4PHASE}, \hyperpage{13}
 
   \indexspace
 
-  \item {torqueForce}
+  \item {uni\_4phase\_fullstep\_maxtorque\_clk}
+    \subitem {StepMotor.h}, \hyperpage{14}
+  \item {uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}
     \subitem {StepMotor.h}, \hyperpage{15}
-
-  \indexspace
-
-  \item {Unipolar}
+  \item {uni\_4phase\_fullstep\_mintorque\_clk}
     \subitem {StepMotor.h}, \hyperpage{15}
+  \item {uni\_4phase\_fullstep\_mintorque\_ctr\_clk}
+    \subitem {StepMotor.h}, \hyperpage{15}
+  \item {UNIPOLAR\_4PHASE}
+    \subitem {StepMotor.h}, \hyperpage{13}
 
 \end{theindex}

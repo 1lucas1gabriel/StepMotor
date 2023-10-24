@@ -1,0 +1,55 @@
+Required Changes\+:
+\begin{DoxyEnumerate}
+\item Change notation method to doxygen documentation
+\end{DoxyEnumerate}
+
+Best Practices Reference\+: \href{https://stackoverflow.com/questions/1805351/best-practices-for-reusable-embedded-c}{\texttt{ https\+://stackoverflow.\+com/questions/1805351/best-\/practices-\/for-\/reusable-\/embedded-\/c}}
+
+\DoxyHorRuler{0}
+ L\+I\+B\+R\+A\+RY D\+E\+V\+O\+PS R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+TS
+
+
+\begin{DoxyEnumerate}
+\item Library shall use configuration files (Header file) to set project specific configs (e.\+g. pin config, function mapping)
+\item Library shall have a documented A\+PI (including R\+E\+A\+D\+M\+E.\+md file and Git\+Hub page)
+\item Library shall be tested through unit tests
+\item Library shall use a control version system (branch for QA, dev, releases)
+\item Library shall have a license to use
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+ C\+O\+N\+C\+E\+P\+T\+U\+AL R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+TS W\+H\+AT? \mbox{[}D\+O\+NE\mbox{]} 1. User shall be allowed to control Step motor speed. \mbox{[}D\+O\+NE\mbox{]} 2. User shall be allowed to control the rotational direction of Step Motor (Clockwise / Counter Clockwise). \mbox{[}D\+O\+NE\mbox{]} 3. User shall define required torque applied by the step motor (Max, Min). \mbox{[}D\+O\+NE\mbox{]} 4. User shall be allowed to use the library with unipolar / bipolar step motors. \mbox{[}D\+O\+NE\mbox{]} 5. User shall be allowed to choose any M\+CU digital pin for the Step Motor connections.
+\begin{DoxyEnumerate}
+\item User shall set maximum amount of steps allowed to the Step Motor (it will lead to counting steps).
+\end{DoxyEnumerate}
+
+H\+OW? \mbox{[}I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+SS\mbox{]} 1. Library shall be a general purpose library (absent of architecture / platform). \mbox{[}D\+O\+NE\mbox{]} 2. User shall always define 4 digital pin connections for the Step Motor control. \mbox{[}D\+O\+NE\mbox{]} 3. Library shall only control the Step Motor by using full step method.
+
+\DoxyHorRuler{0}
+ I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+TS \mbox{[}D\+O\+NE\mbox{]} 1. Implement a matrix mapping method to command different Step Motor types. \mbox{[}D\+O\+NE\mbox{]} 2. Enumeration and matrixes shall follow a convention for readbility. \mbox{[}T\+O\+\_\+\+DO\mbox{]}3. Implement the delay control (btw step commands) following R\+T\+OS?
+
+\mbox{[}F\+U\+T\+U\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON\mbox{]} 1. Library shall define a write\+To\+Port function. \mbox{[}F\+U\+T\+U\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON\mbox{]} 2. write\+To\+Port function shall set all 4 registers (pin connections) at once. \mbox{[}F\+U\+T\+U\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON\mbox{]} 3. write\+To\+Port function shall be enabled by the user at A\+PI (High) level. \mbox{[}F\+U\+T\+U\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON\mbox{]} 4. User shall ensure all 4 pins are properly connected to enable writing to a Port.
+
+\DoxyHorRuler{0}
+ C\+A\+L\+I\+B\+R\+A\+T\+I\+ON
+\begin{DoxyEnumerate}
+\item S\+L\+OW S\+P\+E\+ED
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item base (360º) rotation\+: 576 steps
+\item join (360º) rotation\+: 1960 steps
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item M\+E\+D\+I\+UM S\+P\+E\+ED
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item base (360º) rotation\+: 578 steps
+\item join (360º) rotation\+: 1960 steps
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item F\+A\+ST S\+P\+E\+ED
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item base (360º) rotation\+: 584 steps
+\item join (360º) rotation\+: 1960 steps 
+\end{DoxyItemize}

@@ -83,77 +83,87 @@ $(document).ready(function(){initNavTree('classStepMotor.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classStepMotor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">StepMotor Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> Class.  
+ <a href="classStepMotor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="StepMotor_8h_source.html">StepMotor.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a321cb3fe7dbbbc1049d0efe726e3064d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a321cb3fe7dbbbc1049d0efe726e3064d">StepMotor</a> (uint8_t in1Pin, uint8_t in2Pin, uint8_t in3Pin, uint8_t in4Pin, <a class="el" href="StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54">motorType</a> motorT, <a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1">torqueForce</a> torqueF=<a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679">Full</a>)</td></tr>
-<tr class="separator:a321cb3fe7dbbbc1049d0efe726e3064d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62664c5365fc08abaafe260207067ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ad62664c5365fc08abaafe260207067ec">StepMotor</a> (<a class="el" href="StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6">SM_motortype_t</a> motorType, <a class="el" href="StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0">SM_torqueforce_t</a> torqueForce, uint8_t in1Pin, uint8_t in2Pin, uint8_t in3Pin, uint8_t in4Pin)</td></tr>
+<tr class="memdesc:ad62664c5365fc08abaafe260207067ec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> Class constructor.  <a href="classStepMotor.html#ad62664c5365fc08abaafe260207067ec">More...</a><br /></td></tr>
+<tr class="separator:ad62664c5365fc08abaafe260207067ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5cd93575892e8d139e3437bc87198c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ada5cd93575892e8d139e3437bc87198c">begin</a> ()</td></tr>
-<tr class="memdesc:ada5cd93575892e8d139e3437bc87198c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="classStepMotor.html">StepMotor</a> controller.  <a href="classStepMotor.html#ada5cd93575892e8d139e3437bc87198c">More...</a><br /></td></tr>
+<tr class="memdesc:ada5cd93575892e8d139e3437bc87198c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> controller pins.  <a href="classStepMotor.html#ada5cd93575892e8d139e3437bc87198c">More...</a><br /></td></tr>
 <tr class="separator:ada5cd93575892e8d139e3437bc87198c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bff223e23dcecf58dff48bdd7134fff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a3bff223e23dcecf58dff48bdd7134fff">end</a> ()</td></tr>
-<tr class="memdesc:a3bff223e23dcecf58dff48bdd7134fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release <a class="el" href="classStepMotor.html">StepMotor</a> controller pins.  <a href="classStepMotor.html#a3bff223e23dcecf58dff48bdd7134fff">More...</a><br /></td></tr>
+<tr class="memdesc:a3bff223e23dcecf58dff48bdd7134fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> controller pins.  <a href="classStepMotor.html#a3bff223e23dcecf58dff48bdd7134fff">More...</a><br /></td></tr>
 <tr class="separator:a3bff223e23dcecf58dff48bdd7134fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f7f0e92d31d1ded6d4d9ef8e0f0a75"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a45f7f0e92d31d1ded6d4d9ef8e0f0a75">setMov</a> (uint16_t nSteps, uint8_t speed=1, <a class="el" href="StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790">directRot</a> directR=<a class="el" href="StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0">Clk</a>)</td></tr>
-<tr class="memdesc:a45f7f0e92d31d1ded6d4d9ef8e0f0a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate <a class="el" href="classStepMotor.html">StepMotor</a> nSteps at the established speed and direction.  <a href="classStepMotor.html#a45f7f0e92d31d1ded6d4d9ef8e0f0a75">More...</a><br /></td></tr>
-<tr class="separator:a45f7f0e92d31d1ded6d4d9ef8e0f0a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae06ebbaffa422c7e3ba8104e9da1b9d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ae06ebbaffa422c7e3ba8104e9da1b9d0">setMotorType</a> (<a class="el" href="StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54">motorType</a> motorT)</td></tr>
-<tr class="memdesc:ae06ebbaffa422c7e3ba8104e9da1b9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set which motor type will be used (Bipolar or Unipolar)  <a href="classStepMotor.html#ae06ebbaffa422c7e3ba8104e9da1b9d0">More...</a><br /></td></tr>
-<tr class="separator:ae06ebbaffa422c7e3ba8104e9da1b9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f6c8c618162d9e2f514ebebe5574876"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a3f6c8c618162d9e2f514ebebe5574876">setTorqueForce</a> (<a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1">torqueForce</a> torqueF)</td></tr>
-<tr class="memdesc:a3f6c8c618162d9e2f514ebebe5574876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set which torque force will be used (Half or Full)  <a href="classStepMotor.html#a3f6c8c618162d9e2f514ebebe5574876">More...</a><br /></td></tr>
-<tr class="separator:a3f6c8c618162d9e2f514ebebe5574876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a63c6e766f67b1a222bafce097b7af"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a72a63c6e766f67b1a222bafce097b7af">setMov</a> (uint16_t nSteps, <a class="el" href="StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1">SM_stepdelay_t</a> delay_ms, <a class="el" href="StepMotor_8h.html#ae0c236e90ce0b9f322ce3260dc2897d9">SM_direction_t</a> direction)</td></tr>
+<tr class="memdesc:a72a63c6e766f67b1a222bafce097b7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> by nSteps at the expected direction.  <a href="classStepMotor.html#a72a63c6e766f67b1a222bafce097b7af">More...</a><br /></td></tr>
+<tr class="separator:a72a63c6e766f67b1a222bafce097b7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aee9e31cd855658d572d2ec6852782ba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#aee9e31cd855658d572d2ec6852782ba8">_RELEASE_PINS</a> ()</td></tr>
-<tr class="separator:aee9e31cd855658d572d2ec6852782ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8831e02b883f1fd854b903ff78e9ede1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a8831e02b883f1fd854b903ff78e9ede1">_BI_CLKWISE_ROT_FULL_TORQUE</a> (uint16_t nSteps, uint8_t speed)</td></tr>
-<tr class="memdesc:a8831e02b883f1fd854b903ff78e9ede1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clockwise Rotation of Bipolar Motor at Full Torque.  <a href="classStepMotor.html#a8831e02b883f1fd854b903ff78e9ede1">More...</a><br /></td></tr>
-<tr class="separator:a8831e02b883f1fd854b903ff78e9ede1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b561f6b9341723b6556e33651617aaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a7b561f6b9341723b6556e33651617aaf">_BI_CTR_CLKWISE_ROT_FULL_TORQUE</a> (uint16_t nSteps, uint8_t speed)</td></tr>
-<tr class="memdesc:a7b561f6b9341723b6556e33651617aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter Clockwise Rotation of Bipolar Motor at Full Torque.  <a href="classStepMotor.html#a7b561f6b9341723b6556e33651617aaf">More...</a><br /></td></tr>
-<tr class="separator:a7b561f6b9341723b6556e33651617aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ef32c7c1e3b84c2a10a9d6e3fd0eda8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a3ef32c7c1e3b84c2a10a9d6e3fd0eda8">_UNI_CLKWISE_ROT_FULL_TORQUE</a> (uint16_t nSteps, uint8_t speed)</td></tr>
-<tr class="memdesc:a3ef32c7c1e3b84c2a10a9d6e3fd0eda8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clockwise Rotation of Unipolar Motor at Full Torque.  <a href="classStepMotor.html#a3ef32c7c1e3b84c2a10a9d6e3fd0eda8">More...</a><br /></td></tr>
-<tr class="separator:a3ef32c7c1e3b84c2a10a9d6e3fd0eda8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14361b79e286d96d5d324633664e8ebb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a14361b79e286d96d5d324633664e8ebb">_UNI_CTR_CLKWISE_ROT_FULL_TORQUE</a> (uint16_t nSteps, uint8_t speed)</td></tr>
-<tr class="memdesc:a14361b79e286d96d5d324633664e8ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter Clockwise Rotation of Unipolar Motor at Full Torque.  <a href="classStepMotor.html#a14361b79e286d96d5d324633664e8ebb">More...</a><br /></td></tr>
-<tr class="separator:a14361b79e286d96d5d324633664e8ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9194fb22cc76cb65467b3df368931da6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a9194fb22cc76cb65467b3df368931da6">_setMotorType</a> (<a class="el" href="StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6">SM_motortype_t</a> motorType)</td></tr>
+<tr class="memdesc:a9194fb22cc76cb65467b3df368931da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> type to be used controlled.  <a href="classStepMotor.html#a9194fb22cc76cb65467b3df368931da6">More...</a><br /></td></tr>
+<tr class="separator:a9194fb22cc76cb65467b3df368931da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf9136ba3a03a10d2263dea9ad22e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#aeaf9136ba3a03a10d2263dea9ad22e95">_setTorqueForce</a> (<a class="el" href="StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0">SM_torqueforce_t</a> torqueForce)</td></tr>
+<tr class="memdesc:aeaf9136ba3a03a10d2263dea9ad22e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set torque force type to be used by <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a>.  <a href="classStepMotor.html#aeaf9136ba3a03a10d2263dea9ad22e95">More...</a><br /></td></tr>
+<tr class="separator:aeaf9136ba3a03a10d2263dea9ad22e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d021e3d99208ee6487fe17ad9d4fe43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a8d021e3d99208ee6487fe17ad9d4fe43">_control_stepCmd</a> (uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, <a class="el" href="StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1">SM_stepdelay_t</a> delay_ms)</td></tr>
+<tr class="memdesc:a8d021e3d99208ee6487fe17ad9d4fe43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control sequenced steps &amp; speed applied to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a>.  <a href="classStepMotor.html#a8d021e3d99208ee6487fe17ad9d4fe43">More...</a><br /></td></tr>
+<tr class="separator:a8d021e3d99208ee6487fe17ad9d4fe43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5e3a1ec0083d363f0cedd4e5e418bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a8a5e3a1ec0083d363f0cedd4e5e418bf">_set_stepCmd</a> (uint8_t nibble_cmd)</td></tr>
+<tr class="memdesc:a8a5e3a1ec0083d363f0cedd4e5e418bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a step command to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> pins.  <a href="classStepMotor.html#a8a5e3a1ec0083d363f0cedd4e5e418bf">More...</a><br /></td></tr>
+<tr class="separator:a8a5e3a1ec0083d363f0cedd4e5e418bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ad9742d5916a717290d087c8e1ef830da"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ad9742d5916a717290d087c8e1ef830da">_in1Pin</a></td></tr>
-<tr class="memdesc:ad9742d5916a717290d087c8e1ef830da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pole 1 pin.  <a href="classStepMotor.html#ad9742d5916a717290d087c8e1ef830da">More...</a><br /></td></tr>
-<tr class="separator:ad9742d5916a717290d087c8e1ef830da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27f9ced7fa5580c8b34471ab86024f34"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a27f9ced7fa5580c8b34471ab86024f34">_in2Pin</a></td></tr>
-<tr class="memdesc:a27f9ced7fa5580c8b34471ab86024f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pole 2 pin.  <a href="classStepMotor.html#a27f9ced7fa5580c8b34471ab86024f34">More...</a><br /></td></tr>
-<tr class="separator:a27f9ced7fa5580c8b34471ab86024f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99d46e1bb4d0d0d1095ebd14752d8fc2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a99d46e1bb4d0d0d1095ebd14752d8fc2">_in3Pin</a></td></tr>
-<tr class="memdesc:a99d46e1bb4d0d0d1095ebd14752d8fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pole 3 pin.  <a href="classStepMotor.html#a99d46e1bb4d0d0d1095ebd14752d8fc2">More...</a><br /></td></tr>
-<tr class="separator:a99d46e1bb4d0d0d1095ebd14752d8fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a278db68f60babffa7442b6157ac7abbc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a278db68f60babffa7442b6157ac7abbc">_in4Pin</a></td></tr>
-<tr class="memdesc:a278db68f60babffa7442b6157ac7abbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pole 4 pin.  <a href="classStepMotor.html#a278db68f60babffa7442b6157ac7abbc">More...</a><br /></td></tr>
-<tr class="separator:a278db68f60babffa7442b6157ac7abbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8460a9ba07f8c1b47d5d0b66fdf5e15f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54">motorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a8460a9ba07f8c1b47d5d0b66fdf5e15f">_motorT</a></td></tr>
-<tr class="memdesc:a8460a9ba07f8c1b47d5d0b66fdf5e15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motor type: Bipolar or Unipolar.  <a href="classStepMotor.html#a8460a9ba07f8c1b47d5d0b66fdf5e15f">More...</a><br /></td></tr>
-<tr class="separator:a8460a9ba07f8c1b47d5d0b66fdf5e15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9bc96a5ec7e07a8a9608867372fdb92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1">torqueForce</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ab9bc96a5ec7e07a8a9608867372fdb92">_torqueF</a></td></tr>
-<tr class="memdesc:ab9bc96a5ec7e07a8a9608867372fdb92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Torque force: Full or Half.  <a href="classStepMotor.html#ab9bc96a5ec7e07a8a9608867372fdb92">More...</a><br /></td></tr>
-<tr class="separator:ab9bc96a5ec7e07a8a9608867372fdb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a42a3bb94c27d1c746b1a61389d2ea016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6">SM_motortype_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a42a3bb94c27d1c746b1a61389d2ea016">_motorType</a></td></tr>
+<tr class="memdesc:a42a3bb94c27d1c746b1a61389d2ea016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> motor type.  <a href="classStepMotor.html#a42a3bb94c27d1c746b1a61389d2ea016">More...</a><br /></td></tr>
+<tr class="separator:a42a3bb94c27d1c746b1a61389d2ea016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac465228bd39b4bb1339d8d95a358708c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0">SM_torqueforce_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ac465228bd39b4bb1339d8d95a358708c">_torqueForce</a></td></tr>
+<tr class="memdesc:ac465228bd39b4bb1339d8d95a358708c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> torque force.  <a href="classStepMotor.html#ac465228bd39b4bb1339d8d95a358708c">More...</a><br /></td></tr>
+<tr class="separator:ac465228bd39b4bb1339d8d95a358708c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1e8c87c2496a8008bc1cbd2eecb666"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a7e1e8c87c2496a8008bc1cbd2eecb666">_pin1Port</a></td></tr>
+<tr class="memdesc:a7e1e8c87c2496a8008bc1cbd2eecb666"><td class="mdescLeft">&#160;</td><td class="mdescRight">PORT register for pin1.  <a href="classStepMotor.html#a7e1e8c87c2496a8008bc1cbd2eecb666">More...</a><br /></td></tr>
+<tr class="separator:a7e1e8c87c2496a8008bc1cbd2eecb666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff93d150206ea12fdd9842b132b4d80b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#aff93d150206ea12fdd9842b132b4d80b">_pin2Port</a></td></tr>
+<tr class="memdesc:aff93d150206ea12fdd9842b132b4d80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">PORT register for pin2.  <a href="classStepMotor.html#aff93d150206ea12fdd9842b132b4d80b">More...</a><br /></td></tr>
+<tr class="separator:aff93d150206ea12fdd9842b132b4d80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2bd1777ff97052336e330d42cb761a5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#aa2bd1777ff97052336e330d42cb761a5">_pin3Port</a></td></tr>
+<tr class="memdesc:aa2bd1777ff97052336e330d42cb761a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">PORT register for pin3.  <a href="classStepMotor.html#aa2bd1777ff97052336e330d42cb761a5">More...</a><br /></td></tr>
+<tr class="separator:aa2bd1777ff97052336e330d42cb761a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee9bc3e647ad904add295a205ef9985"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#adee9bc3e647ad904add295a205ef9985">_pin4Port</a></td></tr>
+<tr class="memdesc:adee9bc3e647ad904add295a205ef9985"><td class="mdescLeft">&#160;</td><td class="mdescRight">PORT register for pin4.  <a href="classStepMotor.html#adee9bc3e647ad904add295a205ef9985">More...</a><br /></td></tr>
+<tr class="separator:adee9bc3e647ad904add295a205ef9985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ad1ceb8d2690842277f138e496d296"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a54ad1ceb8d2690842277f138e496d296">_pin1PortBit</a></td></tr>
+<tr class="memdesc:a54ad1ceb8d2690842277f138e496d296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit number in IO register for pin1.  <a href="classStepMotor.html#a54ad1ceb8d2690842277f138e496d296">More...</a><br /></td></tr>
+<tr class="separator:a54ad1ceb8d2690842277f138e496d296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36277c15f54c96afd99fc7e9bb6328bf"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a36277c15f54c96afd99fc7e9bb6328bf">_pin2PortBit</a></td></tr>
+<tr class="memdesc:a36277c15f54c96afd99fc7e9bb6328bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit number in IO register for pin2.  <a href="classStepMotor.html#a36277c15f54c96afd99fc7e9bb6328bf">More...</a><br /></td></tr>
+<tr class="separator:a36277c15f54c96afd99fc7e9bb6328bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec325acaf8aa2d26d7c9f973aa34624"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#afec325acaf8aa2d26d7c9f973aa34624">_pin3PortBit</a></td></tr>
+<tr class="memdesc:afec325acaf8aa2d26d7c9f973aa34624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit number in IO register for pin3.  <a href="classStepMotor.html#afec325acaf8aa2d26d7c9f973aa34624">More...</a><br /></td></tr>
+<tr class="separator:afec325acaf8aa2d26d7c9f973aa34624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae07820c4d41e303d4a69e76aef76b663"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ae07820c4d41e303d4a69e76aef76b663">_pin4PortBit</a></td></tr>
+<tr class="memdesc:ae07820c4d41e303d4a69e76aef76b663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit number in IO register for pin4.  <a href="classStepMotor.html#ae07820c4d41e303d4a69e76aef76b663">More...</a><br /></td></tr>
+<tr class="separator:ae07820c4d41e303d4a69e76aef76b663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a321cb3fe7dbbbc1049d0efe726e3064d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a321cb3fe7dbbbc1049d0efe726e3064d">&#9670;&nbsp;</a></span>StepMotor()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> Class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad62664c5365fc08abaafe260207067ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62664c5365fc08abaafe260207067ec">&#9670;&nbsp;</a></span>StepMotor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,6 +171,18 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">StepMotor::StepMotor </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6">SM_motortype_t</a>&#160;</td>
+          <td class="paramname"><em>motorType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0">SM_torqueforce_t</a>&#160;</td>
+          <td class="paramname"><em>torqueForce</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>in1Pin</em>, </td>
         </tr>
@@ -180,19 +202,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>in4Pin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54">motorType</a>&#160;</td>
-          <td class="paramname"><em>motorT</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1">torqueForce</a>&#160;</td>
-          <td class="paramname"><em>torqueF</em> = <code><a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679">Full</a></code>&#160;</td>
+          <td class="paramname"><em>in4Pin</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -201,12 +211,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> Class constructor. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8831e02b883f1fd854b903ff78e9ede1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8831e02b883f1fd854b903ff78e9ede1">&#9670;&nbsp;</a></span>_BI_CLKWISE_ROT_FULL_TORQUE()</h2>
+<a id="a8d021e3d99208ee6487fe17ad9d4fe43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d021e3d99208ee6487fe17ad9d4fe43">&#9670;&nbsp;</a></span>_control_stepCmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,16 +227,28 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StepMotor::_BI_CLKWISE_ROT_FULL_TORQUE </td>
+          <td class="memname">void StepMotor::_control_stepCmd </td>
           <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>stepSequenceMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is4stepMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>nSteps</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>speed</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1">SM_stepdelay_t</a>&#160;</td>
+          <td class="paramname"><em>delay_ms</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -234,17 +258,17 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Clockwise Rotation of Bipolar Motor at Full Torque. </p>
+<p>Control sequenced steps &amp; speed applied to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a>. </p>
 
 </div>
 </div>
-<a id="a7b561f6b9341723b6556e33651617aaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b561f6b9341723b6556e33651617aaf">&#9670;&nbsp;</a></span>_BI_CTR_CLKWISE_ROT_FULL_TORQUE()</h2>
+<a id="a8a5e3a1ec0083d363f0cedd4e5e418bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5e3a1ec0083d363f0cedd4e5e418bf">&#9670;&nbsp;</a></span>_set_stepCmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,36 +277,26 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StepMotor::_BI_CTR_CLKWISE_ROT_FULL_TORQUE </td>
+          <td class="memname">void StepMotor::_set_stepCmd </td>
           <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>nSteps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>speed</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>nibble_cmd</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Counter Clockwise Rotation of Bipolar Motor at Full Torque. </p>
+<p>Set a step command to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> pins. </p>
 
 </div>
 </div>
-<a id="aee9e31cd855658d572d2ec6852782ba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee9e31cd855658d572d2ec6852782ba8">&#9670;&nbsp;</a></span>_RELEASE_PINS()</h2>
+<a id="a9194fb22cc76cb65467b3df368931da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9194fb22cc76cb65467b3df368931da6">&#9670;&nbsp;</a></span>_setMotorType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,23 +305,26 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StepMotor::_RELEASE_PINS </td>
+          <td class="memname">void StepMotor::_setMotorType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6">SM_motortype_t</a>&#160;</td>
+          <td class="paramname"><em>motorType</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Set <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> type to be used controlled. </p>
+
 </div>
 </div>
-<a id="a3ef32c7c1e3b84c2a10a9d6e3fd0eda8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ef32c7c1e3b84c2a10a9d6e3fd0eda8">&#9670;&nbsp;</a></span>_UNI_CLKWISE_ROT_FULL_TORQUE()</h2>
+<a id="aeaf9136ba3a03a10d2263dea9ad22e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf9136ba3a03a10d2263dea9ad22e95">&#9670;&nbsp;</a></span>_setTorqueForce()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,69 +333,21 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StepMotor::_UNI_CLKWISE_ROT_FULL_TORQUE </td>
+          <td class="memname">void StepMotor::_setTorqueForce </td>
           <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>nSteps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0">SM_torqueforce_t</a>&#160;</td>
+          <td class="paramname"><em>torqueForce</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>speed</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Clockwise Rotation of Unipolar Motor at Full Torque. </p>
-
-</div>
-</div>
-<a id="a14361b79e286d96d5d324633664e8ebb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14361b79e286d96d5d324633664e8ebb">&#9670;&nbsp;</a></span>_UNI_CTR_CLKWISE_ROT_FULL_TORQUE()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StepMotor::_UNI_CTR_CLKWISE_ROT_FULL_TORQUE </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>nSteps</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>speed</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Counter Clockwise Rotation of Unipolar Motor at Full Torque. </p>
+<p>Set torque force type to be used by <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a>. </p>
 
 </div>
 </div>
@@ -405,7 +374,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initialize <a class="el" href="classStepMotor.html">StepMotor</a> controller. </p>
+<p>Initialize <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> controller pins. </p>
 
 </div>
 </div>
@@ -432,40 +401,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Release <a class="el" href="classStepMotor.html">StepMotor</a> controller pins. </p>
+<p>Release <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> controller pins. </p>
 
 </div>
 </div>
-<a id="ae06ebbaffa422c7e3ba8104e9da1b9d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae06ebbaffa422c7e3ba8104e9da1b9d0">&#9670;&nbsp;</a></span>setMotorType()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StepMotor::setMotorType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54">motorType</a>&#160;</td>
-          <td class="paramname"><em>motorT</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set which motor type will be used (Bipolar or Unipolar) </p>
-
-</div>
-</div>
-<a id="a45f7f0e92d31d1ded6d4d9ef8e0f0a75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45f7f0e92d31d1ded6d4d9ef8e0f0a75">&#9670;&nbsp;</a></span>setMov()</h2>
+<a id="a72a63c6e766f67b1a222bafce097b7af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a63c6e766f67b1a222bafce097b7af">&#9670;&nbsp;</a></span>setMov()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,14 +423,14 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>speed</em> = <code>1</code>, </td>
+          <td class="paramtype"><a class="el" href="StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1">SM_stepdelay_t</a>&#160;</td>
+          <td class="paramname"><em>delay_ms</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790">directRot</a>&#160;</td>
-          <td class="paramname"><em>directR</em> = <code><a class="el" href="StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0">Clk</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="StepMotor_8h.html#ae0c236e90ce0b9f322ce3260dc2897d9">SM_direction_t</a>&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -504,41 +445,36 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Rotate <a class="el" href="classStepMotor.html">StepMotor</a> nSteps at the established speed and direction. </p>
-
-</div>
-</div>
-<a id="a3f6c8c618162d9e2f514ebebe5574876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f6c8c618162d9e2f514ebebe5574876">&#9670;&nbsp;</a></span>setTorqueForce()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StepMotor::setTorqueForce </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1">torqueForce</a>&#160;</td>
-          <td class="paramname"><em>torqueF</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
+<p>Rotate <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> by nSteps at the expected direction. </p>
+<ul>
+<li>Following table documents how internal and external variables are mapped to set an adequate movement command.</li>
+</ul>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">_motorType </th><th class="markdownTableHeadNone">_torqueForce </th><th class="markdownTableHeadNone">direction </th><th class="markdownTableHeadNone">cmd (BIN)  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">UNI_4PHASE </td><td class="markdownTableBodyNone">MIN_TORQUE </td><td class="markdownTableBodyNone">CLK </td><td class="markdownTableBodyNone">0b0000  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">UNI_4PHASE </td><td class="markdownTableBodyNone">MIN_TORQUE </td><td class="markdownTableBodyNone">CTR_CLK </td><td class="markdownTableBodyNone">0b0001  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">UNI_4PHASE </td><td class="markdownTableBodyNone">MAX_TORQUE </td><td class="markdownTableBodyNone">CLK </td><td class="markdownTableBodyNone">0b0010  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">UNI_4PHASE </td><td class="markdownTableBodyNone">MAX_TORQUE </td><td class="markdownTableBodyNone">CTR_CLK </td><td class="markdownTableBodyNone">0b0011  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">BI_2PHASE </td><td class="markdownTableBodyNone">MIN_TORQUE </td><td class="markdownTableBodyNone">CLK </td><td class="markdownTableBodyNone">0b0100  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">BI_2PHASE </td><td class="markdownTableBodyNone">MIN_TORQUE </td><td class="markdownTableBodyNone">CTR_CLK </td><td class="markdownTableBodyNone">0b0101  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">BI_2PHASE </td><td class="markdownTableBodyNone">MAX_TORQUE </td><td class="markdownTableBodyNone">CLK </td><td class="markdownTableBodyNone">0b0110  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">BI_2PHASE </td><td class="markdownTableBodyNone">MAX_TORQUE </td><td class="markdownTableBodyNone">CTR_CLK </td><td class="markdownTableBodyNone">0b0111  </td></tr>
 </table>
-</div><div class="memdoc">
-
-<p>Set which torque force will be used (Half or Full) </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad9742d5916a717290d087c8e1ef830da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9742d5916a717290d087c8e1ef830da">&#9670;&nbsp;</a></span>_in1Pin</h2>
+<a id="a42a3bb94c27d1c746b1a61389d2ea016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a3bb94c27d1c746b1a61389d2ea016">&#9670;&nbsp;</a></span>_motorType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,22 +483,22 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t StepMotor::_in1Pin</td>
+          <td class="memname"><a class="el" href="StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6">SM_motortype_t</a> StepMotor::_motorType</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pole 1 pin. </p>
+<p>Defines <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> motor type. </p>
 
 </div>
 </div>
-<a id="a27f9ced7fa5580c8b34471ab86024f34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27f9ced7fa5580c8b34471ab86024f34">&#9670;&nbsp;</a></span>_in2Pin</h2>
+<a id="a7e1e8c87c2496a8008bc1cbd2eecb666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e1e8c87c2496a8008bc1cbd2eecb666">&#9670;&nbsp;</a></span>_pin1Port</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -571,22 +507,22 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t StepMotor::_in2Pin</td>
+          <td class="memname">uint8_t StepMotor::_pin1Port</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pole 2 pin. </p>
+<p>PORT register for pin1. </p>
 
 </div>
 </div>
-<a id="a99d46e1bb4d0d0d1095ebd14752d8fc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99d46e1bb4d0d0d1095ebd14752d8fc2">&#9670;&nbsp;</a></span>_in3Pin</h2>
+<a id="a54ad1ceb8d2690842277f138e496d296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54ad1ceb8d2690842277f138e496d296">&#9670;&nbsp;</a></span>_pin1PortBit</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -595,22 +531,22 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t StepMotor::_in3Pin</td>
+          <td class="memname">uint8_t StepMotor::_pin1PortBit</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pole 3 pin. </p>
+<p>Bit number in IO register for pin1. </p>
 
 </div>
 </div>
-<a id="a278db68f60babffa7442b6157ac7abbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a278db68f60babffa7442b6157ac7abbc">&#9670;&nbsp;</a></span>_in4Pin</h2>
+<a id="aff93d150206ea12fdd9842b132b4d80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff93d150206ea12fdd9842b132b4d80b">&#9670;&nbsp;</a></span>_pin2Port</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,22 +555,22 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t StepMotor::_in4Pin</td>
+          <td class="memname">uint8_t StepMotor::_pin2Port</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pole 4 pin. </p>
+<p>PORT register for pin2. </p>
 
 </div>
 </div>
-<a id="a8460a9ba07f8c1b47d5d0b66fdf5e15f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8460a9ba07f8c1b47d5d0b66fdf5e15f">&#9670;&nbsp;</a></span>_motorT</h2>
+<a id="a36277c15f54c96afd99fc7e9bb6328bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36277c15f54c96afd99fc7e9bb6328bf">&#9670;&nbsp;</a></span>_pin2PortBit</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -643,22 +579,22 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54">motorType</a> StepMotor::_motorT</td>
+          <td class="memname">uint8_t StepMotor::_pin2PortBit</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Motor type: Bipolar or Unipolar. </p>
+<p>Bit number in IO register for pin2. </p>
 
 </div>
 </div>
-<a id="ab9bc96a5ec7e07a8a9608867372fdb92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9bc96a5ec7e07a8a9608867372fdb92">&#9670;&nbsp;</a></span>_torqueF</h2>
+<a id="aa2bd1777ff97052336e330d42cb761a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2bd1777ff97052336e330d42cb761a5">&#9670;&nbsp;</a></span>_pin3Port</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,17 +603,113 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1">torqueForce</a> StepMotor::_torqueF</td>
+          <td class="memname">uint8_t StepMotor::_pin3Port</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Torque force: Full or Half. </p>
+<p>PORT register for pin3. </p>
+
+</div>
+</div>
+<a id="afec325acaf8aa2d26d7c9f973aa34624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec325acaf8aa2d26d7c9f973aa34624">&#9670;&nbsp;</a></span>_pin3PortBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StepMotor::_pin3PortBit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bit number in IO register for pin3. </p>
+
+</div>
+</div>
+<a id="adee9bc3e647ad904add295a205ef9985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee9bc3e647ad904add295a205ef9985">&#9670;&nbsp;</a></span>_pin4Port</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StepMotor::_pin4Port</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>PORT register for pin4. </p>
+
+</div>
+</div>
+<a id="ae07820c4d41e303d4a69e76aef76b663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae07820c4d41e303d4a69e76aef76b663">&#9670;&nbsp;</a></span>_pin4PortBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StepMotor::_pin4PortBit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bit number in IO register for pin4. </p>
+
+</div>
+</div>
+<a id="ac465228bd39b4bb1339d8d95a358708c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac465228bd39b4bb1339d8d95a358708c">&#9670;&nbsp;</a></span>_torqueForce</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0">SM_torqueforce_t</a> StepMotor::_torqueForce</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defines <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> torque force. </p>
 
 </div>
 </div>

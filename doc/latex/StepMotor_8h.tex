@@ -1,14 +1,12 @@
 \hypertarget{StepMotor_8h}{}\doxysection{Step\+Motor.\+h File Reference}
 \label{StepMotor_8h}\index{StepMotor.h@{StepMotor.h}}
-{\ttfamily \#include $<$Arduino.\+h$>$}\newline
-Include dependency graph for Step\+Motor.\+h\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=149pt]{StepMotor_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+
+
+\mbox{\hyperlink{classStepMotor}{Step\+Motor}} library header file for Arduino \& A\+RM Cortex-\/\+M3 (S\+T\+M32)  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,204 +17,188 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classStepMotor}{Step\+Motor}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a9e7417a69aa5e1f9d12c3f1622e6172a}{I\+N1\+\_\+\+L\+OW}}()~\{ digital\+Write(\+\_\+in1\+Pin, L\+OW); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_ae84f1dc1d7fe75b290149ca0886e3c0b}{I\+N1\+\_\+\+H\+I\+GH}}()~\{ digital\+Write(\+\_\+in1\+Pin, H\+I\+GH);\}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a1aee991f8e4ae7d745af23f0efd045e5}{I\+N1\+\_\+\+I\+N\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in1\+Pin, I\+N\+P\+UT); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a4d8ad8d82df9787c86da69f31266d294}{I\+N1\+\_\+\+O\+U\+T\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in1\+Pin, O\+U\+T\+P\+UT);\}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a42e3e1983ddb0aa38084ae3c0c110714}{I\+N2\+\_\+\+L\+OW}}()~\{ digital\+Write(\+\_\+in2\+Pin, L\+OW); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_acbe31ede4b6aea596fda6ed572020f2e}{I\+N2\+\_\+\+H\+I\+GH}}()~\{ digital\+Write(\+\_\+in2\+Pin, H\+I\+GH);\}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_ae26b8ac22ca0203dc266cc2ed0791bfb}{I\+N2\+\_\+\+I\+N\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in2\+Pin, I\+N\+P\+UT); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a188004dc0fd3662c499432557c4848c6}{I\+N2\+\_\+\+O\+U\+T\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in2\+Pin, O\+U\+T\+P\+UT);\}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a4ae0d329339e89a8352ef2f5e39bddb5}{I\+N3\+\_\+\+L\+OW}}()~\{ digital\+Write(\+\_\+in3\+Pin, L\+OW); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_ac57045c67f3e72a448d56479b044ce0a}{I\+N3\+\_\+\+H\+I\+GH}}()~\{ digital\+Write(\+\_\+in3\+Pin, H\+I\+GH);\}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a08a2dba20c741a244513cbff85697dc2}{I\+N3\+\_\+\+I\+N\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in3\+Pin, I\+N\+P\+UT); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_ad4b6c7f03862c9e50045027a8573939b}{I\+N3\+\_\+\+O\+U\+T\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in3\+Pin, O\+U\+T\+P\+UT);\}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a03b3c26125cf009d981c2949435a0357}{I\+N4\+\_\+\+L\+OW}}()~\{ digital\+Write(\+\_\+in4\+Pin, L\+OW); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_aa581e77d9cf3fd8354fc0dc4c16174fe}{I\+N4\+\_\+\+H\+I\+GH}}()~\{ digital\+Write(\+\_\+in4\+Pin, H\+I\+GH);\}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_a0f92d56f0ef4385ff6418c59b230bde6}{I\+N4\+\_\+\+I\+N\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in4\+Pin, I\+N\+P\+UT); \}
-\item 
-\#define \mbox{\hyperlink{StepMotor_8h_adbfda9c4d45a9202bb598354f93e295f}{I\+N4\+\_\+\+O\+U\+T\+P\+UT}}()~\{ pin\+Mode(	 \+\_\+in4\+Pin, O\+U\+T\+P\+UT);\}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStepMotor}{Step\+Motor}} Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}} \{ \mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54a3489d7d08e6a1ceae2113842444d478f}{Unipolar}}, 
-\mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54a167c39e69296c933ab917fa8f0675781}{Bipolar}}
+enum \mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}} \{ \mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6acd9180bfbd8d42be6422a63ff2cf04f4}{U\+N\+I\+P\+O\+L\+A\+R\+\_\+4\+P\+H\+A\+SE}} = 0b00, 
+\mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6a7f77b6da124328d0f16d6ad7f966f845}{B\+I\+P\+O\+L\+A\+R\+\_\+2\+P\+H\+A\+SE}} = 0b01
  \}
 \item 
-enum \mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}} \{ \mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1abed09284f1bf5d886dc92384337250d2}{Half}}, 
-\mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679}{Full}}
+enum \mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}} \{ \mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0a7b0c3d3e4980c50e8b0f573d89c2132b}{M\+I\+N\+\_\+\+T\+O\+R\+Q\+UE}} = 0b00, 
+\mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0ad3add5f5967aaf6c37919ecf9fab415b}{M\+A\+X\+\_\+\+T\+O\+R\+Q\+UE}} = 0b01
  \}
 \item 
-enum \mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790}{direct\+Rot}} \{ \mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0}{Clk}}, 
-\mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a34613c03cc300b281481ad034f8ad5a6}{Ctr\+Clk}}
+enum \mbox{\hyperlink{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9}{S\+M\+\_\+direction\+\_\+t}} \{ \mbox{\hyperlink{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9a436e34ac11f92a71ed5b0c06a6cba180}{C\+L\+O\+C\+K\+W\+I\+SE}} = 0b00, 
+\mbox{\hyperlink{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9a6afc03b68174f14642be3753f1c7edca}{C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+C\+K\+W\+I\+SE}} = 0b01
  \}
+\item 
+enum \mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}} \{ \mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1a047fe64f8c33dda7c5bfc48841cb5fdd}{S\+L\+O\+W\+\_\+\+MS}} = 30, 
+\mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1a1a09a17c3db897c149c8f40b8238060a}{M\+E\+D\+I\+U\+M\+\_\+\+MS}} = 15, 
+\mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1aa8de41280bc29d65c29ed90199785b72}{F\+A\+S\+T\+\_\+\+MS}} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_a0deb7f0545bafe32025c13e8ab141804}{uni\+\_\+4phase\+\_\+fullstep\+\_\+maxtorque\+\_\+clk}} \mbox{[}4\mbox{]} = \{0x9, 0x3, 0x6, 0xC\}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_a881a2c3b7c8cc4734010e60c73b054a0}{uni\+\_\+4phase\+\_\+fullstep\+\_\+maxtorque\+\_\+ctr\+\_\+clk}} \mbox{[}4\mbox{]} = \{0xC, 0x6, 0x3, 0x9\}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_a2a47552f53525ade3c38ea505fea75ab}{uni\+\_\+4phase\+\_\+fullstep\+\_\+mintorque\+\_\+clk}} \mbox{[}4\mbox{]} = \{0x8, 0x1, 0x2, 0x4\}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_a397d8f8a43ddc0f5dce2caa0586d246d}{uni\+\_\+4phase\+\_\+fullstep\+\_\+mintorque\+\_\+ctr\+\_\+clk}} \mbox{[}4\mbox{]} = \{0x4, 0x2, 0x1, 0x8\}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_abda8b5e0bbd327f89cdf949ac565b700}{bi\+\_\+2phase\+\_\+fullstep\+\_\+maxtorque\+\_\+clk}} \mbox{[}4\mbox{]} = \{0xA, 0x9, 0x5, 0x6\}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_ac7ba6ba3bb5ef7c17e83a6154aa5a1e8}{bi\+\_\+2phase\+\_\+fullstep\+\_\+maxtorque\+\_\+ctr\+\_\+clk}} \mbox{[}4\mbox{]} = \{0x6, 0x5, 0x9, 0xA\}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_a06bbcc421bb53cabe922a3c8572f7588}{bi\+\_\+2phase\+\_\+fullstep\+\_\+mintorque\+\_\+clk}} \mbox{[}4\mbox{]} = \{0x8, 0x1, 0x4, 0x2\}
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_a5063302452788f7e160889499073a404}{bi\+\_\+2phase\+\_\+fullstep\+\_\+mintorque\+\_\+ctr\+\_\+clk}} \mbox{[}4\mbox{]} = \{0x2, 0x4, 0x1, 0x8\}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{StepMotor_8h_ae84f1dc1d7fe75b290149ca0886e3c0b}\label{StepMotor_8h_ae84f1dc1d7fe75b290149ca0886e3c0b}} 
-\index{StepMotor.h@{StepMotor.h}!IN1\_HIGH@{IN1\_HIGH}}
-\index{IN1\_HIGH@{IN1\_HIGH}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN1\_HIGH}{IN1\_HIGH}}
-{\footnotesize\ttfamily \#define I\+N1\+\_\+\+H\+I\+GH(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in1\+Pin, H\+I\+GH);\}}
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classStepMotor}{Step\+Motor}} library header file for Arduino \& A\+RM Cortex-\/\+M3 (S\+T\+M32) 
 
-\mbox{\Hypertarget{StepMotor_8h_a1aee991f8e4ae7d745af23f0efd045e5}\label{StepMotor_8h_a1aee991f8e4ae7d745af23f0efd045e5}} 
-\index{StepMotor.h@{StepMotor.h}!IN1\_INPUT@{IN1\_INPUT}}
-\index{IN1\_INPUT@{IN1\_INPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN1\_INPUT}{IN1\_INPUT}}
-{\footnotesize\ttfamily \#define I\+N1\+\_\+\+I\+N\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in1\+Pin, I\+N\+P\+UT); \}}
+Source\+: \href{https://github.com/1lucas1gabriel/StepMotor}{\texttt{ https\+://github.\+com/1lucas1gabriel/\+Step\+Motor}}
 
-\mbox{\Hypertarget{StepMotor_8h_a9e7417a69aa5e1f9d12c3f1622e6172a}\label{StepMotor_8h_a9e7417a69aa5e1f9d12c3f1622e6172a}} 
-\index{StepMotor.h@{StepMotor.h}!IN1\_LOW@{IN1\_LOW}}
-\index{IN1\_LOW@{IN1\_LOW}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN1\_LOW}{IN1\_LOW}}
-{\footnotesize\ttfamily \#define I\+N1\+\_\+\+L\+OW(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in1\+Pin, L\+OW); \}}
-
-\mbox{\Hypertarget{StepMotor_8h_a4d8ad8d82df9787c86da69f31266d294}\label{StepMotor_8h_a4d8ad8d82df9787c86da69f31266d294}} 
-\index{StepMotor.h@{StepMotor.h}!IN1\_OUTPUT@{IN1\_OUTPUT}}
-\index{IN1\_OUTPUT@{IN1\_OUTPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN1\_OUTPUT}{IN1\_OUTPUT}}
-{\footnotesize\ttfamily \#define I\+N1\+\_\+\+O\+U\+T\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in1\+Pin, O\+U\+T\+P\+UT);\}}
-
-\mbox{\Hypertarget{StepMotor_8h_acbe31ede4b6aea596fda6ed572020f2e}\label{StepMotor_8h_acbe31ede4b6aea596fda6ed572020f2e}} 
-\index{StepMotor.h@{StepMotor.h}!IN2\_HIGH@{IN2\_HIGH}}
-\index{IN2\_HIGH@{IN2\_HIGH}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN2\_HIGH}{IN2\_HIGH}}
-{\footnotesize\ttfamily \#define I\+N2\+\_\+\+H\+I\+GH(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in2\+Pin, H\+I\+GH);\}}
-
-\mbox{\Hypertarget{StepMotor_8h_ae26b8ac22ca0203dc266cc2ed0791bfb}\label{StepMotor_8h_ae26b8ac22ca0203dc266cc2ed0791bfb}} 
-\index{StepMotor.h@{StepMotor.h}!IN2\_INPUT@{IN2\_INPUT}}
-\index{IN2\_INPUT@{IN2\_INPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN2\_INPUT}{IN2\_INPUT}}
-{\footnotesize\ttfamily \#define I\+N2\+\_\+\+I\+N\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in2\+Pin, I\+N\+P\+UT); \}}
-
-\mbox{\Hypertarget{StepMotor_8h_a42e3e1983ddb0aa38084ae3c0c110714}\label{StepMotor_8h_a42e3e1983ddb0aa38084ae3c0c110714}} 
-\index{StepMotor.h@{StepMotor.h}!IN2\_LOW@{IN2\_LOW}}
-\index{IN2\_LOW@{IN2\_LOW}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN2\_LOW}{IN2\_LOW}}
-{\footnotesize\ttfamily \#define I\+N2\+\_\+\+L\+OW(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in2\+Pin, L\+OW); \}}
-
-\mbox{\Hypertarget{StepMotor_8h_a188004dc0fd3662c499432557c4848c6}\label{StepMotor_8h_a188004dc0fd3662c499432557c4848c6}} 
-\index{StepMotor.h@{StepMotor.h}!IN2\_OUTPUT@{IN2\_OUTPUT}}
-\index{IN2\_OUTPUT@{IN2\_OUTPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN2\_OUTPUT}{IN2\_OUTPUT}}
-{\footnotesize\ttfamily \#define I\+N2\+\_\+\+O\+U\+T\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in2\+Pin, O\+U\+T\+P\+UT);\}}
-
-\mbox{\Hypertarget{StepMotor_8h_ac57045c67f3e72a448d56479b044ce0a}\label{StepMotor_8h_ac57045c67f3e72a448d56479b044ce0a}} 
-\index{StepMotor.h@{StepMotor.h}!IN3\_HIGH@{IN3\_HIGH}}
-\index{IN3\_HIGH@{IN3\_HIGH}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN3\_HIGH}{IN3\_HIGH}}
-{\footnotesize\ttfamily \#define I\+N3\+\_\+\+H\+I\+GH(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in3\+Pin, H\+I\+GH);\}}
-
-\mbox{\Hypertarget{StepMotor_8h_a08a2dba20c741a244513cbff85697dc2}\label{StepMotor_8h_a08a2dba20c741a244513cbff85697dc2}} 
-\index{StepMotor.h@{StepMotor.h}!IN3\_INPUT@{IN3\_INPUT}}
-\index{IN3\_INPUT@{IN3\_INPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN3\_INPUT}{IN3\_INPUT}}
-{\footnotesize\ttfamily \#define I\+N3\+\_\+\+I\+N\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in3\+Pin, I\+N\+P\+UT); \}}
-
-\mbox{\Hypertarget{StepMotor_8h_a4ae0d329339e89a8352ef2f5e39bddb5}\label{StepMotor_8h_a4ae0d329339e89a8352ef2f5e39bddb5}} 
-\index{StepMotor.h@{StepMotor.h}!IN3\_LOW@{IN3\_LOW}}
-\index{IN3\_LOW@{IN3\_LOW}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN3\_LOW}{IN3\_LOW}}
-{\footnotesize\ttfamily \#define I\+N3\+\_\+\+L\+OW(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in3\+Pin, L\+OW); \}}
-
-\mbox{\Hypertarget{StepMotor_8h_ad4b6c7f03862c9e50045027a8573939b}\label{StepMotor_8h_ad4b6c7f03862c9e50045027a8573939b}} 
-\index{StepMotor.h@{StepMotor.h}!IN3\_OUTPUT@{IN3\_OUTPUT}}
-\index{IN3\_OUTPUT@{IN3\_OUTPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN3\_OUTPUT}{IN3\_OUTPUT}}
-{\footnotesize\ttfamily \#define I\+N3\+\_\+\+O\+U\+T\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in3\+Pin, O\+U\+T\+P\+UT);\}}
-
-\mbox{\Hypertarget{StepMotor_8h_aa581e77d9cf3fd8354fc0dc4c16174fe}\label{StepMotor_8h_aa581e77d9cf3fd8354fc0dc4c16174fe}} 
-\index{StepMotor.h@{StepMotor.h}!IN4\_HIGH@{IN4\_HIGH}}
-\index{IN4\_HIGH@{IN4\_HIGH}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN4\_HIGH}{IN4\_HIGH}}
-{\footnotesize\ttfamily \#define I\+N4\+\_\+\+H\+I\+GH(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in4\+Pin, H\+I\+GH);\}}
-
-\mbox{\Hypertarget{StepMotor_8h_a0f92d56f0ef4385ff6418c59b230bde6}\label{StepMotor_8h_a0f92d56f0ef4385ff6418c59b230bde6}} 
-\index{StepMotor.h@{StepMotor.h}!IN4\_INPUT@{IN4\_INPUT}}
-\index{IN4\_INPUT@{IN4\_INPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN4\_INPUT}{IN4\_INPUT}}
-{\footnotesize\ttfamily \#define I\+N4\+\_\+\+I\+N\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in4\+Pin, I\+N\+P\+UT); \}}
-
-\mbox{\Hypertarget{StepMotor_8h_a03b3c26125cf009d981c2949435a0357}\label{StepMotor_8h_a03b3c26125cf009d981c2949435a0357}} 
-\index{StepMotor.h@{StepMotor.h}!IN4\_LOW@{IN4\_LOW}}
-\index{IN4\_LOW@{IN4\_LOW}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN4\_LOW}{IN4\_LOW}}
-{\footnotesize\ttfamily \#define I\+N4\+\_\+\+L\+OW(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ digital\+Write(\+\_\+in4\+Pin, L\+OW); \}}
-
-\mbox{\Hypertarget{StepMotor_8h_adbfda9c4d45a9202bb598354f93e295f}\label{StepMotor_8h_adbfda9c4d45a9202bb598354f93e295f}} 
-\index{StepMotor.h@{StepMotor.h}!IN4\_OUTPUT@{IN4\_OUTPUT}}
-\index{IN4\_OUTPUT@{IN4\_OUTPUT}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{IN4\_OUTPUT}{IN4\_OUTPUT}}
-{\footnotesize\ttfamily \#define I\+N4\+\_\+\+O\+U\+T\+P\+UT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\{ pin\+Mode(	 \+\_\+in4\+Pin, O\+U\+T\+P\+UT);\}}
-
-
+\begin{DoxyVerb}*   Required mapping between uC Port and Step Motor connection:
+*   
+*   0. One Single PORT must be used to connect all 4 pins.
+*   1. Pin connection must be sequenced over a same PORT.
+*  2. Written nibble to a Port refers to a step command.
+* 
+* 
+*  Pin connection example
+* 
+*                       -----------------------------------------
+*  uC: 8 LSB Port       | b7 | b6 | b5 | b4 | b3 | b2 | b1 | b0 |
+*                       -----------------------------------------
+*   StepMotor:                         ---------------------
+*  pin connection (nibble_cmd)         | In1| In2| In3| In4|
+*                                      ---------------------
+* \end{DoxyVerb}
+ 
 
 \doxysubsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790}\label{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790}} 
-\index{StepMotor.h@{StepMotor.h}!directRot@{directRot}}
-\index{directRot@{directRot}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{directRot}{directRot}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790}{direct\+Rot}}}
+\mbox{\Hypertarget{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9}\label{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9}} 
+\index{StepMotor.h@{StepMotor.h}!SM\_direction\_t@{SM\_direction\_t}}
+\index{SM\_direction\_t@{SM\_direction\_t}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{SM\_direction\_t}{SM\_direction\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9}{S\+M\+\_\+direction\+\_\+t}}}
 
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Clk@{Clk}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!Clk@{Clk}}}\mbox{\Hypertarget{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0}\label{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0}} 
-Clk&\\
+Defines rotational direction for the \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLOCKWISE@{CLOCKWISE}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!CLOCKWISE@{CLOCKWISE}}}\mbox{\Hypertarget{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9a436e34ac11f92a71ed5b0c06a6cba180}\label{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9a436e34ac11f92a71ed5b0c06a6cba180}} 
+C\+L\+O\+C\+K\+W\+I\+SE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CtrClk@{CtrClk}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!CtrClk@{CtrClk}}}\mbox{\Hypertarget{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a34613c03cc300b281481ad034f8ad5a6}\label{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a34613c03cc300b281481ad034f8ad5a6}} 
-Ctr\+Clk&\\
-\hline
-
-\end{DoxyEnumFields}
-\mbox{\Hypertarget{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}\label{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}} 
-\index{StepMotor.h@{StepMotor.h}!motorType@{motorType}}
-\index{motorType@{motorType}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{motorType}{motorType}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Unipolar@{Unipolar}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!Unipolar@{Unipolar}}}\mbox{\Hypertarget{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54a3489d7d08e6a1ceae2113842444d478f}\label{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54a3489d7d08e6a1ceae2113842444d478f}} 
-Unipolar&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Bipolar@{Bipolar}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!Bipolar@{Bipolar}}}\mbox{\Hypertarget{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54a167c39e69296c933ab917fa8f0675781}\label{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54a167c39e69296c933ab917fa8f0675781}} 
-Bipolar&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COUNTER\_CLOCKWISE@{COUNTER\_CLOCKWISE}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!COUNTER\_CLOCKWISE@{COUNTER\_CLOCKWISE}}}\mbox{\Hypertarget{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9a6afc03b68174f14642be3753f1c7edca}\label{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9a6afc03b68174f14642be3753f1c7edca}} 
+C\+O\+U\+N\+T\+E\+R\+\_\+\+C\+L\+O\+C\+K\+W\+I\+SE&\\
 \hline
 
 \end{DoxyEnumFields}
-\mbox{\Hypertarget{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}\label{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}} 
-\index{StepMotor.h@{StepMotor.h}!torqueForce@{torqueForce}}
-\index{torqueForce@{torqueForce}!StepMotor.h@{StepMotor.h}}
-\doxysubsubsection{\texorpdfstring{torqueForce}{torqueForce}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}}}
+\mbox{\Hypertarget{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}\label{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}} 
+\index{StepMotor.h@{StepMotor.h}!SM\_motortype\_t@{SM\_motortype\_t}}
+\index{SM\_motortype\_t@{SM\_motortype\_t}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{SM\_motortype\_t}{SM\_motortype\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}}}
 
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Half@{Half}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!Half@{Half}}}\mbox{\Hypertarget{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1abed09284f1bf5d886dc92384337250d2}\label{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1abed09284f1bf5d886dc92384337250d2}} 
-Half&\\
+Defines the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} type used. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNIPOLAR\_4PHASE@{UNIPOLAR\_4PHASE}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!UNIPOLAR\_4PHASE@{UNIPOLAR\_4PHASE}}}\mbox{\Hypertarget{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6acd9180bfbd8d42be6422a63ff2cf04f4}\label{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6acd9180bfbd8d42be6422a63ff2cf04f4}} 
+U\+N\+I\+P\+O\+L\+A\+R\+\_\+4\+P\+H\+A\+SE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Full@{Full}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!Full@{Full}}}\mbox{\Hypertarget{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679}\label{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679}} 
-Full&\\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BIPOLAR\_2PHASE@{BIPOLAR\_2PHASE}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!BIPOLAR\_2PHASE@{BIPOLAR\_2PHASE}}}\mbox{\Hypertarget{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6a7f77b6da124328d0f16d6ad7f966f845}\label{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6a7f77b6da124328d0f16d6ad7f966f845}} 
+B\+I\+P\+O\+L\+A\+R\+\_\+2\+P\+H\+A\+SE&\\
 \hline
 
 \end{DoxyEnumFields}
+\mbox{\Hypertarget{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}\label{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}} 
+\index{StepMotor.h@{StepMotor.h}!SM\_stepdelay\_t@{SM\_stepdelay\_t}}
+\index{SM\_stepdelay\_t@{SM\_stepdelay\_t}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{SM\_stepdelay\_t}{SM\_stepdelay\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}}}
+
+Defines delay time applied to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} between each step command. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SLOW\_MS@{SLOW\_MS}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!SLOW\_MS@{SLOW\_MS}}}\mbox{\Hypertarget{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1a047fe64f8c33dda7c5bfc48841cb5fdd}\label{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1a047fe64f8c33dda7c5bfc48841cb5fdd}} 
+S\+L\+O\+W\+\_\+\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEDIUM\_MS@{MEDIUM\_MS}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!MEDIUM\_MS@{MEDIUM\_MS}}}\mbox{\Hypertarget{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1a1a09a17c3db897c149c8f40b8238060a}\label{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1a1a09a17c3db897c149c8f40b8238060a}} 
+M\+E\+D\+I\+U\+M\+\_\+\+MS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FAST\_MS@{FAST\_MS}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!FAST\_MS@{FAST\_MS}}}\mbox{\Hypertarget{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1aa8de41280bc29d65c29ed90199785b72}\label{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1aa8de41280bc29d65c29ed90199785b72}} 
+F\+A\+S\+T\+\_\+\+MS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}\label{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}} 
+\index{StepMotor.h@{StepMotor.h}!SM\_torqueforce\_t@{SM\_torqueforce\_t}}
+\index{SM\_torqueforce\_t@{SM\_torqueforce\_t}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{SM\_torqueforce\_t}{SM\_torqueforce\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}}}
+
+Defines torque force type applied by the \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIN\_TORQUE@{MIN\_TORQUE}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!MIN\_TORQUE@{MIN\_TORQUE}}}\mbox{\Hypertarget{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0a7b0c3d3e4980c50e8b0f573d89c2132b}\label{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0a7b0c3d3e4980c50e8b0f573d89c2132b}} 
+M\+I\+N\+\_\+\+T\+O\+R\+Q\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_TORQUE@{MAX\_TORQUE}!StepMotor.h@{StepMotor.h}}\index{StepMotor.h@{StepMotor.h}!MAX\_TORQUE@{MAX\_TORQUE}}}\mbox{\Hypertarget{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0ad3add5f5967aaf6c37919ecf9fab415b}\label{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0ad3add5f5967aaf6c37919ecf9fab415b}} 
+M\+A\+X\+\_\+\+T\+O\+R\+Q\+UE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{StepMotor_8h_abda8b5e0bbd327f89cdf949ac565b700}\label{StepMotor_8h_abda8b5e0bbd327f89cdf949ac565b700}} 
+\index{StepMotor.h@{StepMotor.h}!bi\_2phase\_fullstep\_maxtorque\_clk@{bi\_2phase\_fullstep\_maxtorque\_clk}}
+\index{bi\_2phase\_fullstep\_maxtorque\_clk@{bi\_2phase\_fullstep\_maxtorque\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{bi\_2phase\_fullstep\_maxtorque\_clk}{bi\_2phase\_fullstep\_maxtorque\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t bi\+\_\+2phase\+\_\+fullstep\+\_\+maxtorque\+\_\+clk\mbox{[}4\mbox{]} = \{0xA, 0x9, 0x5, 0x6\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StepMotor_8h_ac7ba6ba3bb5ef7c17e83a6154aa5a1e8}\label{StepMotor_8h_ac7ba6ba3bb5ef7c17e83a6154aa5a1e8}} 
+\index{StepMotor.h@{StepMotor.h}!bi\_2phase\_fullstep\_maxtorque\_ctr\_clk@{bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}}
+\index{bi\_2phase\_fullstep\_maxtorque\_ctr\_clk@{bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}{bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t bi\+\_\+2phase\+\_\+fullstep\+\_\+maxtorque\+\_\+ctr\+\_\+clk\mbox{[}4\mbox{]} = \{0x6, 0x5, 0x9, 0xA\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StepMotor_8h_a06bbcc421bb53cabe922a3c8572f7588}\label{StepMotor_8h_a06bbcc421bb53cabe922a3c8572f7588}} 
+\index{StepMotor.h@{StepMotor.h}!bi\_2phase\_fullstep\_mintorque\_clk@{bi\_2phase\_fullstep\_mintorque\_clk}}
+\index{bi\_2phase\_fullstep\_mintorque\_clk@{bi\_2phase\_fullstep\_mintorque\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{bi\_2phase\_fullstep\_mintorque\_clk}{bi\_2phase\_fullstep\_mintorque\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t bi\+\_\+2phase\+\_\+fullstep\+\_\+mintorque\+\_\+clk\mbox{[}4\mbox{]} = \{0x8, 0x1, 0x4, 0x2\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StepMotor_8h_a5063302452788f7e160889499073a404}\label{StepMotor_8h_a5063302452788f7e160889499073a404}} 
+\index{StepMotor.h@{StepMotor.h}!bi\_2phase\_fullstep\_mintorque\_ctr\_clk@{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}}
+\index{bi\_2phase\_fullstep\_mintorque\_ctr\_clk@{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t bi\+\_\+2phase\+\_\+fullstep\+\_\+mintorque\+\_\+ctr\+\_\+clk\mbox{[}4\mbox{]} = \{0x2, 0x4, 0x1, 0x8\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StepMotor_8h_a0deb7f0545bafe32025c13e8ab141804}\label{StepMotor_8h_a0deb7f0545bafe32025c13e8ab141804}} 
+\index{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_maxtorque\_clk@{uni\_4phase\_fullstep\_maxtorque\_clk}}
+\index{uni\_4phase\_fullstep\_maxtorque\_clk@{uni\_4phase\_fullstep\_maxtorque\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{uni\_4phase\_fullstep\_maxtorque\_clk}{uni\_4phase\_fullstep\_maxtorque\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t uni\+\_\+4phase\+\_\+fullstep\+\_\+maxtorque\+\_\+clk\mbox{[}4\mbox{]} = \{0x9, 0x3, 0x6, 0xC\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StepMotor_8h_a881a2c3b7c8cc4734010e60c73b054a0}\label{StepMotor_8h_a881a2c3b7c8cc4734010e60c73b054a0}} 
+\index{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_maxtorque\_ctr\_clk@{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}}
+\index{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk@{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t uni\+\_\+4phase\+\_\+fullstep\+\_\+maxtorque\+\_\+ctr\+\_\+clk\mbox{[}4\mbox{]} = \{0xC, 0x6, 0x3, 0x9\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StepMotor_8h_a2a47552f53525ade3c38ea505fea75ab}\label{StepMotor_8h_a2a47552f53525ade3c38ea505fea75ab}} 
+\index{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_mintorque\_clk@{uni\_4phase\_fullstep\_mintorque\_clk}}
+\index{uni\_4phase\_fullstep\_mintorque\_clk@{uni\_4phase\_fullstep\_mintorque\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{uni\_4phase\_fullstep\_mintorque\_clk}{uni\_4phase\_fullstep\_mintorque\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t uni\+\_\+4phase\+\_\+fullstep\+\_\+mintorque\+\_\+clk\mbox{[}4\mbox{]} = \{0x8, 0x1, 0x2, 0x4\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StepMotor_8h_a397d8f8a43ddc0f5dce2caa0586d246d}\label{StepMotor_8h_a397d8f8a43ddc0f5dce2caa0586d246d}} 
+\index{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_mintorque\_ctr\_clk@{uni\_4phase\_fullstep\_mintorque\_ctr\_clk}}
+\index{uni\_4phase\_fullstep\_mintorque\_ctr\_clk@{uni\_4phase\_fullstep\_mintorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}}
+\doxysubsubsection{\texorpdfstring{uni\_4phase\_fullstep\_mintorque\_ctr\_clk}{uni\_4phase\_fullstep\_mintorque\_ctr\_clk}}
+{\footnotesize\ttfamily const uint8\+\_\+t uni\+\_\+4phase\+\_\+fullstep\+\_\+mintorque\+\_\+ctr\+\_\+clk\mbox{[}4\mbox{]} = \{0x4, 0x2, 0x1, 0x8\}\hspace{0.3cm}{\ttfamily [static]}}
+

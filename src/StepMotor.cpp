@@ -1,19 +1,53 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2023 Lucas Morais
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+
+/*****************************************************************
+ * @file StepMotor.cpp
+ * @brief StepMotor library source code for Arduino & ARM Cortex-M3 (STM32)
+ * @details
+ * 		Source: https://github.com/1lucas1gabriel/StepMotor
+ *****************************************************************/
+
+
 #include "StepMotor.h"
 
+/*******************************************************************
+ * @brief StepMotor Class constructor.
+ *******************************************************************/
+StepMotor::StepMotor( 	SM_motortype_t motorType, 
+						SM_torqueforce_t torqueForce,
+						uint8_t in1Pin, 
+						uint8_t in2Pin, 
+						uint8_t in3Pin, 
+						uint8_t in4Pin){
 
-StepMotor::StepMotor(
-			uint8_t in1Pin,
-			uint8_t in2Pin,
-			uint8_t in3Pin,
-			uint8_t in4Pin,
-			SM_motortype_t 		motorType,
-			SM_torqueforce_t 	torqueForce)
-{
-	this->_setMotorType(motorType);
-	this->_setTorqueForce(torqueForce);
+	_setMotorType(motorType);
+	_setTorqueForce(torqueForce);
 
 #ifdef __AVR
-    // Map pins to according PORT and bit position (AVR targets only)
+    // Map selected pin to a PORT and bit position (AVR targets only)
     _pin1Port 		= digitalPinToPort(in1Pin);
 	_pin2Port 		= digitalPinToPort(in2Pin);
 	_pin3Port 		= digitalPinToPort(in3Pin);
@@ -28,9 +62,9 @@ StepMotor::StepMotor(
 #endif
 }
 
-/*!
- * \brief Initialize StepMotor controller.
- */
+/*******************************************************************
+ * @brief Initialize StepMotor controller pins.
+ *******************************************************************/
 void StepMotor::begin(){
 	
 	// Set Output PinMode and Turn Off to save current
@@ -41,9 +75,9 @@ void StepMotor::begin(){
     _set_stepCmd(0x0);
 }
 
-/*!
- * \brief Release StepMotor controller pins.
- */
+/*******************************************************************
+ * @brief Release StepMotor controller pins.
+ *******************************************************************/
 void StepMotor::end(){
 	
 	// Set Input PinMode and Turn Off to save current
@@ -54,16 +88,19 @@ void StepMotor::end(){
     _set_stepCmd(0x0);
 }
 
-/*!
- * \brief Rotate StepMotor nSteps at the established speed and direction
- */
+/********************************************************************
+ * @brief Rotate StepMotor by nSteps at the expected direction.
+ ********************************************************************/
 void StepMotor::setMov(	uint16_t nSteps, 
 						SM_stepdelay_t delay_ms, 
 						SM_direction_t direction){
 
-	/*-------------------------------------------------------
+	/**
+	 * - Following table documents how internal and external variables
+	 *  are mapped to set an adequate movement command.
+	 * 
 	 *| _motorType 	| _torqueForce 	| direction | cmd (BIN) |
-	 *-------------------------------------------------------
+	 *|-------------|---------------|-----------|-----------|
 	 *|	UNI_4PHASE	| MIN_TORQUE	| CLK		| 0b0000 	|
 	 *|	UNI_4PHASE	| MIN_TORQUE	| CTR_CLK	| 0b0001 	|
 	 *|	UNI_4PHASE	| MAX_TORQUE	| CLK		| 0b0010 	|
@@ -72,7 +109,6 @@ void StepMotor::setMov(	uint16_t nSteps,
 	 *|	BI_2PHASE	| MIN_TORQUE	| CTR_CLK	| 0b0101 	|
 	 *|	BI_2PHASE	| MAX_TORQUE	| CLK		| 0b0110 	|
 	 *|	BI_2PHASE	| MAX_TORQUE	| CTR_CLK	| 0b0111 	|
-	 *-------------------------------------------------------
 	 */
 
 	uint8_t cmd = (_motorType << 2) | ((_torqueForce << 1) | direction);
@@ -80,28 +116,28 @@ void StepMotor::setMov(	uint16_t nSteps,
 	switch (cmd){
 
 	case 0:
-		_rotate_stepMotor(uni_4phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
+		_control_stepCmd(uni_4phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
 		break;
 	case 1:
-		_rotate_stepMotor(uni_4phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
+		_control_stepCmd(uni_4phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
 		break;
 	case 2:
-		_rotate_stepMotor(uni_4phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
+		_control_stepCmd(uni_4phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
 		break;
 	case 3:
-		_rotate_stepMotor(uni_4phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
+		_control_stepCmd(uni_4phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
 		break;
 	case 4:
-		_rotate_stepMotor(bi_2phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
+		_control_stepCmd(bi_2phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
 		break;
 	case 5:
-		_rotate_stepMotor(bi_2phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
+		_control_stepCmd(bi_2phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
 		break;
 	case 6:
-		_rotate_stepMotor(bi_2phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
+		_control_stepCmd(bi_2phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
 		break;
 	case 7:
-		_rotate_stepMotor(bi_2phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
+		_control_stepCmd(bi_2phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
 		break;	
 	default:
 		break;
@@ -109,44 +145,41 @@ void StepMotor::setMov(	uint16_t nSteps,
 }
 
 
-/***********************************************************
- *  INTERNAL METHODS *
- *********************************************************** /
-
-/*!
- * \brief Set which motor type will be used.
- */
+/*******************************************************************
+ * @brief Set StepMotor type to be used controlled.
+ *******************************************************************/
 void StepMotor::_setMotorType(SM_motortype_t motorType){
 
 	_motorType = motorType;
 }
 
-/*!
- * \brief Set which torque force will be used.
- */
+/*******************************************************************
+ * @brief Set torque force type to be used by StepMotor.
+ *******************************************************************/
 void StepMotor::_setTorqueForce(SM_torqueforce_t torqueForce){
 
 	_torqueForce = torqueForce;
 }
 
-/*!
- * \brief Rotate step motor by using sequence step matrix.
- */
-void StepMotor::_rotate_stepMotor(uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms){
+/*******************************************************************
+ * @brief Control sequenced steps & speed applied to the StepMotor.
+ *******************************************************************/
+void StepMotor::_control_stepCmd(	uint8_t *stepSequenceMatrix, 
+									bool is4stepMatrix, 
+									uint16_t nSteps, 
+									SM_stepdelay_t delay_ms){
 
-	
-	// currentStep iterates for nSteps times and loops back over stepSeqMatrix positions.
-	// If is4stepMatrix it goes from 0 to 3 and returns to the matrix begin.
-	// If is (8stepMatrix) it goes from 0 to 7 and returns again.
-	uint8_t currentStep = 0x0;
+	// currentStep iterates for nSteps times and loops back over stepSeqMatrix positions. 
+	// If is4stepMatrix true currentStep goes from 0 to 3 and returns to the matrix beginning. 
+	// Else it goes from 0 to 7 and returns again.
+	uint8_t currentStep = 0;
 
+	// is4stepMatrix included to support non-4stepMatrixes
 	if (is4stepMatrix){
 		for(uint16_t i = 0; i < nSteps; i++){
 		
 			currentStep = (0x0003 & i);
 			_set_stepCmd(stepSequenceMatrix[currentStep]);
-
-			// stop step until the next step -> impacts on stepmotor velocity
 			stepDelay(delay_ms);		
 		}
 	}
@@ -155,8 +188,6 @@ void StepMotor::_rotate_stepMotor(uint8_t *stepSequenceMatrix, bool is4stepMatri
 		
 			currentStep = (0x0007 & i);
 			_set_stepCmd(stepSequenceMatrix[currentStep]);
-
-			// stop step until the next step -> impacts on stepmotor velocity
 			stepDelay(delay_ms);		
 		}
 	}
@@ -164,13 +195,13 @@ void StepMotor::_rotate_stepMotor(uint8_t *stepSequenceMatrix, bool is4stepMatri
 	_set_stepCmd(0x0);
 }
 
-/* !
- * \brief Set a step command to the StepMotor pins.
- */
+/*******************************************************************
+ * @brief Set a step command to the StepMotor pins.
+ *******************************************************************/
 void StepMotor::_set_stepCmd(uint8_t nibble_cmd){
 
-	// split nibble command to pass bit value to each pin status
-	// e.g. nibble_cmd = 0x1100. (0x1100 >> 3) & 0x1 = TRUE. Calls pin_high()
+	// nibble_cmd is splited to pass bit status value to each pin.
+	// e.g. nibble_cmd = 0x1100. (0x1000 >> 3) & 0x1 = TRUE. Calls pin_high()
 	if((nibble_cmd >> 3) & 0x1) pin1_high() else pin1_low();
 	if((nibble_cmd >> 2) & 0x1) pin2_high() else pin2_low();
 	if((nibble_cmd >> 1) & 0x1) pin3_high() else pin3_low();

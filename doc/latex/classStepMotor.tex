@@ -2,108 +2,116 @@
 \label{classStepMotor}\index{StepMotor@{StepMotor}}
 
 
+\mbox{\hyperlink{classStepMotor}{Step\+Motor}} Class.  
+
+
+
+
 {\ttfamily \#include $<$Step\+Motor.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classStepMotor_a321cb3fe7dbbbc1049d0efe726e3064d}{Step\+Motor}} (uint8\+\_\+t in1\+Pin, uint8\+\_\+t in2\+Pin, uint8\+\_\+t in3\+Pin, uint8\+\_\+t in4\+Pin, \mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}} motorT, \mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}} torqueF=\mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679}{Full}})
-\item 
+\mbox{\hyperlink{classStepMotor_ad62664c5365fc08abaafe260207067ec}{Step\+Motor}} (\mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}} motor\+Type, \mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}} torque\+Force, uint8\+\_\+t in1\+Pin, uint8\+\_\+t in2\+Pin, uint8\+\_\+t in3\+Pin, uint8\+\_\+t in4\+Pin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classStepMotor}{Step\+Motor}} Class constructor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classStepMotor_ada5cd93575892e8d139e3437bc87198c}{begin}} ()
-\begin{DoxyCompactList}\small\item\em Initialize \mbox{\hyperlink{classStepMotor}{Step\+Motor}} controller. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Initialize \mbox{\hyperlink{classStepMotor}{Step\+Motor}} controller pins. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classStepMotor_a3bff223e23dcecf58dff48bdd7134fff}{end}} ()
 \begin{DoxyCompactList}\small\item\em Release \mbox{\hyperlink{classStepMotor}{Step\+Motor}} controller pins. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classStepMotor_a45f7f0e92d31d1ded6d4d9ef8e0f0a75}{set\+Mov}} (uint16\+\_\+t n\+Steps, uint8\+\_\+t speed=1, \mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790}{direct\+Rot}} directR=\mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0}{Clk}})
-\begin{DoxyCompactList}\small\item\em Rotate \mbox{\hyperlink{classStepMotor}{Step\+Motor}} n\+Steps at the established speed and direction. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classStepMotor_ae06ebbaffa422c7e3ba8104e9da1b9d0}{set\+Motor\+Type}} (\mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}} motorT)
-\begin{DoxyCompactList}\small\item\em Set which motor type will be used (Bipolar or Unipolar) \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classStepMotor_a3f6c8c618162d9e2f514ebebe5574876}{set\+Torque\+Force}} (\mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}} torqueF)
-\begin{DoxyCompactList}\small\item\em Set which torque force will be used (Half or Full) \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
+virtual void \mbox{\hyperlink{classStepMotor_a72a63c6e766f67b1a222bafce097b7af}{set\+Mov}} (uint16\+\_\+t n\+Steps, \mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}} delay\+\_\+ms, \mbox{\hyperlink{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9}{S\+M\+\_\+direction\+\_\+t}} direction)
+\begin{DoxyCompactList}\small\item\em Rotate \mbox{\hyperlink{classStepMotor}{Step\+Motor}} by n\+Steps at the expected direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classStepMotor_aee9e31cd855658d572d2ec6852782ba8}{\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+P\+I\+NS}} ()
-\item 
-void \mbox{\hyperlink{classStepMotor_a8831e02b883f1fd854b903ff78e9ede1}{\+\_\+\+B\+I\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE}} (uint16\+\_\+t n\+Steps, uint8\+\_\+t speed)
-\begin{DoxyCompactList}\small\item\em Clockwise Rotation of Bipolar Motor at Full Torque. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classStepMotor_a7b561f6b9341723b6556e33651617aaf}{\+\_\+\+B\+I\+\_\+\+C\+T\+R\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE}} (uint16\+\_\+t n\+Steps, uint8\+\_\+t speed)
-\begin{DoxyCompactList}\small\item\em Counter Clockwise Rotation of Bipolar Motor at Full Torque. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classStepMotor_a3ef32c7c1e3b84c2a10a9d6e3fd0eda8}{\+\_\+\+U\+N\+I\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE}} (uint16\+\_\+t n\+Steps, uint8\+\_\+t speed)
-\begin{DoxyCompactList}\small\item\em Clockwise Rotation of Unipolar Motor at Full Torque. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classStepMotor_a14361b79e286d96d5d324633664e8ebb}{\+\_\+\+U\+N\+I\+\_\+\+C\+T\+R\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE}} (uint16\+\_\+t n\+Steps, uint8\+\_\+t speed)
-\begin{DoxyCompactList}\small\item\em Counter Clockwise Rotation of Unipolar Motor at Full Torque. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+void \mbox{\hyperlink{classStepMotor_a9194fb22cc76cb65467b3df368931da6}{\+\_\+set\+Motor\+Type}} (\mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}} motor\+Type)
+\begin{DoxyCompactList}\small\item\em Set \mbox{\hyperlink{classStepMotor}{Step\+Motor}} type to be used controlled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStepMotor_aeaf9136ba3a03a10d2263dea9ad22e95}{\+\_\+set\+Torque\+Force}} (\mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}} torque\+Force)
+\begin{DoxyCompactList}\small\item\em Set torque force type to be used by \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStepMotor_a8d021e3d99208ee6487fe17ad9d4fe43}{\+\_\+control\+\_\+step\+Cmd}} (uint8\+\_\+t $\ast$step\+Sequence\+Matrix, bool is4step\+Matrix, uint16\+\_\+t n\+Steps, \mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}} delay\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Control sequenced steps \& speed applied to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStepMotor_a8a5e3a1ec0083d363f0cedd4e5e418bf}{\+\_\+set\+\_\+step\+Cmd}} (uint8\+\_\+t nibble\+\_\+cmd)
+\begin{DoxyCompactList}\small\item\em Set a step command to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-uint8\+\_\+t \mbox{\hyperlink{classStepMotor_ad9742d5916a717290d087c8e1ef830da}{\+\_\+in1\+Pin}}
-\begin{DoxyCompactList}\small\item\em Pole 1 pin. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{classStepMotor_a27f9ced7fa5580c8b34471ab86024f34}{\+\_\+in2\+Pin}}
-\begin{DoxyCompactList}\small\item\em Pole 2 pin. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{classStepMotor_a99d46e1bb4d0d0d1095ebd14752d8fc2}{\+\_\+in3\+Pin}}
-\begin{DoxyCompactList}\small\item\em Pole 3 pin. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{classStepMotor_a278db68f60babffa7442b6157ac7abbc}{\+\_\+in4\+Pin}}
-\begin{DoxyCompactList}\small\item\em Pole 4 pin. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}} \mbox{\hyperlink{classStepMotor_a8460a9ba07f8c1b47d5d0b66fdf5e15f}{\+\_\+motorT}}
-\begin{DoxyCompactList}\small\item\em Motor type\+: Bipolar or Unipolar. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}} \mbox{\hyperlink{classStepMotor_ab9bc96a5ec7e07a8a9608867372fdb92}{\+\_\+torqueF}}
-\begin{DoxyCompactList}\small\item\em Torque force\+: Full or Half. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}} \mbox{\hyperlink{classStepMotor_a42a3bb94c27d1c746b1a61389d2ea016}{\+\_\+motor\+Type}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStepMotor}{Step\+Motor}} motor type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}} \mbox{\hyperlink{classStepMotor_ac465228bd39b4bb1339d8d95a358708c}{\+\_\+torque\+Force}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStepMotor}{Step\+Motor}} torque force. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_a7e1e8c87c2496a8008bc1cbd2eecb666}{\+\_\+pin1\+Port}}
+\begin{DoxyCompactList}\small\item\em P\+O\+RT register for pin1. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_aff93d150206ea12fdd9842b132b4d80b}{\+\_\+pin2\+Port}}
+\begin{DoxyCompactList}\small\item\em P\+O\+RT register for pin2. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_aa2bd1777ff97052336e330d42cb761a5}{\+\_\+pin3\+Port}}
+\begin{DoxyCompactList}\small\item\em P\+O\+RT register for pin3. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_adee9bc3e647ad904add295a205ef9985}{\+\_\+pin4\+Port}}
+\begin{DoxyCompactList}\small\item\em P\+O\+RT register for pin4. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_a54ad1ceb8d2690842277f138e496d296}{\+\_\+pin1\+Port\+Bit}}
+\begin{DoxyCompactList}\small\item\em Bit number in IO register for pin1. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_a36277c15f54c96afd99fc7e9bb6328bf}{\+\_\+pin2\+Port\+Bit}}
+\begin{DoxyCompactList}\small\item\em Bit number in IO register for pin2. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_afec325acaf8aa2d26d7c9f973aa34624}{\+\_\+pin3\+Port\+Bit}}
+\begin{DoxyCompactList}\small\item\em Bit number in IO register for pin3. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classStepMotor_ae07820c4d41e303d4a69e76aef76b663}{\+\_\+pin4\+Port\+Bit}}
+\begin{DoxyCompactList}\small\item\em Bit number in IO register for pin4. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classStepMotor}{Step\+Motor}} Class. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classStepMotor_a321cb3fe7dbbbc1049d0efe726e3064d}\label{classStepMotor_a321cb3fe7dbbbc1049d0efe726e3064d}} 
+\mbox{\Hypertarget{classStepMotor_ad62664c5365fc08abaafe260207067ec}\label{classStepMotor_ad62664c5365fc08abaafe260207067ec}} 
 \index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
 \index{StepMotor@{StepMotor}!StepMotor@{StepMotor}}
 \doxysubsubsection{\texorpdfstring{StepMotor()}{StepMotor()}}
-{\footnotesize\ttfamily Step\+Motor\+::\+Step\+Motor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{in1\+Pin,  }\item[{uint8\+\_\+t}]{in2\+Pin,  }\item[{uint8\+\_\+t}]{in3\+Pin,  }\item[{uint8\+\_\+t}]{in4\+Pin,  }\item[{\mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}}}]{motorT,  }\item[{\mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}}}]{torqueF = {\ttfamily \mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679}{Full}}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Step\+Motor\+::\+Step\+Motor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}}}]{motor\+Type,  }\item[{\mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}}}]{torque\+Force,  }\item[{uint8\+\_\+t}]{in1\+Pin,  }\item[{uint8\+\_\+t}]{in2\+Pin,  }\item[{uint8\+\_\+t}]{in3\+Pin,  }\item[{uint8\+\_\+t}]{in4\+Pin }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classStepMotor}{Step\+Motor}} Class constructor. 
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classStepMotor_a8831e02b883f1fd854b903ff78e9ede1}\label{classStepMotor_a8831e02b883f1fd854b903ff78e9ede1}} 
-\index{StepMotor@{StepMotor}!\_BI\_CLKWISE\_ROT\_FULL\_TORQUE@{\_BI\_CLKWISE\_ROT\_FULL\_TORQUE}}
-\index{\_BI\_CLKWISE\_ROT\_FULL\_TORQUE@{\_BI\_CLKWISE\_ROT\_FULL\_TORQUE}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_BI\_CLKWISE\_ROT\_FULL\_TORQUE()}{\_BI\_CLKWISE\_ROT\_FULL\_TORQUE()}}
-{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+\+B\+I\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{uint8\+\_\+t}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classStepMotor_a8d021e3d99208ee6487fe17ad9d4fe43}\label{classStepMotor_a8d021e3d99208ee6487fe17ad9d4fe43}} 
+\index{StepMotor@{StepMotor}!\_control\_stepCmd@{\_control\_stepCmd}}
+\index{\_control\_stepCmd@{\_control\_stepCmd}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_control\_stepCmd()}{\_control\_stepCmd()}}
+{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+control\+\_\+step\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{step\+Sequence\+Matrix,  }\item[{bool}]{is4step\+Matrix,  }\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{\mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}}}]{delay\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Clockwise Rotation of Bipolar Motor at Full Torque. 
+Control sequenced steps \& speed applied to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. 
 
-\mbox{\Hypertarget{classStepMotor_a7b561f6b9341723b6556e33651617aaf}\label{classStepMotor_a7b561f6b9341723b6556e33651617aaf}} 
-\index{StepMotor@{StepMotor}!\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE@{\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}}
-\index{\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE@{\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE()}{\_BI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE()}}
-{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+\+B\+I\+\_\+\+C\+T\+R\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{uint8\+\_\+t}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Counter Clockwise Rotation of Bipolar Motor at Full Torque. 
-
-\mbox{\Hypertarget{classStepMotor_aee9e31cd855658d572d2ec6852782ba8}\label{classStepMotor_aee9e31cd855658d572d2ec6852782ba8}} 
-\index{StepMotor@{StepMotor}!\_RELEASE\_PINS@{\_RELEASE\_PINS}}
-\index{\_RELEASE\_PINS@{\_RELEASE\_PINS}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_RELEASE\_PINS()}{\_RELEASE\_PINS()}}
-{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+P\+I\+NS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classStepMotor_a3ef32c7c1e3b84c2a10a9d6e3fd0eda8}\label{classStepMotor_a3ef32c7c1e3b84c2a10a9d6e3fd0eda8}} 
-\index{StepMotor@{StepMotor}!\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE@{\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE}}
-\index{\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE@{\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE()}{\_UNI\_CLKWISE\_ROT\_FULL\_TORQUE()}}
-{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+\+U\+N\+I\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{uint8\+\_\+t}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classStepMotor_a8a5e3a1ec0083d363f0cedd4e5e418bf}\label{classStepMotor_a8a5e3a1ec0083d363f0cedd4e5e418bf}} 
+\index{StepMotor@{StepMotor}!\_set\_stepCmd@{\_set\_stepCmd}}
+\index{\_set\_stepCmd@{\_set\_stepCmd}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_set\_stepCmd()}{\_set\_stepCmd()}}
+{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+set\+\_\+step\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{nibble\+\_\+cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Clockwise Rotation of Unipolar Motor at Full Torque. 
+Set a step command to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} pins. 
 
-\mbox{\Hypertarget{classStepMotor_a14361b79e286d96d5d324633664e8ebb}\label{classStepMotor_a14361b79e286d96d5d324633664e8ebb}} 
-\index{StepMotor@{StepMotor}!\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE@{\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}}
-\index{\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE@{\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE()}{\_UNI\_CTR\_CLKWISE\_ROT\_FULL\_TORQUE()}}
-{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+\+U\+N\+I\+\_\+\+C\+T\+R\+\_\+\+C\+L\+K\+W\+I\+S\+E\+\_\+\+R\+O\+T\+\_\+\+F\+U\+L\+L\+\_\+\+T\+O\+R\+Q\+UE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{uint8\+\_\+t}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classStepMotor_a9194fb22cc76cb65467b3df368931da6}\label{classStepMotor_a9194fb22cc76cb65467b3df368931da6}} 
+\index{StepMotor@{StepMotor}!\_setMotorType@{\_setMotorType}}
+\index{\_setMotorType@{\_setMotorType}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_setMotorType()}{\_setMotorType()}}
+{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+set\+Motor\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}}}]{motor\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Counter Clockwise Rotation of Unipolar Motor at Full Torque. 
+Set \mbox{\hyperlink{classStepMotor}{Step\+Motor}} type to be used controlled. 
+
+\mbox{\Hypertarget{classStepMotor_aeaf9136ba3a03a10d2263dea9ad22e95}\label{classStepMotor_aeaf9136ba3a03a10d2263dea9ad22e95}} 
+\index{StepMotor@{StepMotor}!\_setTorqueForce@{\_setTorqueForce}}
+\index{\_setTorqueForce@{\_setTorqueForce}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_setTorqueForce()}{\_setTorqueForce()}}
+{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+set\+Torque\+Force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}}}]{torque\+Force }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set torque force type to be used by \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. 
 
 \mbox{\Hypertarget{classStepMotor_ada5cd93575892e8d139e3437bc87198c}\label{classStepMotor_ada5cd93575892e8d139e3437bc87198c}} 
 \index{StepMotor@{StepMotor}!begin@{begin}}
@@ -113,7 +121,7 @@ Counter Clockwise Rotation of Unipolar Motor at Full Torque.
 
 
 
-Initialize \mbox{\hyperlink{classStepMotor}{Step\+Motor}} controller. 
+Initialize \mbox{\hyperlink{classStepMotor}{Step\+Motor}} controller pins. 
 
 \mbox{\Hypertarget{classStepMotor_a3bff223e23dcecf58dff48bdd7134fff}\label{classStepMotor_a3bff223e23dcecf58dff48bdd7134fff}} 
 \index{StepMotor@{StepMotor}!end@{end}}
@@ -125,98 +133,142 @@ Initialize \mbox{\hyperlink{classStepMotor}{Step\+Motor}} controller.
 
 Release \mbox{\hyperlink{classStepMotor}{Step\+Motor}} controller pins. 
 
-\mbox{\Hypertarget{classStepMotor_ae06ebbaffa422c7e3ba8104e9da1b9d0}\label{classStepMotor_ae06ebbaffa422c7e3ba8104e9da1b9d0}} 
-\index{StepMotor@{StepMotor}!setMotorType@{setMotorType}}
-\index{setMotorType@{setMotorType}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{setMotorType()}{setMotorType()}}
-{\footnotesize\ttfamily void Step\+Motor\+::set\+Motor\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}}}]{motorT }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Set which motor type will be used (Bipolar or Unipolar) 
-
-\mbox{\Hypertarget{classStepMotor_a45f7f0e92d31d1ded6d4d9ef8e0f0a75}\label{classStepMotor_a45f7f0e92d31d1ded6d4d9ef8e0f0a75}} 
+\mbox{\Hypertarget{classStepMotor_a72a63c6e766f67b1a222bafce097b7af}\label{classStepMotor_a72a63c6e766f67b1a222bafce097b7af}} 
 \index{StepMotor@{StepMotor}!setMov@{setMov}}
 \index{setMov@{setMov}!StepMotor@{StepMotor}}
 \doxysubsubsection{\texorpdfstring{setMov()}{setMov()}}
-{\footnotesize\ttfamily void Step\+Motor\+::set\+Mov (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{uint8\+\_\+t}]{speed = {\ttfamily 1},  }\item[{\mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790}{direct\+Rot}}}]{directR = {\ttfamily \mbox{\hyperlink{StepMotor_8h_ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0}{Clk}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Step\+Motor\+::set\+Mov (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{\mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}}}]{delay\+\_\+ms,  }\item[{\mbox{\hyperlink{StepMotor_8h_ae0c236e90ce0b9f322ce3260dc2897d9}{S\+M\+\_\+direction\+\_\+t}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Rotate \mbox{\hyperlink{classStepMotor}{Step\+Motor}} n\+Steps at the established speed and direction. 
-
-\mbox{\Hypertarget{classStepMotor_a3f6c8c618162d9e2f514ebebe5574876}\label{classStepMotor_a3f6c8c618162d9e2f514ebebe5574876}} 
-\index{StepMotor@{StepMotor}!setTorqueForce@{setTorqueForce}}
-\index{setTorqueForce@{setTorqueForce}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{setTorqueForce()}{setTorqueForce()}}
-{\footnotesize\ttfamily void Step\+Motor\+::set\+Torque\+Force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}}}]{torqueF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+Rotate \mbox{\hyperlink{classStepMotor}{Step\+Motor}} by n\+Steps at the expected direction. 
 
 
+\begin{DoxyItemize}
+\item Following table documents how internal and external variables are mapped to set an adequate movement command.
+\end{DoxyItemize}
 
-Set which torque force will be used (Half or Full) 
-
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \+\_\+motor\+Type }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \+\_\+torque\+Force }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ direction }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ cmd (B\+IN)  }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \+\_\+motor\+Type }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \+\_\+torque\+Force }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ direction }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ cmd (B\+IN)  }\\\cline{1-4}
+\endhead
+U\+N\+I\+\_\+4\+P\+H\+A\+SE &M\+I\+N\+\_\+\+T\+O\+R\+Q\+UE &C\+LK &0b0000  \\\cline{1-4}
+U\+N\+I\+\_\+4\+P\+H\+A\+SE &M\+I\+N\+\_\+\+T\+O\+R\+Q\+UE &C\+T\+R\+\_\+\+C\+LK &0b0001  \\\cline{1-4}
+U\+N\+I\+\_\+4\+P\+H\+A\+SE &M\+A\+X\+\_\+\+T\+O\+R\+Q\+UE &C\+LK &0b0010  \\\cline{1-4}
+U\+N\+I\+\_\+4\+P\+H\+A\+SE &M\+A\+X\+\_\+\+T\+O\+R\+Q\+UE &C\+T\+R\+\_\+\+C\+LK &0b0011  \\\cline{1-4}
+B\+I\+\_\+2\+P\+H\+A\+SE &M\+I\+N\+\_\+\+T\+O\+R\+Q\+UE &C\+LK &0b0100  \\\cline{1-4}
+B\+I\+\_\+2\+P\+H\+A\+SE &M\+I\+N\+\_\+\+T\+O\+R\+Q\+UE &C\+T\+R\+\_\+\+C\+LK &0b0101  \\\cline{1-4}
+B\+I\+\_\+2\+P\+H\+A\+SE &M\+A\+X\+\_\+\+T\+O\+R\+Q\+UE &C\+LK &0b0110  \\\cline{1-4}
+B\+I\+\_\+2\+P\+H\+A\+SE &M\+A\+X\+\_\+\+T\+O\+R\+Q\+UE &C\+T\+R\+\_\+\+C\+LK &0b0111  \\\cline{1-4}
+\end{longtabu}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classStepMotor_ad9742d5916a717290d087c8e1ef830da}\label{classStepMotor_ad9742d5916a717290d087c8e1ef830da}} 
-\index{StepMotor@{StepMotor}!\_in1Pin@{\_in1Pin}}
-\index{\_in1Pin@{\_in1Pin}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_in1Pin}{\_in1Pin}}
-{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+in1\+Pin\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classStepMotor_a42a3bb94c27d1c746b1a61389d2ea016}\label{classStepMotor_a42a3bb94c27d1c746b1a61389d2ea016}} 
+\index{StepMotor@{StepMotor}!\_motorType@{\_motorType}}
+\index{\_motorType@{\_motorType}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_motorType}{\_motorType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{StepMotor_8h_a391fc40c4b5d009366d36d01f6b8c1a6}{S\+M\+\_\+motortype\+\_\+t}} Step\+Motor\+::\+\_\+motor\+Type\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Pole 1 pin. 
+Defines \mbox{\hyperlink{classStepMotor}{Step\+Motor}} motor type. 
 
-\mbox{\Hypertarget{classStepMotor_a27f9ced7fa5580c8b34471ab86024f34}\label{classStepMotor_a27f9ced7fa5580c8b34471ab86024f34}} 
-\index{StepMotor@{StepMotor}!\_in2Pin@{\_in2Pin}}
-\index{\_in2Pin@{\_in2Pin}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_in2Pin}{\_in2Pin}}
-{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+in2\+Pin\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Pole 2 pin. 
-
-\mbox{\Hypertarget{classStepMotor_a99d46e1bb4d0d0d1095ebd14752d8fc2}\label{classStepMotor_a99d46e1bb4d0d0d1095ebd14752d8fc2}} 
-\index{StepMotor@{StepMotor}!\_in3Pin@{\_in3Pin}}
-\index{\_in3Pin@{\_in3Pin}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_in3Pin}{\_in3Pin}}
-{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+in3\+Pin\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classStepMotor_a7e1e8c87c2496a8008bc1cbd2eecb666}\label{classStepMotor_a7e1e8c87c2496a8008bc1cbd2eecb666}} 
+\index{StepMotor@{StepMotor}!\_pin1Port@{\_pin1Port}}
+\index{\_pin1Port@{\_pin1Port}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin1Port}{\_pin1Port}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin1\+Port\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Pole 3 pin. 
+P\+O\+RT register for pin1. 
 
-\mbox{\Hypertarget{classStepMotor_a278db68f60babffa7442b6157ac7abbc}\label{classStepMotor_a278db68f60babffa7442b6157ac7abbc}} 
-\index{StepMotor@{StepMotor}!\_in4Pin@{\_in4Pin}}
-\index{\_in4Pin@{\_in4Pin}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_in4Pin}{\_in4Pin}}
-{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+in4\+Pin\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Pole 4 pin. 
-
-\mbox{\Hypertarget{classStepMotor_a8460a9ba07f8c1b47d5d0b66fdf5e15f}\label{classStepMotor_a8460a9ba07f8c1b47d5d0b66fdf5e15f}} 
-\index{StepMotor@{StepMotor}!\_motorT@{\_motorT}}
-\index{\_motorT@{\_motorT}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_motorT}{\_motorT}}
-{\footnotesize\ttfamily \mbox{\hyperlink{StepMotor_8h_aa0b95df57b6ae3d5b5ac026d56968a54}{motor\+Type}} Step\+Motor\+::\+\_\+motorT\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classStepMotor_a54ad1ceb8d2690842277f138e496d296}\label{classStepMotor_a54ad1ceb8d2690842277f138e496d296}} 
+\index{StepMotor@{StepMotor}!\_pin1PortBit@{\_pin1PortBit}}
+\index{\_pin1PortBit@{\_pin1PortBit}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin1PortBit}{\_pin1PortBit}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin1\+Port\+Bit\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Motor type\+: Bipolar or Unipolar. 
+Bit number in IO register for pin1. 
 
-\mbox{\Hypertarget{classStepMotor_ab9bc96a5ec7e07a8a9608867372fdb92}\label{classStepMotor_ab9bc96a5ec7e07a8a9608867372fdb92}} 
-\index{StepMotor@{StepMotor}!\_torqueF@{\_torqueF}}
-\index{\_torqueF@{\_torqueF}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_torqueF}{\_torqueF}}
-{\footnotesize\ttfamily \mbox{\hyperlink{StepMotor_8h_a6cc07a17db30ffb9332a8496f26c6dd1}{torque\+Force}} Step\+Motor\+::\+\_\+torqueF\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classStepMotor_aff93d150206ea12fdd9842b132b4d80b}\label{classStepMotor_aff93d150206ea12fdd9842b132b4d80b}} 
+\index{StepMotor@{StepMotor}!\_pin2Port@{\_pin2Port}}
+\index{\_pin2Port@{\_pin2Port}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin2Port}{\_pin2Port}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin2\+Port\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Torque force\+: Full or Half. 
+P\+O\+RT register for pin2. 
+
+\mbox{\Hypertarget{classStepMotor_a36277c15f54c96afd99fc7e9bb6328bf}\label{classStepMotor_a36277c15f54c96afd99fc7e9bb6328bf}} 
+\index{StepMotor@{StepMotor}!\_pin2PortBit@{\_pin2PortBit}}
+\index{\_pin2PortBit@{\_pin2PortBit}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin2PortBit}{\_pin2PortBit}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin2\+Port\+Bit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bit number in IO register for pin2. 
+
+\mbox{\Hypertarget{classStepMotor_aa2bd1777ff97052336e330d42cb761a5}\label{classStepMotor_aa2bd1777ff97052336e330d42cb761a5}} 
+\index{StepMotor@{StepMotor}!\_pin3Port@{\_pin3Port}}
+\index{\_pin3Port@{\_pin3Port}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin3Port}{\_pin3Port}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin3\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+P\+O\+RT register for pin3. 
+
+\mbox{\Hypertarget{classStepMotor_afec325acaf8aa2d26d7c9f973aa34624}\label{classStepMotor_afec325acaf8aa2d26d7c9f973aa34624}} 
+\index{StepMotor@{StepMotor}!\_pin3PortBit@{\_pin3PortBit}}
+\index{\_pin3PortBit@{\_pin3PortBit}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin3PortBit}{\_pin3PortBit}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin3\+Port\+Bit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bit number in IO register for pin3. 
+
+\mbox{\Hypertarget{classStepMotor_adee9bc3e647ad904add295a205ef9985}\label{classStepMotor_adee9bc3e647ad904add295a205ef9985}} 
+\index{StepMotor@{StepMotor}!\_pin4Port@{\_pin4Port}}
+\index{\_pin4Port@{\_pin4Port}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin4Port}{\_pin4Port}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin4\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+P\+O\+RT register for pin4. 
+
+\mbox{\Hypertarget{classStepMotor_ae07820c4d41e303d4a69e76aef76b663}\label{classStepMotor_ae07820c4d41e303d4a69e76aef76b663}} 
+\index{StepMotor@{StepMotor}!\_pin4PortBit@{\_pin4PortBit}}
+\index{\_pin4PortBit@{\_pin4PortBit}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_pin4PortBit}{\_pin4PortBit}}
+{\footnotesize\ttfamily uint8\+\_\+t Step\+Motor\+::\+\_\+pin4\+Port\+Bit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bit number in IO register for pin4. 
+
+\mbox{\Hypertarget{classStepMotor_ac465228bd39b4bb1339d8d95a358708c}\label{classStepMotor_ac465228bd39b4bb1339d8d95a358708c}} 
+\index{StepMotor@{StepMotor}!\_torqueForce@{\_torqueForce}}
+\index{\_torqueForce@{\_torqueForce}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_torqueForce}{\_torqueForce}}
+{\footnotesize\ttfamily \mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}} Step\+Motor\+::\+\_\+torque\+Force\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Defines \mbox{\hyperlink{classStepMotor}{Step\+Motor}} torque force. 
 
 
 

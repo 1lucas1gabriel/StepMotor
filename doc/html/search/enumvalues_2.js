@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['full_70',['Full',['../StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679',1,'StepMotor.h']]]
+  ['fast_5fms_77',['FAST_MS',['../StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1aa8de41280bc29d65c29ed90199785b72',1,'StepMotor.h']]]
 ];

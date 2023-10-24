@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.10.13)  13 OCT 2023 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.10.13)  24 OCT 2023 20:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -884,73 +884,63 @@ Chapter 2.
 ]
 Chapter 3.
 (./classStepMotor.tex
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 5.
-
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
+.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 7.
+(Font)              scaled to size 10.79993pt on input line 12.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-0.
+5.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 10.
+(Font)              scaled to size 8.99994pt on input line 15.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 13.
+(Font)              scaled to size 8.09995pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 13.
+(Font)              scaled to size 8.09995pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 13.
+(Font)              scaled to size 6.29996pt on input line 16.
  [5]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 57.
+(Font)              scaled to size 7.19995pt on input line 67.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 57.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 67.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 57.
- [6] [7] [8])
-[9] [10
-
-]
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 67.
+ [6] [7] [8]
+[9]) [10]
 Chapter 4.
 (./StepMotor_8cpp.tex <./StepMotor_8cpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./StepMotor_8cpp__incl.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >
-<StepMotor_8cpp__incl.pdf, id=401, 160.6pt x 212.795pt>
+<StepMotor_8cpp__incl.pdf, id=411, 160.6pt x 156.585pt>
 File: StepMotor_8cpp__incl.pdf Graphic file (type pdf)
 <use StepMotor_8cpp__incl.pdf>
-Package pdftex.def Info: StepMotor_8cpp__incl.pdf  used on input line 8.
-(pdftex.def)             Requested size: 160.0pt x 212.00543pt.
-) (./StepMotor_8h.tex <./StepMotor_8h__incl.pdf
+Package pdftex.def Info: StepMotor_8cpp__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 160.0pt x 156.004pt.
+) (./StepMotor_8h.tex <./StepMotor_8h__dep__incl.pdf
 
-pdfTeX warning: pdflatex (file ./StepMotor_8h__incl.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./StepMotor_8h__dep__incl.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
 >
-<StepMotor_8h__incl.pdf, id=409, 149.55875pt x 156.585pt>
-File: StepMotor_8h__incl.pdf Graphic file (type pdf)
-<use StepMotor_8h__incl.pdf>
-Package pdftex.def Info: StepMotor_8h__incl.pdf  used on input line 8.
-(pdftex.def)             Requested size: 149.0pt x 156.01117pt.
- [11] <./StepMotor_8h__dep__incl.pdf>
-<StepMotor_8h__dep__incl.pdf, id=424, 160.6pt x 156.585pt>
+<StepMotor_8h__dep__incl.pdf, id=422, 160.6pt x 156.585pt>
 File: StepMotor_8h__dep__incl.pdf Graphic file (type pdf)
 <use StepMotor_8h__dep__incl.pdf>
-Package pdftex.def Info: StepMotor_8h__dep__incl.pdf  used on input line 15.
+Package pdftex.def Info: StepMotor_8h__dep__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 160.0pt x 156.004pt.
- [12] [13] [14])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [11
 
- [15]
-[16
+] [12] [13] [14]) [15] [16
 
 ] (./refman.ind [17
 
@@ -964,27 +954,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 90015CC5A1EEBC351A1C51518F04469D;9209.
+(rerunfilecheck)             Checksum: 9A724EBF0D641727953D14E835C2207F;9676.
  ) 
 Here is how much of TeX's memory you used:
- 16658 strings out of 483183
- 244843 string characters out of 5966291
- 522938 words of memory out of 5000000
- 31233 multiletter control sequences out of 15000+600000
- 583097 words of font info for 76 fonts, out of 8000000 for 9000
+ 16680 strings out of 483183
+ 244772 string characters out of 5966291
+ 530045 words of memory out of 5000000
+ 31251 multiletter control sequences out of 15000+600000
+ 586635 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,16n,96p,938b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,96p,938b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
-lvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8
-ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (22 pages, 129726 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cou
+rier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (22 pages, 136734 bytes).
 PDF statistics:
- 662 PDF objects out of 1000 (max. 8388607)
- 614 compressed objects within 7 object streams
- 128 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 666 PDF objects out of 1000 (max. 8388607)
+ 618 compressed objects within 7 object streams
+ 123 named destinations out of 1000 (max. 500000)
+ 395 words of extra memory for PDF output out of 10000 (max. 10000000)
 

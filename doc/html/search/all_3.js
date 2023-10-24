@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['directrot_15',['directRot',['../StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790',1,'StepMotor.h']]]
+  ['end_22',['end',['../classStepMotor.html#a3bff223e23dcecf58dff48bdd7134fff',1,'StepMotor']]]
 ];

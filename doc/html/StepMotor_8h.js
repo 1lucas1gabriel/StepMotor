@@ -1,32 +1,29 @@
 var StepMotor_8h =
 [
     [ "StepMotor", "classStepMotor.html", "classStepMotor" ],
-    [ "IN1_HIGH", "StepMotor_8h.html#ae84f1dc1d7fe75b290149ca0886e3c0b", null ],
-    [ "IN1_INPUT", "StepMotor_8h.html#a1aee991f8e4ae7d745af23f0efd045e5", null ],
-    [ "IN1_LOW", "StepMotor_8h.html#a9e7417a69aa5e1f9d12c3f1622e6172a", null ],
-    [ "IN1_OUTPUT", "StepMotor_8h.html#a4d8ad8d82df9787c86da69f31266d294", null ],
-    [ "IN2_HIGH", "StepMotor_8h.html#acbe31ede4b6aea596fda6ed572020f2e", null ],
-    [ "IN2_INPUT", "StepMotor_8h.html#ae26b8ac22ca0203dc266cc2ed0791bfb", null ],
-    [ "IN2_LOW", "StepMotor_8h.html#a42e3e1983ddb0aa38084ae3c0c110714", null ],
-    [ "IN2_OUTPUT", "StepMotor_8h.html#a188004dc0fd3662c499432557c4848c6", null ],
-    [ "IN3_HIGH", "StepMotor_8h.html#ac57045c67f3e72a448d56479b044ce0a", null ],
-    [ "IN3_INPUT", "StepMotor_8h.html#a08a2dba20c741a244513cbff85697dc2", null ],
-    [ "IN3_LOW", "StepMotor_8h.html#a4ae0d329339e89a8352ef2f5e39bddb5", null ],
-    [ "IN3_OUTPUT", "StepMotor_8h.html#ad4b6c7f03862c9e50045027a8573939b", null ],
-    [ "IN4_HIGH", "StepMotor_8h.html#aa581e77d9cf3fd8354fc0dc4c16174fe", null ],
-    [ "IN4_INPUT", "StepMotor_8h.html#a0f92d56f0ef4385ff6418c59b230bde6", null ],
-    [ "IN4_LOW", "StepMotor_8h.html#a03b3c26125cf009d981c2949435a0357", null ],
-    [ "IN4_OUTPUT", "StepMotor_8h.html#adbfda9c4d45a9202bb598354f93e295f", null ],
-    [ "directRot", "StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790", [
-      [ "Clk", "StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790a2fc8f4afab810760aa71449d833582a0", null ],
-      [ "CtrClk", "StepMotor_8h.html#ad0db4b832b9c0ff1fb82e20594b32790a34613c03cc300b281481ad034f8ad5a6", null ]
+    [ "SM_direction_t", "StepMotor_8h.html#ae0c236e90ce0b9f322ce3260dc2897d9", [
+      [ "CLOCKWISE", "StepMotor_8h.html#ae0c236e90ce0b9f322ce3260dc2897d9a436e34ac11f92a71ed5b0c06a6cba180", null ],
+      [ "COUNTER_CLOCKWISE", "StepMotor_8h.html#ae0c236e90ce0b9f322ce3260dc2897d9a6afc03b68174f14642be3753f1c7edca", null ]
     ] ],
-    [ "motorType", "StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54", [
-      [ "Unipolar", "StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54a3489d7d08e6a1ceae2113842444d478f", null ],
-      [ "Bipolar", "StepMotor_8h.html#aa0b95df57b6ae3d5b5ac026d56968a54a167c39e69296c933ab917fa8f0675781", null ]
+    [ "SM_motortype_t", "StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6", [
+      [ "UNIPOLAR_4PHASE", "StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6acd9180bfbd8d42be6422a63ff2cf04f4", null ],
+      [ "BIPOLAR_2PHASE", "StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6a7f77b6da124328d0f16d6ad7f966f845", null ]
     ] ],
-    [ "torqueForce", "StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1", [
-      [ "Half", "StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1abed09284f1bf5d886dc92384337250d2", null ],
-      [ "Full", "StepMotor_8h.html#a6cc07a17db30ffb9332a8496f26c6dd1a8b7c5cd8bd8eb51ee6d3fd0eac584679", null ]
-    ] ]
+    [ "SM_stepdelay_t", "StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1", [
+      [ "SLOW_MS", "StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1a047fe64f8c33dda7c5bfc48841cb5fdd", null ],
+      [ "MEDIUM_MS", "StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1a1a09a17c3db897c149c8f40b8238060a", null ],
+      [ "FAST_MS", "StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1aa8de41280bc29d65c29ed90199785b72", null ]
+    ] ],
+    [ "SM_torqueforce_t", "StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0", [
+      [ "MIN_TORQUE", "StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0a7b0c3d3e4980c50e8b0f573d89c2132b", null ],
+      [ "MAX_TORQUE", "StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0ad3add5f5967aaf6c37919ecf9fab415b", null ]
+    ] ],
+    [ "bi_2phase_fullstep_maxtorque_clk", "StepMotor_8h.html#abda8b5e0bbd327f89cdf949ac565b700", null ],
+    [ "bi_2phase_fullstep_maxtorque_ctr_clk", "StepMotor_8h.html#ac7ba6ba3bb5ef7c17e83a6154aa5a1e8", null ],
+    [ "bi_2phase_fullstep_mintorque_clk", "StepMotor_8h.html#a06bbcc421bb53cabe922a3c8572f7588", null ],
+    [ "bi_2phase_fullstep_mintorque_ctr_clk", "StepMotor_8h.html#a5063302452788f7e160889499073a404", null ],
+    [ "uni_4phase_fullstep_maxtorque_clk", "StepMotor_8h.html#a0deb7f0545bafe32025c13e8ab141804", null ],
+    [ "uni_4phase_fullstep_maxtorque_ctr_clk", "StepMotor_8h.html#a881a2c3b7c8cc4734010e60c73b054a0", null ],
+    [ "uni_4phase_fullstep_mintorque_clk", "StepMotor_8h.html#a2a47552f53525ade3c38ea505fea75ab", null ],
+    [ "uni_4phase_fullstep_mintorque_ctr_clk", "StepMotor_8h.html#a397d8f8a43ddc0f5dce2caa0586d246d", null ]
 ];

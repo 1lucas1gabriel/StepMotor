@@ -1,13 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "_bcdefhimstu",
+  0: "_bcefmsu",
   1: "s",
   2: "s",
   3: "_bes",
-  4: "_",
-  5: "dmt",
-  6: "bcfhu",
-  7: "i"
+  4: "_bu",
+  5: "s",
+  6: "bcfmsu"
 };
 
 var indexSectionNames =
@@ -18,8 +17,7 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "enums",
-  6: "enumvalues",
-  7: "defines"
+  6: "enumvalues"
 };
 
 var indexSectionLabels =
@@ -30,7 +28,6 @@ var indexSectionLabels =
   3: "Functions",
   4: "Variables",
   5: "Enumerations",
-  6: "Enumerator",
-  7: "Macros"
+  6: "Enumerator"
 };
 

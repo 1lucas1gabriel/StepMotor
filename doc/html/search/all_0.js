@@ -1,14 +1,17 @@
 var searchData=
 [
-  ['_5fbi_5fclkwise_5frot_5ffull_5ftorque_0',['_BI_CLKWISE_ROT_FULL_TORQUE',['../classStepMotor.html#a8831e02b883f1fd854b903ff78e9ede1',1,'StepMotor']]],
-  ['_5fbi_5fctr_5fclkwise_5frot_5ffull_5ftorque_1',['_BI_CTR_CLKWISE_ROT_FULL_TORQUE',['../classStepMotor.html#a7b561f6b9341723b6556e33651617aaf',1,'StepMotor']]],
-  ['_5fin1pin_2',['_in1Pin',['../classStepMotor.html#ad9742d5916a717290d087c8e1ef830da',1,'StepMotor']]],
-  ['_5fin2pin_3',['_in2Pin',['../classStepMotor.html#a27f9ced7fa5580c8b34471ab86024f34',1,'StepMotor']]],
-  ['_5fin3pin_4',['_in3Pin',['../classStepMotor.html#a99d46e1bb4d0d0d1095ebd14752d8fc2',1,'StepMotor']]],
-  ['_5fin4pin_5',['_in4Pin',['../classStepMotor.html#a278db68f60babffa7442b6157ac7abbc',1,'StepMotor']]],
-  ['_5fmotort_6',['_motorT',['../classStepMotor.html#a8460a9ba07f8c1b47d5d0b66fdf5e15f',1,'StepMotor']]],
-  ['_5frelease_5fpins_7',['_RELEASE_PINS',['../classStepMotor.html#aee9e31cd855658d572d2ec6852782ba8',1,'StepMotor']]],
-  ['_5ftorquef_8',['_torqueF',['../classStepMotor.html#ab9bc96a5ec7e07a8a9608867372fdb92',1,'StepMotor']]],
-  ['_5funi_5fclkwise_5frot_5ffull_5ftorque_9',['_UNI_CLKWISE_ROT_FULL_TORQUE',['../classStepMotor.html#a3ef32c7c1e3b84c2a10a9d6e3fd0eda8',1,'StepMotor']]],
-  ['_5funi_5fctr_5fclkwise_5frot_5ffull_5ftorque_10',['_UNI_CTR_CLKWISE_ROT_FULL_TORQUE',['../classStepMotor.html#a14361b79e286d96d5d324633664e8ebb',1,'StepMotor']]]
+  ['_5fcontrol_5fstepcmd_0',['_control_stepCmd',['../classStepMotor.html#a8d021e3d99208ee6487fe17ad9d4fe43',1,'StepMotor']]],
+  ['_5fmotortype_1',['_motorType',['../classStepMotor.html#a42a3bb94c27d1c746b1a61389d2ea016',1,'StepMotor']]],
+  ['_5fpin1port_2',['_pin1Port',['../classStepMotor.html#a7e1e8c87c2496a8008bc1cbd2eecb666',1,'StepMotor']]],
+  ['_5fpin1portbit_3',['_pin1PortBit',['../classStepMotor.html#a54ad1ceb8d2690842277f138e496d296',1,'StepMotor']]],
+  ['_5fpin2port_4',['_pin2Port',['../classStepMotor.html#aff93d150206ea12fdd9842b132b4d80b',1,'StepMotor']]],
+  ['_5fpin2portbit_5',['_pin2PortBit',['../classStepMotor.html#a36277c15f54c96afd99fc7e9bb6328bf',1,'StepMotor']]],
+  ['_5fpin3port_6',['_pin3Port',['../classStepMotor.html#aa2bd1777ff97052336e330d42cb761a5',1,'StepMotor']]],
+  ['_5fpin3portbit_7',['_pin3PortBit',['../classStepMotor.html#afec325acaf8aa2d26d7c9f973aa34624',1,'StepMotor']]],
+  ['_5fpin4port_8',['_pin4Port',['../classStepMotor.html#adee9bc3e647ad904add295a205ef9985',1,'StepMotor']]],
+  ['_5fpin4portbit_9',['_pin4PortBit',['../classStepMotor.html#ae07820c4d41e303d4a69e76aef76b663',1,'StepMotor']]],
+  ['_5fset_5fstepcmd_10',['_set_stepCmd',['../classStepMotor.html#a8a5e3a1ec0083d363f0cedd4e5e418bf',1,'StepMotor']]],
+  ['_5fsetmotortype_11',['_setMotorType',['../classStepMotor.html#a9194fb22cc76cb65467b3df368931da6',1,'StepMotor']]],
+  ['_5fsettorqueforce_12',['_setTorqueForce',['../classStepMotor.html#aeaf9136ba3a03a10d2263dea9ad22e95',1,'StepMotor']]],
+  ['_5ftorqueforce_13',['_torqueForce',['../classStepMotor.html#ac465228bd39b4bb1339d8d95a358708c',1,'StepMotor']]]
 ];

@@ -1,34 +1,26 @@
 #include <StepMotor.h>
 
-StepMotor baseMotor(11,10,9,8, BIPOLAR_2PHASE, MAX_TORQUE);
-StepMotor joinMotor(5,4,3,2, UNIPOLAR_4PHASE, MAX_TORQUE);
+StepMotor baseMotor(BIPOLAR_2PHASE, MIN_TORQUE, 11,10,9,8);
+StepMotor joinMotor(UNIPOLAR_4PHASE, MIN_TORQUE, 5,4,3,2);
 
 void setup(){
   
   baseMotor.begin();
   joinMotor.begin();
 
-  baseMotor.setMov(50, SLOW_MS, CLOCKWISE);
+  baseMotor.setMov(584, FAST_MS, COUNTER_CLOCKWISE);
+
+
+  delay(3000);
+  joinMotor.setMov(1960/2, FAST_MS, COUNTER_CLOCKWISE);
+/*
+  delay(1000);
+  joinMotor.setMov(200, FAST_MS, COUNTER_CLOCKWISE);
 
   delay(1000);
-  baseMotor.setMov(50, SLOW_MS, COUNTER_CLOCKWISE);
-
-  delay(1000);
-  baseMotor.setMov(50, SLOW_MS, CLOCKWISE);
-
-
-
-  delay(1000);
-  joinMotor.setMov(50, SLOW_MS, CLOCKWISE);
-
-  delay(1000);
-  joinMotor.setMov(50, SLOW_MS, COUNTER_CLOCKWISE);
-
-  delay(1000);
-  joinMotor.setMov(50, SLOW_MS, CLOCKWISE);
-
-
-  //baseMotor.end();
+  joinMotor.setMov(100, SLOW_MS, CLOCKWISE);
+*/
+  baseMotor.end();
   joinMotor.end();
 
 }

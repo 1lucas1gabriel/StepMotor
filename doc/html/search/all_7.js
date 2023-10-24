@@ -1,19 +1,8 @@
 var searchData=
 [
-  ['in1_5fhigh_19',['IN1_HIGH',['../StepMotor_8h.html#ae84f1dc1d7fe75b290149ca0886e3c0b',1,'StepMotor.h']]],
-  ['in1_5finput_20',['IN1_INPUT',['../StepMotor_8h.html#a1aee991f8e4ae7d745af23f0efd045e5',1,'StepMotor.h']]],
-  ['in1_5flow_21',['IN1_LOW',['../StepMotor_8h.html#a9e7417a69aa5e1f9d12c3f1622e6172a',1,'StepMotor.h']]],
-  ['in1_5foutput_22',['IN1_OUTPUT',['../StepMotor_8h.html#a4d8ad8d82df9787c86da69f31266d294',1,'StepMotor.h']]],
-  ['in2_5fhigh_23',['IN2_HIGH',['../StepMotor_8h.html#acbe31ede4b6aea596fda6ed572020f2e',1,'StepMotor.h']]],
-  ['in2_5finput_24',['IN2_INPUT',['../StepMotor_8h.html#ae26b8ac22ca0203dc266cc2ed0791bfb',1,'StepMotor.h']]],
-  ['in2_5flow_25',['IN2_LOW',['../StepMotor_8h.html#a42e3e1983ddb0aa38084ae3c0c110714',1,'StepMotor.h']]],
-  ['in2_5foutput_26',['IN2_OUTPUT',['../StepMotor_8h.html#a188004dc0fd3662c499432557c4848c6',1,'StepMotor.h']]],
-  ['in3_5fhigh_27',['IN3_HIGH',['../StepMotor_8h.html#ac57045c67f3e72a448d56479b044ce0a',1,'StepMotor.h']]],
-  ['in3_5finput_28',['IN3_INPUT',['../StepMotor_8h.html#a08a2dba20c741a244513cbff85697dc2',1,'StepMotor.h']]],
-  ['in3_5flow_29',['IN3_LOW',['../StepMotor_8h.html#a4ae0d329339e89a8352ef2f5e39bddb5',1,'StepMotor.h']]],
-  ['in3_5foutput_30',['IN3_OUTPUT',['../StepMotor_8h.html#ad4b6c7f03862c9e50045027a8573939b',1,'StepMotor.h']]],
-  ['in4_5fhigh_31',['IN4_HIGH',['../StepMotor_8h.html#aa581e77d9cf3fd8354fc0dc4c16174fe',1,'StepMotor.h']]],
-  ['in4_5finput_32',['IN4_INPUT',['../StepMotor_8h.html#a0f92d56f0ef4385ff6418c59b230bde6',1,'StepMotor.h']]],
-  ['in4_5flow_33',['IN4_LOW',['../StepMotor_8h.html#a03b3c26125cf009d981c2949435a0357',1,'StepMotor.h']]],
-  ['in4_5foutput_34',['IN4_OUTPUT',['../StepMotor_8h.html#adbfda9c4d45a9202bb598354f93e295f',1,'StepMotor.h']]]
+  ['uni_5f4phase_5ffullstep_5fmaxtorque_5fclk_36',['uni_4phase_fullstep_maxtorque_clk',['../StepMotor_8h.html#a0deb7f0545bafe32025c13e8ab141804',1,'StepMotor.h']]],
+  ['uni_5f4phase_5ffullstep_5fmaxtorque_5fctr_5fclk_37',['uni_4phase_fullstep_maxtorque_ctr_clk',['../StepMotor_8h.html#a881a2c3b7c8cc4734010e60c73b054a0',1,'StepMotor.h']]],
+  ['uni_5f4phase_5ffullstep_5fmintorque_5fclk_38',['uni_4phase_fullstep_mintorque_clk',['../StepMotor_8h.html#a2a47552f53525ade3c38ea505fea75ab',1,'StepMotor.h']]],
+  ['uni_5f4phase_5ffullstep_5fmintorque_5fctr_5fclk_39',['uni_4phase_fullstep_mintorque_ctr_clk',['../StepMotor_8h.html#a397d8f8a43ddc0f5dce2caa0586d246d',1,'StepMotor.h']]],
+  ['unipolar_5f4phase_40',['UNIPOLAR_4PHASE',['../StepMotor_8h.html#a391fc40c4b5d009366d36d01f6b8c1a6acd9180bfbd8d42be6422a63ff2cf04f4',1,'StepMotor.h']]]
 ];
