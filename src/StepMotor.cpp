@@ -58,7 +58,7 @@ StepMotor::StepMotor( 	SM_motortype_t motorType,
     _pin3PortBit 	= digitalPinToBitMask(in3Pin);
     _pin4PortBit 	= digitalPinToBitMask(in4Pin);
 
-//#else #define for other architectures
+//#else [FUTURE_VERSION]: ARM CORTEX M3 (STM32)
 #endif
 }
 
@@ -72,7 +72,7 @@ void StepMotor::begin(){
 	pin2_output();
 	pin3_output();
 	pin4_output();
-    _set_stepCmd(0x0);
+    _setStepCmd(0x0);
 }
 
 /*******************************************************************
@@ -85,7 +85,7 @@ void StepMotor::end(){
 	pin2_input();
 	pin3_input();
 	pin4_input();
-    _set_stepCmd(0x0);
+    _setStepCmd(0x0);
 }
 
 /********************************************************************
@@ -116,28 +116,28 @@ void StepMotor::setMov(	uint16_t nSteps,
 	switch (cmd){
 
 	case 0:
-		_control_stepCmd(uni_4phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
+		_controlStepCmd(uni_4phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
 		break;
 	case 1:
-		_control_stepCmd(uni_4phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
+		_controlStepCmd(uni_4phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
 		break;
 	case 2:
-		_control_stepCmd(uni_4phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
+		_controlStepCmd(uni_4phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
 		break;
 	case 3:
-		_control_stepCmd(uni_4phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
+		_controlStepCmd(uni_4phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
 		break;
 	case 4:
-		_control_stepCmd(bi_2phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
+		_controlStepCmd(bi_2phase_fullstep_mintorque_clk, true, nSteps, delay_ms);
 		break;
 	case 5:
-		_control_stepCmd(bi_2phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
+		_controlStepCmd(bi_2phase_fullstep_mintorque_ctr_clk, true, nSteps, delay_ms);
 		break;
 	case 6:
-		_control_stepCmd(bi_2phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
+		_controlStepCmd(bi_2phase_fullstep_maxtorque_clk, true, nSteps, delay_ms);
 		break;
 	case 7:
-		_control_stepCmd(bi_2phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
+		_controlStepCmd(bi_2phase_fullstep_maxtorque_ctr_clk, true, nSteps, delay_ms);
 		break;	
 	default:
 		break;
@@ -164,7 +164,7 @@ void StepMotor::_setTorqueForce(SM_torqueforce_t torqueForce){
 /*******************************************************************
  * @brief Control sequenced steps & speed applied to the StepMotor.
  *******************************************************************/
-void StepMotor::_control_stepCmd(	uint8_t *stepSequenceMatrix, 
+void StepMotor::_controlStepCmd(	uint8_t *stepSequenceMatrix, 
 									bool is4stepMatrix, 
 									uint16_t nSteps, 
 									SM_stepdelay_t delay_ms){
@@ -179,7 +179,7 @@ void StepMotor::_control_stepCmd(	uint8_t *stepSequenceMatrix,
 		for(uint16_t i = 0; i < nSteps; i++){
 		
 			currentStep = (0x0003 & i);
-			_set_stepCmd(stepSequenceMatrix[currentStep]);
+			_setStepCmd(stepSequenceMatrix[currentStep]);
 			stepDelay(delay_ms);		
 		}
 	}
@@ -187,18 +187,18 @@ void StepMotor::_control_stepCmd(	uint8_t *stepSequenceMatrix,
 		for(uint16_t i = 0; i < nSteps; i++){
 		
 			currentStep = (0x0007 & i);
-			_set_stepCmd(stepSequenceMatrix[currentStep]);
+			_setStepCmd(stepSequenceMatrix[currentStep]);
 			stepDelay(delay_ms);		
 		}
 	}
 	// Turn off StepMotor pins to save current
-	_set_stepCmd(0x0);
+	_setStepCmd(0x0);
 }
 
 /*******************************************************************
  * @brief Set a step command to the StepMotor pins.
  *******************************************************************/
-void StepMotor::_set_stepCmd(uint8_t nibble_cmd){
+void StepMotor::_setStepCmd(uint8_t nibble_cmd){
 
 	// nibble_cmd is splited to pass bit status value to each pin.
 	// e.g. nibble_cmd = 0x1100. (0x1000 >> 3) & 0x1 = TRUE. Calls pin_high()

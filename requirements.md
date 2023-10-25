@@ -1,6 +1,4 @@
 Required Changes:
-1. Change notation method to doxygen documentation
-2. remove requirements and adjust doxyfile to target src files
 
 
 Best Practices Reference: https://stackoverflow.com/questions/1805351/best-practices-for-reusable-embedded-c

@@ -54,6 +54,7 @@
 #ifdef __AVR
 #include <Arduino.h>
 
+// [FUTURE_VERSION]: Performance library - Writing (4bits) directly to a PORT register 
 //#define writeToPort(nibble_cmd)	{ *portOutputRegister(_pin1Port) |=  (nibble_cmd << X);}
 //#define clearPinPort()			{ *portOutputRegister(_pin1Port) &= ~(0x0F << X);}
 #define stepDelay(delayTime)	{ delay(delayTime);}
@@ -78,7 +79,7 @@
 #define pin3_output()			{ *portModeRegister(_pin3Port) |=  _pin3PortBit;}
 #define pin4_output()			{ *portModeRegister(_pin4Port) |=  _pin4PortBit;}
 
-//#else #define for other architectures
+//#else [FUTURE_VERSION]: ARM CORTEX M3 (STM32)
 #endif
 
 
@@ -98,12 +99,12 @@ static const uint8_t bi_2phase_fullstep_maxtorque_ctr_clk[4] 	= {0x6, 0x5, 0x9, 
 static const uint8_t bi_2phase_fullstep_mintorque_clk[4] 		= {0x8, 0x1, 0x4, 0x2};
 static const uint8_t bi_2phase_fullstep_mintorque_ctr_clk[4]	= {0x2, 0x4, 0x1, 0x8};
 
-// TBD [FUTURE_VERSION]
+// TBD [FUTURE_VERSION]: Half Step implementation
 // Half Step (Mix of 1 and 2 Phase ON per step)
 // static const uint8_t uni_4phase_halfstep_clk[8] 				= {0x9, 0x1, 0x3, 0x2, 0x6, 0x4, 0xC, 0x8};
 // static const uint8_t uni_4phase_halfstep_ctr_clk[8] 			= {0x8, 0xC, 0x4, 0x6, 0x2, 0x3, 0x1, 0x9};
 
-// TBD [FUTURE_VERSION]
+// TBD [FUTURE_VERSION]: Half Step implementation
 // Half Step (Mix of 1 and 2 Phase ON per step)
 //static const uint8_t bi_2phase_halfstep_clk[8]				= {0x8, 0x9, 0x1, 0x5, 0x4, 0x6, 0x2, 0xA};
 //static const uint8_t bi_2phase_halfstep_ctr_clk[8] 			= {0xA, 0x2, 0x6, 0x4, 0x5, 0x1, 0x9, 0x8};
@@ -181,8 +182,8 @@ private:
 
 	void _setMotorType(SM_motortype_t motorType);
 	void _setTorqueForce(SM_torqueforce_t torqueForce);
-	void _control_stepCmd(uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms);
-	void _set_stepCmd(uint8_t nibble_cmd);
+	void _controlStepCmd(uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms);
+	void _setStepCmd(uint8_t nibble_cmd);
 };
 
 #endif // STEP_MOTOR_H
