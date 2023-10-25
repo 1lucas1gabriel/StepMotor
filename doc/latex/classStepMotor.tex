@@ -27,9 +27,9 @@ void \mbox{\hyperlink{classStepMotor_a9194fb22cc76cb65467b3df368931da6}{\+\_\+se
 \begin{DoxyCompactList}\small\item\em Set \mbox{\hyperlink{classStepMotor}{Step\+Motor}} type to be used controlled. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classStepMotor_aeaf9136ba3a03a10d2263dea9ad22e95}{\+\_\+set\+Torque\+Force}} (\mbox{\hyperlink{StepMotor_8h_acef625a3d10d57d4c041decaf38086d0}{S\+M\+\_\+torqueforce\+\_\+t}} torque\+Force)
 \begin{DoxyCompactList}\small\item\em Set torque force type to be used by \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classStepMotor_a8d021e3d99208ee6487fe17ad9d4fe43}{\+\_\+control\+\_\+step\+Cmd}} (uint8\+\_\+t $\ast$step\+Sequence\+Matrix, bool is4step\+Matrix, uint16\+\_\+t n\+Steps, \mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}} delay\+\_\+ms)
+void \mbox{\hyperlink{classStepMotor_ace6200ac4a04a6c3918034fd369772d5}{\+\_\+control\+Step\+Cmd}} (uint8\+\_\+t $\ast$step\+Sequence\+Matrix, bool is4step\+Matrix, uint16\+\_\+t n\+Steps, \mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}} delay\+\_\+ms)
 \begin{DoxyCompactList}\small\item\em Control sequenced steps \& speed applied to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classStepMotor_a8a5e3a1ec0083d363f0cedd4e5e418bf}{\+\_\+set\+\_\+step\+Cmd}} (uint8\+\_\+t nibble\+\_\+cmd)
+void \mbox{\hyperlink{classStepMotor_a1a9a208f89d1dea9e987231d60574c10}{\+\_\+set\+Step\+Cmd}} (uint8\+\_\+t nibble\+\_\+cmd)
 \begin{DoxyCompactList}\small\item\em Set a step command to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} pins. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -73,25 +73,15 @@ uint8\+\_\+t \mbox{\hyperlink{classStepMotor_ae07820c4d41e303d4a69e76aef76b663}{
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classStepMotor_a8d021e3d99208ee6487fe17ad9d4fe43}\label{classStepMotor_a8d021e3d99208ee6487fe17ad9d4fe43}} 
-\index{StepMotor@{StepMotor}!\_control\_stepCmd@{\_control\_stepCmd}}
-\index{\_control\_stepCmd@{\_control\_stepCmd}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_control\_stepCmd()}{\_control\_stepCmd()}}
-{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+control\+\_\+step\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{step\+Sequence\+Matrix,  }\item[{bool}]{is4step\+Matrix,  }\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{\mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}}}]{delay\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classStepMotor_ace6200ac4a04a6c3918034fd369772d5}\label{classStepMotor_ace6200ac4a04a6c3918034fd369772d5}} 
+\index{StepMotor@{StepMotor}!\_controlStepCmd@{\_controlStepCmd}}
+\index{\_controlStepCmd@{\_controlStepCmd}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_controlStepCmd()}{\_controlStepCmd()}}
+{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+control\+Step\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{step\+Sequence\+Matrix,  }\item[{bool}]{is4step\+Matrix,  }\item[{uint16\+\_\+t}]{n\+Steps,  }\item[{\mbox{\hyperlink{StepMotor_8h_ad67e7ac6fb1fc4d092af734bc7e73ff1}{S\+M\+\_\+stepdelay\+\_\+t}}}]{delay\+\_\+ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Control sequenced steps \& speed applied to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}}. 
-
-\mbox{\Hypertarget{classStepMotor_a8a5e3a1ec0083d363f0cedd4e5e418bf}\label{classStepMotor_a8a5e3a1ec0083d363f0cedd4e5e418bf}} 
-\index{StepMotor@{StepMotor}!\_set\_stepCmd@{\_set\_stepCmd}}
-\index{\_set\_stepCmd@{\_set\_stepCmd}!StepMotor@{StepMotor}}
-\doxysubsubsection{\texorpdfstring{\_set\_stepCmd()}{\_set\_stepCmd()}}
-{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+set\+\_\+step\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{nibble\+\_\+cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Set a step command to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} pins. 
 
 \mbox{\Hypertarget{classStepMotor_a9194fb22cc76cb65467b3df368931da6}\label{classStepMotor_a9194fb22cc76cb65467b3df368931da6}} 
 \index{StepMotor@{StepMotor}!\_setMotorType@{\_setMotorType}}
@@ -102,6 +92,16 @@ Set a step command to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} pins.
 
 
 Set \mbox{\hyperlink{classStepMotor}{Step\+Motor}} type to be used controlled. 
+
+\mbox{\Hypertarget{classStepMotor_a1a9a208f89d1dea9e987231d60574c10}\label{classStepMotor_a1a9a208f89d1dea9e987231d60574c10}} 
+\index{StepMotor@{StepMotor}!\_setStepCmd@{\_setStepCmd}}
+\index{\_setStepCmd@{\_setStepCmd}!StepMotor@{StepMotor}}
+\doxysubsubsection{\texorpdfstring{\_setStepCmd()}{\_setStepCmd()}}
+{\footnotesize\ttfamily void Step\+Motor\+::\+\_\+set\+Step\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{nibble\+\_\+cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set a step command to the \mbox{\hyperlink{classStepMotor}{Step\+Motor}} pins. 
 
 \mbox{\Hypertarget{classStepMotor_aeaf9136ba3a03a10d2263dea9ad22e95}\label{classStepMotor_aeaf9136ba3a03a10d2263dea9ad22e95}} 
 \index{StepMotor@{StepMotor}!\_setTorqueForce@{\_setTorqueForce}}
