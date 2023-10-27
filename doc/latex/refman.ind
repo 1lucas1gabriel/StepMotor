@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item {\_control\_stepCmd}
+  \item {\_controlStepCmd}
     \subitem {StepMotor}, \hyperpage{6}
   \item {\_motorType}
     \subitem {StepMotor}, \hyperpage{8}
@@ -22,9 +22,9 @@
     \subitem {StepMotor}, \hyperpage{9}
   \item {\_setMotorType}
     \subitem {StepMotor}, \hyperpage{7}
-  \item {\_setTorqueForce}
+  \item {\_setStepCmd}
     \subitem {StepMotor}, \hyperpage{7}
-  \item {\_set\_stepCmd}
+  \item {\_setTorqueForce}
     \subitem {StepMotor}, \hyperpage{7}
   \item {\_torqueForce}
     \subitem {StepMotor}, \hyperpage{10}
@@ -85,7 +85,7 @@
   \item {SM\_torqueforce\_t}
     \subitem {StepMotor.h}, \hyperpage{14}
   \item {StepMotor}, \hyperpage{5}
-    \subitem {\_control\_stepCmd}, \hyperpage{6}
+    \subitem {\_controlStepCmd}, \hyperpage{6}
     \subitem {\_motorType}, \hyperpage{8}
     \subitem {\_pin1Port}, \hyperpage{8}
     \subitem {\_pin1PortBit}, \hyperpage{8}
@@ -96,8 +96,8 @@
     \subitem {\_pin4Port}, \hyperpage{9}
     \subitem {\_pin4PortBit}, \hyperpage{9}
     \subitem {\_setMotorType}, \hyperpage{7}
+    \subitem {\_setStepCmd}, \hyperpage{7}
     \subitem {\_setTorqueForce}, \hyperpage{7}
-    \subitem {\_set\_stepCmd}, \hyperpage{7}
     \subitem {\_torqueForce}, \hyperpage{10}
     \subitem {begin}, \hyperpage{7}
     \subitem {end}, \hyperpage{7}

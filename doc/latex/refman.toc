@@ -9,9 +9,9 @@
 \contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{6}{subsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.2.1}StepMotor()}{6}{subsubsection.3.1.2.1}%
 \contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.3.1}\_control\_stepCmd()}{7}{subsubsection.3.1.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.3.2}\_set\_stepCmd()}{7}{subsubsection.3.1.3.2}%
-\contentsline {subsubsection}{\numberline {3.1.3.3}\_setMotorType()}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}\_controlStepCmd()}{7}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}\_setMotorType()}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}\_setStepCmd()}{7}{subsubsection.3.1.3.3}%
 \contentsline {subsubsection}{\numberline {3.1.3.4}\_setTorqueForce()}{7}{subsubsection.3.1.3.4}%
 \contentsline {subsubsection}{\numberline {3.1.3.5}begin()}{7}{subsubsection.3.1.3.5}%
 \contentsline {subsubsection}{\numberline {3.1.3.6}end()}{8}{subsubsection.3.1.3.6}%

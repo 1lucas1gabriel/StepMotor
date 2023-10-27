@@ -46,20 +46,16 @@ StepMotor::StepMotor( 	SM_motortype_t motorType,
 	_setMotorType(motorType);
 	_setTorqueForce(torqueForce);
 
-#ifdef __AVR
-    // Map selected pin to a PORT and bit position (AVR targets only)
-    _pin1Port 		= digitalPinToPort(in1Pin);
-	_pin2Port 		= digitalPinToPort(in2Pin);
-	_pin3Port 		= digitalPinToPort(in3Pin);
-    _pin4Port 		= digitalPinToPort(in4Pin);
+    // Map selected pin to a PORT and bit position (general target)
+    _pin1Port 		= pinToPort(in1Pin);
+	_pin2Port 		= pinToPort(in2Pin);
+	_pin3Port 		= pinToPort(in3Pin);
+    _pin4Port 		= pinToPort(in4Pin);
 
-    _pin1PortBit	= digitalPinToBitMask(in1Pin);
-    _pin2PortBit	= digitalPinToBitMask(in2Pin);
-    _pin3PortBit 	= digitalPinToBitMask(in3Pin);
-    _pin4PortBit 	= digitalPinToBitMask(in4Pin);
-
-//#else [FUTURE_VERSION]: ARM CORTEX M3 (STM32)
-#endif
+    _pin1PortBit	= pinToPortBit(in1Pin);
+    _pin2PortBit	= pinToPortBit(in2Pin);
+    _pin3PortBit 	= pinToPortBit(in3Pin);
+    _pin4PortBit 	= pinToPortBit(in4Pin);
 }
 
 /*******************************************************************
@@ -68,10 +64,10 @@ StepMotor::StepMotor( 	SM_motortype_t motorType,
 void StepMotor::begin(){
 	
 	// Set Output PinMode and Turn Off to save current
-    pin1_output();
-	pin2_output();
-	pin3_output();
-	pin4_output();
+    pin_output(_pin1Port, _pin1PortBit);
+	pin_output(_pin2Port, _pin2PortBit);
+	pin_output(_pin3Port, _pin3PortBit);
+	pin_output(_pin4Port, _pin4PortBit);
     _setStepCmd(0x0);
 }
 
@@ -81,10 +77,10 @@ void StepMotor::begin(){
 void StepMotor::end(){
 	
 	// Set Input PinMode and Turn Off to save current
-    pin1_input();
-	pin2_input();
-	pin3_input();
-	pin4_input();
+    pin_input(_pin1Port, _pin1PortBit);
+	pin_input(_pin2Port, _pin2PortBit);
+	pin_input(_pin3Port, _pin3PortBit);
+	pin_input(_pin4Port, _pin4PortBit);
     _setStepCmd(0x0);
 }
 
@@ -202,8 +198,8 @@ void StepMotor::_setStepCmd(uint8_t nibble_cmd){
 
 	// nibble_cmd is splited to pass bit status value to each pin.
 	// e.g. nibble_cmd = 0x1100. (0x1000 >> 3) & 0x1 = TRUE. Calls pin_high()
-	if((nibble_cmd >> 3) & 0x1) pin1_high() else pin1_low();
-	if((nibble_cmd >> 2) & 0x1) pin2_high() else pin2_low();
-	if((nibble_cmd >> 1) & 0x1) pin3_high() else pin3_low();
-	if((nibble_cmd >> 0) & 0x1) pin4_high() else pin4_low();
+	if((nibble_cmd >> 3) & 0x1) pin_high(_pin1Port, _pin1PortBit) else pin_low(_pin1Port, _pin1PortBit);
+	if((nibble_cmd >> 2) & 0x1) pin_high(_pin2Port, _pin2PortBit) else pin_low(_pin2Port, _pin2PortBit);
+	if((nibble_cmd >> 1) & 0x1) pin_high(_pin3Port, _pin3PortBit) else pin_low(_pin3Port, _pin3PortBit);
+	if((nibble_cmd >> 0) & 0x1) pin_high(_pin4Port, _pin4PortBit) else pin_low(_pin4Port, _pin4PortBit);
 }

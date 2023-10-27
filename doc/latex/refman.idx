@@ -1,12 +1,12 @@
 \indexentry{StepMotor@{StepMotor}|hyperpage}{5}
 \indexentry{StepMotor@{StepMotor}!StepMotor@{StepMotor}|hyperpage}{6}
 \indexentry{StepMotor@{StepMotor}!StepMotor@{StepMotor}|hyperpage}{6}
-\indexentry{StepMotor@{StepMotor}!\_control\_stepCmd@{\_control\_stepCmd}|hyperpage}{6}
-\indexentry{\_control\_stepCmd@{\_control\_stepCmd}!StepMotor@{StepMotor}|hyperpage}{6}
-\indexentry{StepMotor@{StepMotor}!\_set\_stepCmd@{\_set\_stepCmd}|hyperpage}{7}
-\indexentry{\_set\_stepCmd@{\_set\_stepCmd}!StepMotor@{StepMotor}|hyperpage}{7}
+\indexentry{StepMotor@{StepMotor}!\_controlStepCmd@{\_controlStepCmd}|hyperpage}{6}
+\indexentry{\_controlStepCmd@{\_controlStepCmd}!StepMotor@{StepMotor}|hyperpage}{6}
 \indexentry{StepMotor@{StepMotor}!\_setMotorType@{\_setMotorType}|hyperpage}{7}
 \indexentry{\_setMotorType@{\_setMotorType}!StepMotor@{StepMotor}|hyperpage}{7}
+\indexentry{StepMotor@{StepMotor}!\_setStepCmd@{\_setStepCmd}|hyperpage}{7}
+\indexentry{\_setStepCmd@{\_setStepCmd}!StepMotor@{StepMotor}|hyperpage}{7}
 \indexentry{StepMotor@{StepMotor}!\_setTorqueForce@{\_setTorqueForce}|hyperpage}{7}
 \indexentry{\_setTorqueForce@{\_setTorqueForce}!StepMotor@{StepMotor}|hyperpage}{7}
 \indexentry{StepMotor@{StepMotor}!begin@{begin}|hyperpage}{7}

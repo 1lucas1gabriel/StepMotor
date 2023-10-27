@@ -57,27 +57,14 @@
 // [FUTURE_VERSION]: Performance library - Writing (4bits) directly to a PORT register 
 //#define writeToPort(nibble_cmd)	{ *portOutputRegister(_pin1Port) |=  (nibble_cmd << X);}
 //#define clearPinPort()			{ *portOutputRegister(_pin1Port) &= ~(0x0F << X);}
-#define stepDelay(delayTime)	{ delay(delayTime);}
+#define stepDelay(delayTime)	delay(delayTime)
+#define pinToPort(pin)			digitalPinToPort(pin)
+#define pinToPortBit(pin)		digitalPinToBitMask(pin)
 
-#define pin1_high()				{ *portOutputRegister(_pin1Port) |=  _pin1PortBit;}
-#define pin2_high()				{ *portOutputRegister(_pin2Port) |=  _pin2PortBit;}
-#define pin3_high()				{ *portOutputRegister(_pin3Port) |=  _pin3PortBit;}
-#define pin4_high()				{ *portOutputRegister(_pin4Port) |=  _pin4PortBit;}
-
-#define pin1_low()				{ *portOutputRegister(_pin1Port) &=  ~_pin1PortBit;}
-#define pin2_low()				{ *portOutputRegister(_pin2Port) &=  ~_pin2PortBit;}
-#define pin3_low()				{ *portOutputRegister(_pin3Port) &=  ~_pin3PortBit;}
-#define pin4_low()				{ *portOutputRegister(_pin4Port) &=  ~_pin4PortBit;}
-
-#define pin1_input()			{ *portModeRegister(_pin1Port) &= ~_pin1PortBit;}
-#define pin2_input()			{ *portModeRegister(_pin2Port) &= ~_pin2PortBit;}
-#define pin3_input()			{ *portModeRegister(_pin3Port) &= ~_pin3PortBit;}
-#define pin4_input()			{ *portModeRegister(_pin4Port) &= ~_pin4PortBit;}
-
-#define pin1_output()			{ *portModeRegister(_pin1Port) |=  _pin1PortBit;}
-#define pin2_output()			{ *portModeRegister(_pin2Port) |=  _pin2PortBit;}
-#define pin3_output()			{ *portModeRegister(_pin3Port) |=  _pin3PortBit;}
-#define pin4_output()			{ *portModeRegister(_pin4Port) |=  _pin4PortBit;}
+#define pin_high(	pinPort, pinPortBit)	{ *portOutputRegister(pinPort) |=  pinPortBit;}
+#define pin_low(	pinPort, pinPortBit)	{ *portOutputRegister(pinPort) &= ~pinPortBit;}
+#define pin_output(	pinPort, pinPortBit)	{ *portModeRegister(pinPort)   |=  pinPortBit;}
+#define pin_input(	pinPort, pinPortBit)	{ *portModeRegister(pinPort)   &= ~pinPortBit;}
 
 //#else [FUTURE_VERSION]: ARM CORTEX M3 (STM32)
 #endif

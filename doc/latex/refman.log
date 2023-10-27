@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.10.13)  24 OCT 2023 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.10.13)  26 OCT 2023 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -926,7 +926,7 @@ iple pdfs with page group included in a single page
 <StepMotor_8cpp__incl.pdf, id=411, 160.6pt x 156.585pt>
 File: StepMotor_8cpp__incl.pdf Graphic file (type pdf)
 <use StepMotor_8cpp__incl.pdf>
-Package pdftex.def Info: StepMotor_8cpp__incl.pdf  used on input line 14.
+Package pdftex.def Info: StepMotor_8cpp__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 160.0pt x 156.004pt.
 ) (./StepMotor_8h.tex <./StepMotor_8h__dep__incl.pdf
 
@@ -936,7 +936,7 @@ ultiple pdfs with page group included in a single page
 <StepMotor_8h__dep__incl.pdf, id=422, 160.6pt x 156.585pt>
 File: StepMotor_8h__dep__incl.pdf Graphic file (type pdf)
 <use StepMotor_8h__dep__incl.pdf>
-Package pdftex.def Info: StepMotor_8h__dep__incl.pdf  used on input line 13.
+Package pdftex.def Info: StepMotor_8h__dep__incl.pdf  used on input line 12.
 (pdftex.def)             Requested size: 160.0pt x 156.004pt.
  [11
 
@@ -954,12 +954,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 9A724EBF0D641727953D14E835C2207F;9676.
+(rerunfilecheck)             Checksum: 387418F2BBDCB6C0C4CFBD201635C5C5;9660.
  ) 
 Here is how much of TeX's memory you used:
  16680 strings out of 483183
  244772 string characters out of 5966291
- 530045 words of memory out of 5000000
+ 530035 words of memory out of 5000000
  31251 multiletter control sequences out of 15000+600000
  586635 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -973,7 +973,7 @@ rier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (22 pages, 136734 bytes).
+Output written on refman.pdf (22 pages, 136735 bytes).
 PDF statistics:
  666 PDF objects out of 1000 (max. 8388607)
  618 compressed objects within 7 object streams
