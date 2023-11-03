@@ -25,26 +25,41 @@
 
 /*****************************************************************
  * @file StepMotor.h
- * @brief StepMotor library header file for Arduino & ARM Cortex-M3 (STM32)
+ * @brief StepMotor library header file for Arduino
  * @details
  * 		Source: https://github.com/1lucas1gabriel/StepMotor
+ * 		CurrentVersion: 1.0
+ * 		Date: Oct, 2023
  * 
  * @verbatim
- * 	Required mapping between uC Port and Step Motor connection:
- * 	
- * 	0. One Single PORT must be used to connect all 4 pins.
- * 	1. Pin connection must be sequenced over a same PORT.
- *  2. Written nibble to a Port refers to a step command.
+ * --------------------------------------------------------------
+ * StepMotor: v.1.0
+ * StepMotor library allows to drive stepper motors in a simple way.
+ * It can also be quickly re-used between diferent architectures by 
+ * appling small changes in interface (hardware-dependent) functions.
  * 
+ * API functions are designed to include:
  * 
- *  Pin connection example
+ * 1. Control of step speed (discrete values), direction of rotation and applied torque.
+ * 2. Allows to choose any MCU digital pin for the Step Motor connections.
+ * 3. Allows usage of unipolar / bipolar step motors.
  * 
- * 						-----------------------------------------
- *  uC: 8 LSB Port		| b7 | b6 | b5 | b4 | b3 | b2 | b1 | b0 |
- * 						-----------------------------------------
- * 	StepMotor:						   ---------------------
- *  pin connection (nibble_cmd)		   | In1| In2| In3| In4|
- * 									   ---------------------
+ * --------------------------------------------------------------
+ * Setup:
+ * StepMotor library always requires four-pins connection to drive
+ * step motors properly. It uses only FULL step method to command motors,
+ * allowing one or two phase to be activated simultaneously (MIN/MAX 
+ * torque applied, respectively). It's highly recommended to use adequate 
+ * drivers to drive those devices, see examples below.
+ * 
+ * * Bipolar Step Motor (2 phase)
+ * 		* Driver: L293 H-bridge
+ * 		* Coils per phase: 2
+ 
+ * * Unipolar Step Motor (4 phase)
+ * 		* Driver: ULN 2003
+ * 		* Coils per phase: 1
+ * 
  * @endverbatim
  *****************************************************************/
 
@@ -54,9 +69,6 @@
 #ifdef __AVR
 #include <Arduino.h>
 
-// [FUTURE_VERSION]: Performance library - Writing (4bits) directly to a PORT register 
-//#define writeToPort(nibble_cmd)	{ *portOutputRegister(_pin1Port) |=  (nibble_cmd << X);}
-//#define clearPinPort()			{ *portOutputRegister(_pin1Port) &= ~(0x0F << X);}
 #define stepDelay(delayTime)	delay(delayTime)
 #define pinToPort(pin)			digitalPinToPort(pin)
 #define pinToPortBit(pin)		digitalPinToBitMask(pin)
@@ -66,7 +78,6 @@
 #define pin_output(	pinPort, pinPortBit)	{ *portModeRegister(pinPort)   |=  pinPortBit;}
 #define pin_input(	pinPort, pinPortBit)	{ *portModeRegister(pinPort)   &= ~pinPortBit;}
 
-//#else [FUTURE_VERSION]: ARM CORTEX M3 (STM32)
 #endif
 
 
@@ -85,16 +96,6 @@ static const uint8_t bi_2phase_fullstep_maxtorque_ctr_clk[4] 	= {0x6, 0x5, 0x9, 
 // Full Step and Minimum Torque (1 phase ON per step)
 static const uint8_t bi_2phase_fullstep_mintorque_clk[4] 		= {0x8, 0x1, 0x4, 0x2};
 static const uint8_t bi_2phase_fullstep_mintorque_ctr_clk[4]	= {0x2, 0x4, 0x1, 0x8};
-
-// TBD [FUTURE_VERSION]: Half Step implementation
-// Half Step (Mix of 1 and 2 Phase ON per step)
-// static const uint8_t uni_4phase_halfstep_clk[8] 				= {0x9, 0x1, 0x3, 0x2, 0x6, 0x4, 0xC, 0x8};
-// static const uint8_t uni_4phase_halfstep_ctr_clk[8] 			= {0x8, 0xC, 0x4, 0x6, 0x2, 0x3, 0x1, 0x9};
-
-// TBD [FUTURE_VERSION]: Half Step implementation
-// Half Step (Mix of 1 and 2 Phase ON per step)
-//static const uint8_t bi_2phase_halfstep_clk[8]				= {0x8, 0x9, 0x1, 0x5, 0x4, 0x6, 0x2, 0xA};
-//static const uint8_t bi_2phase_halfstep_ctr_clk[8] 			= {0xA, 0x2, 0x6, 0x4, 0x5, 0x1, 0x9, 0x8};
 
 
 /**
@@ -169,7 +170,7 @@ private:
 
 	void _setMotorType(SM_motortype_t motorType);
 	void _setTorqueForce(SM_torqueforce_t torqueForce);
-	void _controlStepCmd(uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms);
+	void _controlStepCmd(const uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, SM_stepdelay_t delay_ms);
 	void _setStepCmd(uint8_t nibble_cmd);
 };
 

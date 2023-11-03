@@ -25,9 +25,11 @@
 
 /*****************************************************************
  * @file StepMotor.cpp
- * @brief StepMotor library source code for Arduino & ARM Cortex-M3 (STM32)
+ * @brief StepMotor library source code for Arduino
  * @details
  * 		Source: https://github.com/1lucas1gabriel/StepMotor
+ * 		CurrentVersion: 1.0
+ * 		Date: Oct, 2023
  *****************************************************************/
 
 
@@ -160,7 +162,7 @@ void StepMotor::_setTorqueForce(SM_torqueforce_t torqueForce){
 /*******************************************************************
  * @brief Control sequenced steps & speed applied to the StepMotor.
  *******************************************************************/
-void StepMotor::_controlStepCmd(	uint8_t *stepSequenceMatrix, 
+void StepMotor::_controlStepCmd(	const uint8_t *stepSequenceMatrix, 
 									bool is4stepMatrix, 
 									uint16_t nSteps, 
 									SM_stepdelay_t delay_ms){
