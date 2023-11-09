@@ -1,6 +1,17 @@
 /**
- * program to describe how to implement baremetal joystick control
- * needs futher improvements (Kalman filter applied to sensor readings)
+ * Lucas Morais
+ * Lib version: 1.0
+ * Date: Nov, 2023
+ * 
+ * joystickControl program describes how to use joystick readings 
+ * (x and y axis) to control two step motors. It can also be used with two
+ * potentiometer. This bare metal program is a basic implementation, which
+ * could be enhaced by applying Kalman filters to the sensor readings in
+ * order to stabilize step motors controlling.
+
+ * Setup:
+ *    - base step motor: (Bipolar) HP printer motor
+ *    - join step motor: (Unipolar) 28BYJ-48 
 */
 
 #include <StepMotor.h>
@@ -20,10 +31,9 @@ void loop(){
     int x_value, y_value;
 
     x_value = analogRead(A0);
-    //Serial.print("x: ");
+    Serial.print("x: ");
     Serial.print(x_value);
 
-    // 0 -[ 512 ]- 1023
     if((x_value >= 300) && (x_value <= 800)){
         
         /* save guard to stop movement. no really needed */
@@ -41,14 +51,10 @@ void loop(){
         baseMotor.setMov(10, MEDIUM_MS, COUNTER_CLOCKWISE);
     }
 
-    
-
-
     y_value = analogRead(A1);
     Serial.print(",");
     Serial.println(y_value);
 
-    // 0 -[ 512 ]- 1023
     if((y_value >= 200) && (y_value <= 800)){
         
         /* save guard to stop movement. no really needed */
@@ -58,7 +64,6 @@ void loop(){
 
         //set_speed = map(x_value, 550, 1023, 10, 100);
         joinMotor.setMov(20, MEDIUM_MS, CLOCKWISE);
-
     }
     /* y_value < 100*/
     else{
