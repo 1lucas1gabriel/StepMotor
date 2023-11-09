@@ -22,7 +22,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "StepMotor library for Arduino & ARM Cortex-M3 (STM32)", "index.html", [
+  [ "StepMotor library for Arduino", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -49,8 +49,8 @@
 \indexentry{StepMotor.h@{StepMotor.h}!UNIPOLAR\_4PHASE@{UNIPOLAR\_4PHASE}|hyperpage}{13}
 \indexentry{BIPOLAR\_2PHASE@{BIPOLAR\_2PHASE}!StepMotor.h@{StepMotor.h}|hyperpage}{13}
 \indexentry{StepMotor.h@{StepMotor.h}!BIPOLAR\_2PHASE@{BIPOLAR\_2PHASE}|hyperpage}{13}
-\indexentry{StepMotor.h@{StepMotor.h}!SM\_stepdelay\_t@{SM\_stepdelay\_t}|hyperpage}{13}
-\indexentry{SM\_stepdelay\_t@{SM\_stepdelay\_t}!StepMotor.h@{StepMotor.h}|hyperpage}{13}
+\indexentry{StepMotor.h@{StepMotor.h}!SM\_stepdelay\_t@{SM\_stepdelay\_t}|hyperpage}{14}
+\indexentry{SM\_stepdelay\_t@{SM\_stepdelay\_t}!StepMotor.h@{StepMotor.h}|hyperpage}{14}
 \indexentry{SLOW\_MS@{SLOW\_MS}!StepMotor.h@{StepMotor.h}|hyperpage}{14}
 \indexentry{StepMotor.h@{StepMotor.h}!SLOW\_MS@{SLOW\_MS}|hyperpage}{14}
 \indexentry{MEDIUM\_MS@{MEDIUM\_MS}!StepMotor.h@{StepMotor.h}|hyperpage}{14}
@@ -69,10 +69,10 @@
 \indexentry{bi\_2phase\_fullstep\_maxtorque\_ctr\_clk@{bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}|hyperpage}{14}
 \indexentry{StepMotor.h@{StepMotor.h}!bi\_2phase\_fullstep\_mintorque\_clk@{bi\_2phase\_fullstep\_mintorque\_clk}|hyperpage}{14}
 \indexentry{bi\_2phase\_fullstep\_mintorque\_clk@{bi\_2phase\_fullstep\_mintorque\_clk}!StepMotor.h@{StepMotor.h}|hyperpage}{14}
-\indexentry{StepMotor.h@{StepMotor.h}!bi\_2phase\_fullstep\_mintorque\_ctr\_clk@{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}|hyperpage}{14}
-\indexentry{bi\_2phase\_fullstep\_mintorque\_ctr\_clk@{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}|hyperpage}{14}
-\indexentry{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_maxtorque\_clk@{uni\_4phase\_fullstep\_maxtorque\_clk}|hyperpage}{14}
-\indexentry{uni\_4phase\_fullstep\_maxtorque\_clk@{uni\_4phase\_fullstep\_maxtorque\_clk}!StepMotor.h@{StepMotor.h}|hyperpage}{14}
+\indexentry{StepMotor.h@{StepMotor.h}!bi\_2phase\_fullstep\_mintorque\_ctr\_clk@{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}|hyperpage}{15}
+\indexentry{bi\_2phase\_fullstep\_mintorque\_ctr\_clk@{bi\_2phase\_fullstep\_mintorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}|hyperpage}{15}
+\indexentry{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_maxtorque\_clk@{uni\_4phase\_fullstep\_maxtorque\_clk}|hyperpage}{15}
+\indexentry{uni\_4phase\_fullstep\_maxtorque\_clk@{uni\_4phase\_fullstep\_maxtorque\_clk}!StepMotor.h@{StepMotor.h}|hyperpage}{15}
 \indexentry{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_maxtorque\_ctr\_clk@{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}|hyperpage}{15}
 \indexentry{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk@{uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}!StepMotor.h@{StepMotor.h}|hyperpage}{15}
 \indexentry{StepMotor.h@{StepMotor.h}!uni\_4phase\_fullstep\_mintorque\_clk@{uni\_4phase\_fullstep\_mintorque\_clk}|hyperpage}{15}

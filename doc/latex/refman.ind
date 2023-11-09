@@ -40,7 +40,7 @@
   \item {bi\_2phase\_fullstep\_mintorque\_clk}
     \subitem {StepMotor.h}, \hyperpage{14}
   \item {bi\_2phase\_fullstep\_mintorque\_ctr\_clk}
-    \subitem {StepMotor.h}, \hyperpage{14}
+    \subitem {StepMotor.h}, \hyperpage{15}
   \item {BIPOLAR\_2PHASE}
     \subitem {StepMotor.h}, \hyperpage{13}
 
@@ -81,7 +81,7 @@
   \item {SM\_motortype\_t}
     \subitem {StepMotor.h}, \hyperpage{13}
   \item {SM\_stepdelay\_t}
-    \subitem {StepMotor.h}, \hyperpage{13}
+    \subitem {StepMotor.h}, \hyperpage{14}
   \item {SM\_torqueforce\_t}
     \subitem {StepMotor.h}, \hyperpage{14}
   \item {StepMotor}, \hyperpage{5}
@@ -110,7 +110,7 @@
 		\hyperpage{14}
     \subitem {bi\_2phase\_fullstep\_mintorque\_clk}, \hyperpage{14}
     \subitem {bi\_2phase\_fullstep\_mintorque\_ctr\_clk}, 
-		\hyperpage{14}
+		\hyperpage{15}
     \subitem {BIPOLAR\_2PHASE}, \hyperpage{13}
     \subitem {CLOCKWISE}, \hyperpage{13}
     \subitem {COUNTER\_CLOCKWISE}, \hyperpage{13}
@@ -121,9 +121,9 @@
     \subitem {SLOW\_MS}, \hyperpage{14}
     \subitem {SM\_direction\_t}, \hyperpage{13}
     \subitem {SM\_motortype\_t}, \hyperpage{13}
-    \subitem {SM\_stepdelay\_t}, \hyperpage{13}
+    \subitem {SM\_stepdelay\_t}, \hyperpage{14}
     \subitem {SM\_torqueforce\_t}, \hyperpage{14}
-    \subitem {uni\_4phase\_fullstep\_maxtorque\_clk}, \hyperpage{14}
+    \subitem {uni\_4phase\_fullstep\_maxtorque\_clk}, \hyperpage{15}
     \subitem {uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}, 
 		\hyperpage{15}
     \subitem {uni\_4phase\_fullstep\_mintorque\_clk}, \hyperpage{15}
@@ -134,7 +134,7 @@
   \indexspace
 
   \item {uni\_4phase\_fullstep\_maxtorque\_clk}
-    \subitem {StepMotor.h}, \hyperpage{14}
+    \subitem {StepMotor.h}, \hyperpage{15}
   \item {uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}
     \subitem {StepMotor.h}, \hyperpage{15}
   \item {uni\_4phase\_fullstep\_mintorque\_clk}

@@ -2,10 +2,11 @@
 \label{StepMotor_8h}\index{StepMotor.h@{StepMotor.h}}
 
 
-\mbox{\hyperlink{classStepMotor}{Step\+Motor}} library header file for Arduino \& A\+RM Cortex-\/\+M3 (S\+T\+M32)  
+\mbox{\hyperlink{classStepMotor}{Step\+Motor}} library header file for Arduino.  
 
 
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -59,25 +60,38 @@ static const uint8\+\_\+t \mbox{\hyperlink{StepMotor_8h_a5063302452788f7e1608894
 
 
 \doxysubsection{Detailed Description}
-\mbox{\hyperlink{classStepMotor}{Step\+Motor}} library header file for Arduino \& A\+RM Cortex-\/\+M3 (S\+T\+M32) 
+\mbox{\hyperlink{classStepMotor}{Step\+Motor}} library header file for Arduino. 
 
-Source\+: \href{https://github.com/1lucas1gabriel/StepMotor}{\texttt{ https\+://github.\+com/1lucas1gabriel/\+Step\+Motor}}
+Source\+: \href{https://github.com/1lucas1gabriel/StepMotor}{\texttt{ https\+://github.\+com/1lucas1gabriel/\+Step\+Motor}} Current\+Version\+: 1.\+0 Date\+: Oct, 2023
 
-\begin{DoxyVerb}*   Required mapping between uC Port and Step Motor connection:
-*   
-*   0. One Single PORT must be used to connect all 4 pins.
-*   1. Pin connection must be sequenced over a same PORT.
-*  2. Written nibble to a Port refers to a step command.
+\begin{DoxyVerb}* --------------------------------------------------------------
+* StepMotor: v.1.0
+* StepMotor library allows to drive stepper motors in a simple way.
+* It can also be quickly re-used between diferent architectures by 
+* appling small changes in interface (hardware-dependent) functions.
 * 
+* API functions are designed to include:
 * 
-*  Pin connection example
+* 1. Control of step speed (discrete values), direction of rotation and applied torque.
+* 2. Allows to choose any MCU digital pin for the Step Motor connections.
+* 3. Allows usage of unipolar / bipolar step motors.
 * 
-*                       -----------------------------------------
-*  uC: 8 LSB Port       | b7 | b6 | b5 | b4 | b3 | b2 | b1 | b0 |
-*                       -----------------------------------------
-*   StepMotor:                         ---------------------
-*  pin connection (nibble_cmd)         | In1| In2| In3| In4|
-*                                      ---------------------
+* --------------------------------------------------------------
+* Setup:
+* StepMotor library always requires four-pins connection to drive
+* step motors properly. It uses only FULL step method to command motors,
+* allowing one or two phase to be activated simultaneously (MIN/MAX 
+* torque applied, respectively). It's highly recommended to use adequate 
+* drivers to drive those devices, see examples below.
+* 
+* * Bipolar Step Motor (2 phase)
+*       * Driver: L293 H-bridge
+*       * Coils per phase: 2
+
+* * Unipolar Step Motor (4 phase)
+*       * Driver: ULN 2003
+*       * Coils per phase: 1
+* 
 * \end{DoxyVerb}
  
 

@@ -35,13 +35,13 @@
 \contentsline {subsection}{\numberline {4.2.2}Enumeration Type Documentation}{13}{subsection.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.2.1}SM\_direction\_t}{13}{subsubsection.4.2.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2.2}SM\_motortype\_t}{13}{subsubsection.4.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}SM\_stepdelay\_t}{13}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}SM\_stepdelay\_t}{14}{subsubsection.4.2.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.2.4}SM\_torqueforce\_t}{14}{subsubsection.4.2.2.4}%
 \contentsline {subsection}{\numberline {4.2.3}Variable Documentation}{14}{subsection.4.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.3.1}bi\_2phase\_fullstep\_maxtorque\_clk}{14}{subsubsection.4.2.3.1}%
 \contentsline {subsubsection}{\numberline {4.2.3.2}bi\_2phase\_fullstep\_maxtorque\_ctr\_clk}{14}{subsubsection.4.2.3.2}%
-\contentsline {subsubsection}{\numberline {4.2.3.3}bi\_2phase\_fullstep\_mintorque\_clk}{14}{subsubsection.4.2.3.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.4}bi\_2phase\_fullstep\_mintorque\_ctr\_clk}{14}{subsubsection.4.2.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}bi\_2phase\_fullstep\_mintorque\_clk}{15}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}bi\_2phase\_fullstep\_mintorque\_ctr\_clk}{15}{subsubsection.4.2.3.4}%
 \contentsline {subsubsection}{\numberline {4.2.3.5}uni\_4phase\_fullstep\_maxtorque\_clk}{15}{subsubsection.4.2.3.5}%
 \contentsline {subsubsection}{\numberline {4.2.3.6}uni\_4phase\_fullstep\_maxtorque\_ctr\_clk}{15}{subsubsection.4.2.3.6}%
 \contentsline {subsubsection}{\numberline {4.2.3.7}uni\_4phase\_fullstep\_mintorque\_clk}{15}{subsubsection.4.2.3.7}%

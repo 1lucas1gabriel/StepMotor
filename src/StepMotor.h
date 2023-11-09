@@ -86,7 +86,7 @@ static const uint8_t uni_4phase_fullstep_maxtorque_clk[4] 		= {0x9, 0x3, 0x6, 0x
 static const uint8_t uni_4phase_fullstep_maxtorque_ctr_clk[4] 	= {0xC, 0x6, 0x3, 0x9};
 
 // Full Step and Minimum Torque (1 phase ON per step)
-static const uint8_t uni_4phase_fullstep_mintorque_clk[4] 		= {0x8, 0x1, 0x2, 0x4};
+static const uint8_t uni_4phase_fullstep_mintorque_clk[4] 		 = {0x8, 0x1, 0x2, 0x4};
 static const uint8_t uni_4phase_fullstep_mintorque_ctr_clk[4] 	= {0x4, 0x2, 0x1, 0x8};
 
 // Full Step and Maximum Torque (2 phase ON per step)

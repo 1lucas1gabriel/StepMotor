@@ -1,7 +1,7 @@
 var classStepMotor =
 [
     [ "StepMotor", "classStepMotor.html#ad62664c5365fc08abaafe260207067ec", null ],
-    [ "_controlStepCmd", "classStepMotor.html#ace6200ac4a04a6c3918034fd369772d5", null ],
+    [ "_controlStepCmd", "classStepMotor.html#a7805d0089649faa6d572978f1ea3ce6a", null ],
     [ "_setMotorType", "classStepMotor.html#a9194fb22cc76cb65467b3df368931da6", null ],
     [ "_setStepCmd", "classStepMotor.html#a1a9a208f89d1dea9e987231d60574c10", null ],
     [ "_setTorqueForce", "classStepMotor.html#aeaf9136ba3a03a10d2263dea9ad22e95", null ],

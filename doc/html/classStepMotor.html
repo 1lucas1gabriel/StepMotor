@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>StepMotor library for Arduino &amp; ARM Cortex-M3 (STM32): StepMotor Class Reference</title>
+<title>StepMotor library for Arduino: StepMotor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">StepMotor library for Arduino &amp; ARM Cortex-M3 (STM32)
+   <div id="projectname">StepMotor library for Arduino
    </div>
   </td>
  </tr>
@@ -119,11 +119,11 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:aeaf9136ba3a03a10d2263dea9ad22e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#aeaf9136ba3a03a10d2263dea9ad22e95">_setTorqueForce</a> (<a class="el" href="StepMotor_8h.html#acef625a3d10d57d4c041decaf38086d0">SM_torqueforce_t</a> torqueForce)</td></tr>
 <tr class="memdesc:aeaf9136ba3a03a10d2263dea9ad22e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set torque force type to be used by <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a>.  <a href="classStepMotor.html#aeaf9136ba3a03a10d2263dea9ad22e95">More...</a><br /></td></tr>
 <tr class="separator:aeaf9136ba3a03a10d2263dea9ad22e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6200ac4a04a6c3918034fd369772d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#ace6200ac4a04a6c3918034fd369772d5">_controlStepCmd</a> (uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, <a class="el" href="StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1">SM_stepdelay_t</a> delay_ms)</td></tr>
-<tr class="memdesc:ace6200ac4a04a6c3918034fd369772d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control sequenced steps &amp; speed applied to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a>.  <a href="classStepMotor.html#ace6200ac4a04a6c3918034fd369772d5">More...</a><br /></td></tr>
-<tr class="separator:ace6200ac4a04a6c3918034fd369772d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7805d0089649faa6d572978f1ea3ce6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a7805d0089649faa6d572978f1ea3ce6a">_controlStepCmd</a> (const uint8_t *stepSequenceMatrix, bool is4stepMatrix, uint16_t nSteps, <a class="el" href="StepMotor_8h.html#ad67e7ac6fb1fc4d092af734bc7e73ff1">SM_stepdelay_t</a> delay_ms)</td></tr>
+<tr class="memdesc:a7805d0089649faa6d572978f1ea3ce6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control sequenced steps &amp; speed applied to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a>.  <a href="classStepMotor.html#a7805d0089649faa6d572978f1ea3ce6a">More...</a><br /></td></tr>
+<tr class="separator:a7805d0089649faa6d572978f1ea3ce6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a9a208f89d1dea9e987231d60574c10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStepMotor.html#a1a9a208f89d1dea9e987231d60574c10">_setStepCmd</a> (uint8_t nibble_cmd)</td></tr>
-<tr class="memdesc:a1a9a208f89d1dea9e987231d60574c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a step command to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> pins.  <a href="classStepMotor.html#a1a9a208f89d1dea9e987231d60574c10">More...</a><br /></td></tr>
+<tr class="memdesc:a1a9a208f89d1dea9e987231d60574c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a step command individually to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> pins.  <a href="classStepMotor.html#a1a9a208f89d1dea9e987231d60574c10">More...</a><br /></td></tr>
 <tr class="separator:a1a9a208f89d1dea9e987231d60574c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -217,8 +217,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ace6200ac4a04a6c3918034fd369772d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace6200ac4a04a6c3918034fd369772d5">&#9670;&nbsp;</a></span>_controlStepCmd()</h2>
+<a id="a7805d0089649faa6d572978f1ea3ce6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7805d0089649faa6d572978f1ea3ce6a">&#9670;&nbsp;</a></span>_controlStepCmd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +229,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void StepMotor::_controlStepCmd </td>
           <td>(</td>
-          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
           <td class="paramname"><em>stepSequenceMatrix</em>, </td>
         </tr>
         <tr>
@@ -319,7 +319,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set a step command to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> pins. </p>
+<p>Set a step command individually to the <a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> pins. </p>
 
 </div>
 </div>

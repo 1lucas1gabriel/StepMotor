@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>StepMotor library for Arduino &amp; ARM Cortex-M3 (STM32): StepMotor.h File Reference</title>
+<title>StepMotor library for Arduino: StepMotor.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">StepMotor library for Arduino &amp; ARM Cortex-M3 (STM32)
+   <div id="projectname">StepMotor library for Arduino
    </div>
   </td>
  </tr>
@@ -90,15 +90,15 @@ $(document).ready(function(){initNavTree('StepMotor_8h.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> library header file for Arduino &amp; ARM Cortex-M3 (STM32)  
+<p><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> library header file for Arduino.  
 <a href="#details">More...</a></p>
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="StepMotor_8h__dep__incl.png" border="0" usemap="#StepMotor_8hdep" alt=""/></div>
 <map name="StepMotor_8hdep" id="StepMotor_8hdep">
-<area shape="rect" title="StepMotor library header file for Arduino &amp; ARM Cortex&#45;M3 (STM32)" alt="" coords="13,5,105,32"/>
-<area shape="rect" href="StepMotor_8cpp.html" title="StepMotor library source code for Arduino &amp; ARM Cortex&#45;M3 (STM32)" alt="" coords="5,80,112,107"/>
+<area shape="rect" title="StepMotor library header file for Arduino." alt="" coords="13,5,105,32"/>
+<area shape="rect" href="StepMotor_8cpp.html" title="StepMotor library source code for Arduino." alt="" coords="5,80,112,107"/>
 </map>
 </div>
 </div>
@@ -150,23 +150,36 @@ Variables</h2></td></tr>
 <tr class="separator:a5063302452788f7e160889499073a404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> library header file for Arduino &amp; ARM Cortex-M3 (STM32) </p>
-<p>Source: <a href="https://github.com/1lucas1gabriel/StepMotor">https://github.com/1lucas1gabriel/StepMotor</a></p>
-<pre class="fragment">*   Required mapping between uC Port and Step Motor connection:
-*   
-*   0. One Single PORT must be used to connect all 4 pins.
-*   1. Pin connection must be sequenced over a same PORT.
-*  2. Written nibble to a Port refers to a step command.
+<div class="textblock"><p><a class="el" href="classStepMotor.html" title="StepMotor Class.">StepMotor</a> library header file for Arduino. </p>
+<p>Source: <a href="https://github.com/1lucas1gabriel/StepMotor">https://github.com/1lucas1gabriel/StepMotor</a> CurrentVersion: 1.0 Date: Oct, 2023</p>
+<pre class="fragment">* --------------------------------------------------------------
+* StepMotor: v.1.0
+* StepMotor library allows to drive stepper motors in a simple way.
+* It can also be quickly re-used between diferent architectures by 
+* appling small changes in interface (hardware-dependent) functions.
 * 
+* API functions are designed to include:
 * 
-*  Pin connection example
+* 1. Control of step speed (discrete values), direction of rotation and applied torque.
+* 2. Allows to choose any MCU digital pin for the Step Motor connections.
+* 3. Allows usage of unipolar / bipolar step motors.
 * 
-*                       -----------------------------------------
-*  uC: 8 LSB Port       | b7 | b6 | b5 | b4 | b3 | b2 | b1 | b0 |
-*                       -----------------------------------------
-*   StepMotor:                         ---------------------
-*  pin connection (nibble_cmd)         | In1| In2| In3| In4|
-*                                      ---------------------
+* --------------------------------------------------------------
+* Setup:
+* StepMotor library always requires four-pins connection to drive
+* step motors properly. It uses only FULL step method to command motors,
+* allowing one or two phase to be activated simultaneously (MIN/MAX 
+* torque applied, respectively). It's highly recommended to use adequate 
+* drivers to drive those devices, see examples below.
+* 
+* * Bipolar Step Motor (2 phase)
+*       * Driver: L293 H-bridge
+*       * Coils per phase: 2
+
+* * Unipolar Step Motor (4 phase)
+*       * Driver: ULN 2003
+*       * Coils per phase: 1
+* 
 * </pre> </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="ae0c236e90ce0b9f322ce3260dc2897d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0c236e90ce0b9f322ce3260dc2897d9">&#9670;&nbsp;</a></span>SM_direction_t</h2>

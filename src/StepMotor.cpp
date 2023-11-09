@@ -194,7 +194,7 @@ void StepMotor::_controlStepCmd(	const uint8_t *stepSequenceMatrix,
 }
 
 /*******************************************************************
- * @brief Set a step command to the StepMotor pins.
+ * @brief Set a step command individually to the StepMotor pins.
  *******************************************************************/
 void StepMotor::_setStepCmd(uint8_t nibble_cmd){
 

@@ -6,9 +6,10 @@ Best Practices Reference: https://stackoverflow.com/questions/1805351/best-pract
 LIBRARY DEVOPS REQUIREMENTS
 
 [FUTURE_VERSION]1. Library shall use configuration files (Header file) to set project specific configs (e.g. pin config, function mapping)
+[FUTURE_VERSION] 2. Library shall be implemented in C (struct-like instead of classes)
 [IN_PROGRESS] 2. Library shall have a documented API (including README.md file and GitHub page)
 [TO_DO] 3. Library shall be tested through unit tests
-[TO_DO] 4. Library shall use a control version system (branch for QA, dev, releases)
+[DONE] 4. Library shall use a control version system (branch for QA, dev, releases)
 [DONE]  5. Library shall have a license to use
 
 [DONE] 6. Library shall include examples about how to use API.
@@ -23,7 +24,7 @@ WHAT?
 [DONE] 3. User shall define required torque applied by the step motor (Max, Min).
 [DONE] 4. User shall be allowed to use the library with unipolar / bipolar step motors.
 [DONE] 5. User shall be allowed to choose any MCU digital pin for the Step Motor connections.
-[FUTURE_VERSION] 6. User shall set maximum amount of steps allowed to the Step Motor (it will lead to counting steps).
+[FUTURE_VERSION] 6. User shall define maximum amount of steps allowed to the Step Motor (it will lead to counting steps). 
 
 HOW?
 [DONE] 1. Library shall be a general purpose library (absent of architecture / platform).
@@ -34,7 +35,7 @@ HOW?
 IMPLEMENTATION REQUIREMENTS
 [DONE] 1. Implement a matrix mapping method to command different Step Motor types.
 [DONE] 2. Enumeration and matrixes shall follow a convention for readbility.
-[TO_DO]3. Implement the delay control (btw step commands) following RTOS?
+[EVALUATE]3. Implement the delay control (btw step commands) following RTOS?
 
 [FUTURE_VERSION] 1. Library shall define a writeToPort function. 
 [FUTURE_VERSION] 2. writeToPort function shall set all 4 registers (pin connections) at once.
