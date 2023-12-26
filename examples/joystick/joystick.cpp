@@ -13,17 +13,34 @@
  *    - base step motor: (Bipolar) HP printer motor
  *    - join step motor: (Unipolar) 28BYJ-48 
 */
-
-#include <StepMotor.h>
+#include "Arduino.h"
+#include "StepMotor.h"
 
 StepMotor baseMotor(BIPOLAR_2PHASE, MIN_TORQUE, 11,10,9,8);
 StepMotor joinMotor(UNIPOLAR_4PHASE, MIN_TORQUE, 5,4,3,2);
+void setup();
+void loop();
+
+
+int main(){
+
+    // initialize avr and setup resources
+    init();
+    setup();
+
+    while(1){
+        loop();
+    }
+
+    return 0;
+}
+
 
 void setup(){
-  
-  baseMotor.begin();
-  joinMotor.begin();
-  Serial.begin(9600);
+
+    baseMotor.begin();
+    joinMotor.begin();
+    Serial.begin(9600);
 }
 
 void loop(){

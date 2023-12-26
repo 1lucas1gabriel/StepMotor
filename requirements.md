@@ -1,4 +1,24 @@
-Required Changes:
+Required library development changes:
+[DONE] 0. Create Make file to compile library
+[DONE] 0. Adjust Makefile for each example and document Makefile issues/features
+0. Add ReadMe with library features and constraints
+
+1. Refactor functions to mitigate imperative programming style
+2. Select unit testing framework
+3. Setup  unit testing framework
+4. Create Makefile to implement unit test development
+5. Develop test cases
+6. Create mockups and stubs
+7. Run test locally and extract metrics
+8. Plan to apply testing automation (CI/CD)
+
+9. Include command in Make to auto-generate documentation (HTML/PDF)
+10. Create folder in main to store PDF doc.
+11. Generate auto documentation with gh-pages (HTML)
+
+Required library functional changes:
+1. Include parsing source2Cmd feature into library (apply feature absent of technology layer)
+2. Create a external project for RTOS usage with step motor library
 
 Best Practices Reference: https://stackoverflow.com/questions/1805351/best-practices-for-reusable-embedded-c
 

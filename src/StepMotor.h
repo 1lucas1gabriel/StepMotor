@@ -63,11 +63,11 @@
  * @endverbatim
  *****************************************************************/
 
-#ifndef STEP_MOTOR_H
-#define STEP_MOTOR_H
+#ifndef STEPMOTOR_H
+#define STEPMOTOR_H
 
-#ifdef __AVR
-#include <Arduino.h>
+#ifdef ARDUINO_ARCH_AVR
+#include "Arduino.h"
 
 #define stepDelay(delayTime)	delay(delayTime)
 #define pinToPort(pin)			digitalPinToPort(pin)
@@ -174,4 +174,4 @@ private:
 	void _setStepCmd(uint8_t nibble_cmd);
 };
 
-#endif // STEP_MOTOR_H
+#endif // STEPMOTOR_H
