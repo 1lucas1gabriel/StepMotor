@@ -47,7 +47,7 @@
  * --------------------------------------------------------------
  * Setup:
  * StepMotor library always requires four-pins connection to drive
- * step motors properly. It uses only FULL step method to command motors,
+ * step motors properly. It uses only FULL step method to command the step motors,
  * allowing one or two phase to be activated simultaneously (MIN/MAX 
  * torque applied, respectively). It's highly recommended to use adequate 
  * drivers to drive those devices, see examples below.
