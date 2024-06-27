@@ -10,14 +10,14 @@ The repository includes automated *Makefile* for quick building to *avr microcon
 
 1. User can control step movement of each configured device.
 2. User can define step movement parameters (speed, direction, torque) for each device.
-3. Device torque can be configured to minimum or maximum (one or two coils activated by time). 
+3. Device torque can be configured to minimum or maximum (one or two phases activated by time). 
 3. Library allows the user to choose any digital pin to setup device connection.
 4. Library allows usage of unipolar / bipolar step motors.
 5. Library implement driver control via *Full* step method (4 steps by cycle).
 
 
 ## Setting up devices
-StepMotor library always requires four-pins connection to drive step motors properly. It uses only FULL step method to command the step motors, allowing one or two phase to be activated simultaneously (minimum / maximum applied torque, respectively). When using step motors,it is highly recommended to use adequate drivers to drive these devices, see examples below:
+StepMotor library always requires four-pins connection to drive step motors properly. When using step motors, it is highly recommended to use adequate drivers to drive these devices, see examples below:
 
 - Bipolar Step Motor (2 phases)
 	- Driver: L293 H-bridge

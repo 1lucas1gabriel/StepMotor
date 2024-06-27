@@ -1,7 +1,4 @@
 Required library development changes:
-0. Add ReadMe with library features and constraints
-1. encapsulate StepMotor, Core and dependencies per submodules (repositories)
-2. create include or libs folder to facilitate referencing by projects
 
 1. Refactor functions to mitigate imperative programming style
 2. Select unit testing framework
@@ -15,23 +12,6 @@ Required library development changes:
 9. Include command in Make to auto-generate documentation (HTML/PDF)
 10. Create folder in main to store PDF doc.
 11. Generate auto documentation with gh-pages (HTML)
-
-Required library functional changes:
-1. Include parsing source2Cmd feature into library (apply feature absent of technology layer)
-2. Create a external project for RTOS usage with step motor library
-
-Best Practices Reference: https://stackoverflow.com/questions/1805351/best-practices-for-reusable-embedded-c
---------------------------------------------------------------------------------
-LIBRARY DEVOPS REQUIREMENTS
-
-[FUTURE_VERSION] 1. Library shall be implemented in C (struct-like instead of classes)
-[DONE] 2. Library shall have a documented API (including README.md file and GitHub page)
-[TODO] 3. Library shall be tested through unit tests
-[DONE] 4. Library shall use a control version system (branch for QA, dev, releases)
-[DONE] 5. Library shall have a license to use
-[DONE] 6. Library shall include examples about how to use API.
-[DONE] 7. Library examples shall be documented describing examples, date, library version, pinout, uc configurations.
-
 
 --------------------------------------------------------------------------------
 # CONCEPTUAL REQUIREMENTS
@@ -86,6 +66,8 @@ LIBRARY DEVOPS REQUIREMENTS
 [FUTURE_VERSION] 2. writeToPort function shall set all 4 registers (pin connections) at once.
 [FUTURE_VERSION] 3. writeToPort function shall be enabled by the user at API (High) level.
 [FUTURE_VERSION] 4. User shall ensure all 4 pins are properly connected to enable writing to a Port.
+
+[FUTURE_VERSION] 1. Library shall be implemented in C (struct-like instead of classes) [FORK_PROJECT]
 
 [EVALUATE]3. Implement the delay control (btw step commands) following RTOS?
 
