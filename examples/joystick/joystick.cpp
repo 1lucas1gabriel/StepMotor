@@ -16,8 +16,9 @@
 #include "Arduino.h"
 #include "StepMotor.h"
 
-StepMotor baseMotor(BIPOLAR_2PHASE, MIN_TORQUE, 11,10,9,8);
-StepMotor joinMotor(UNIPOLAR_4PHASE, MIN_TORQUE, 5,4,3,2);
+StepMotor baseMotor(BIPOLAR_2PHASE, MIN_TORQUE, 8,7,6,5);
+StepMotor joinMotor(UNIPOLAR_4PHASE, MIN_TORQUE, 12,11,10,9);
+
 void setup();
 void loop();
 

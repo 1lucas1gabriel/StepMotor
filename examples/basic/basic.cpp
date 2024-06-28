@@ -9,8 +9,8 @@
  * phases to be activated simultaneously). 
  * 
  * Setup:
- *    - base step motor: (Bipolar) HP printer motor
- *    - join step motor: (Unipolar) 28BYJ-48 
+ *    - base step motor: (Bipolar) HP printer motor - white
+ *    - join step motor: (Unipolar) 28BYJ-48 - green 
 */
 #include "Arduino.h"
 #include "StepMotor.h"
@@ -21,8 +21,8 @@ void teardown();
 
 
 /* Create and configure stepMotors*/
-StepMotor baseMotor(BIPOLAR_2PHASE, MIN_TORQUE, 11,10,9,8);
-StepMotor joinMotor(UNIPOLAR_4PHASE, MIN_TORQUE, 5,4,3,2);
+StepMotor baseMotor(BIPOLAR_2PHASE, MIN_TORQUE, 8,7,6,5);
+StepMotor joinMotor(UNIPOLAR_4PHASE, MAX_TORQUE, 12,11,10,9);
 
 int main(){
 
@@ -49,14 +49,14 @@ void setup(){
 void loop(){
 
   /* Request device to move. Parameters needed: Number of steps, speed, direction */
-  baseMotor.setMov(100, SLOW_MS, COUNTER_CLOCKWISE);
+  baseMotor.setMov(100, SLOW_MS, CLOCKWISE);
   delay(1000);
   baseMotor.setMov(100, SLOW_MS, COUNTER_CLOCKWISE);
   delay(1000);
 
-  joinMotor.setMov(50, SLOW_MS, COUNTER_CLOCKWISE);
+  joinMotor.setMov(100, SLOW_MS, CLOCKWISE);
   delay(1000);
-  joinMotor.setMov(50, SLOW_MS, COUNTER_CLOCKWISE);
+  joinMotor.setMov(100, SLOW_MS, COUNTER_CLOCKWISE);
 
 }
 
